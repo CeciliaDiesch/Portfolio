@@ -1,0 +1,214 @@
+
+
+.div-Nav{
+    margin: 0 100px;
+    width: calc(100% - 200px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 98px;
+}
+
+section{
+    // margin: 0 100px;
+    // width: calc(100% - 200px);
+    width: 100vw;
+    position: relative;
+    height: 100vh;
+    background-image: url('./../../../assets/img/landingPageBackground.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-position:bottom;
+}
+
+
+@keyframes arrowMove {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(10px); }
+    100% { transform: translateY(0); }
+  }
+
+.button-Div{
+    margin-top: 40px;;
+    display: flex;
+    gap: 48px;
+    font-family: 'Karla';
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.button-Landing{
+width: 172px;
+height: 48px;
+border-radius: 100px;
+border: 1px solid;
+gap: 10px;
+padding-top: 13px;
+padding-right: 24px;
+padding-bottom: 13px;
+padding-left: 24px;
+background-color: transparent;
+overflow: hidden;             /* Wörter, die aus der Box laufen, werden ausgeblendet */
+cursor: pointer;
+transition: border-color 0.3s;
+color: white;
+&:hover {
+    border-color: rgba(61, 207, 182, 1);
+    color: rgba(61, 207, 182, 1);
+  }
+
+  /* Container für den laufenden Text */
+  .slide-container {
+    display: inline-block;
+    white-space: nowrap;
+    /* Anfangs: kein Transform, kein Animation */
+    transform: translateX(0);
+  }
+
+  /* Nur beim Hover: Slide-Animation anhängen */
+  &:hover .slide-container {
+    animation: slideLeftOnly 4s linear infinite;
+  }
+}
+
+@keyframes slideLeftOnly {
+    0%   { transform: translateX(200%); }   /* startet rechts außerhalb */
+    100% { transform: translateX(-200%); }  /* endet links außerhalb */
+  }
+
+.scroll-container {
+    position: absolute;
+    bottom: 0px;    /* Abstand von unten */
+    left: 100px;      /* Abstand von links */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .scroll-btn {
+    width: 30px;
+    height: 48px;
+    border: 1px solid rgba(61, 207, 182, 1);
+    border-radius: 32px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .scroll-arrow {
+    width: 10px;
+    height: 16px;
+    color: white;               // sorgt für weißen Pfeil via currentColor
+    animation: arrowMove 1.5s ease-in-out infinite;
+  }
+
+  .scroll-line {
+    margin-top: 24px;
+    width: 1px;
+    height: 240px; /* oder so lang, wie du möchtest */
+    background-color: rgba(61, 207, 182, 1);
+  }
+
+  .info-container{
+    position: absolute;
+    bottom: 0px;
+    right: 100px;   
+    width: 26px;
+    overflow: visible;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;   
+    color: white; 
+    >a{
+        display: inline-block;          
+        white-space: nowrap;             
+        transform: rotate(-90deg);       
+        transform-origin: center center;
+        font-size: 18px;
+        font-family: 'Karla';
+        font-weight: 400;
+        color: inherit;
+        transition: color 0.3s;
+    
+        &:hover {
+          color: rgba(61, 207, 182, 1);
+        }
+    }
+
+    .icon-wrapper {
+        margin-top: 96px;
+        width: 26px;
+        height: 26px;
+        overflow: visible;
+        img {
+          cursor: pointer;
+          transition: transform 0.3s;
+        }
+      }
+    
+      .info-line {
+        width: 1px;
+        height: 190px;
+        background-color: white;
+        margin-left: 6px;
+      }
+}
+
+.ticker-bar {
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 40px;
+    left: 0px;  
+    width: 110vw;
+    height: 62px;
+    background-color: rgba(255, 255, 255, 0.12);
+    overflow: hidden;
+      /* Hier die Rotation um 3° hinzufügen */
+  transform: rotate(-3deg);
+  /* Drehpunkt: Mitte oben - passt den Ursprung an dein Layout an */
+  transform-origin: top center;
+  }
+  
+  .ticker-content {
+    display: flex;
+  }
+  
+  .ticker-group {
+    display: flex;
+    align-items: center;
+    margin-left: 56px;
+    /* nur hier Gap anwenden, zwischen den Items */
+    gap: 56px;
+    /* Verhindert, dass Flex versucht, Items zu strecken */
+    flex: none;
+  }
+  
+  .ticker-item {
+    flex: none;
+    font-size: 32px;
+    color: rgba(61, 207, 182, 1);
+  }
+  
+  .dot {
+    flex: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(61, 207, 182, 1);
+  }
+  
+  
+
+
+
