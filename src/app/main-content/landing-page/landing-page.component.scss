@@ -12,9 +12,9 @@
 section{
     // margin: 0 100px;
     // width: calc(100% - 200px);
-    width: 100vw;
+    width: 100%;
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url('./../../../assets/img/landingPageBackground.png');
     background-size:cover;
     background-repeat: no-repeat;
@@ -24,6 +24,7 @@ section{
     align-items: center;
     flex-direction: column;
     background-position:bottom;
+    overflow-x: hidden;
 }
 
 
@@ -42,44 +43,7 @@ section{
     font-weight: 400;
 }
 
-.button-Landing{
-width: 172px;
-height: 48px;
-border-radius: 100px;
-border: 1px solid;
-gap: 10px;
-padding-top: 13px;
-padding-right: 24px;
-padding-bottom: 13px;
-padding-left: 24px;
-background-color: transparent;
-overflow: hidden;             /* Wörter, die aus der Box laufen, werden ausgeblendet */
-cursor: pointer;
-transition: border-color 0.3s;
-color: white;
-&:hover {
-    border-color: rgba(61, 207, 182, 1);
-    color: rgba(61, 207, 182, 1);
-  }
 
-  /* Container für den laufenden Text */
-  .slide-container {
-    display: inline-block;
-    white-space: nowrap;
-    /* Anfangs: kein Transform, kein Animation */
-    transform: translateX(0);
-  }
-
-  /* Nur beim Hover: Slide-Animation anhängen */
-  &:hover .slide-container {
-    animation: slideLeftOnly 4s linear infinite;
-  }
-}
-
-@keyframes slideLeftOnly {
-    0%   { transform: translateX(200%); }   /* startet rechts außerhalb */
-    100% { transform: translateX(-200%); }  /* endet links außerhalb */
-  }
 
 .scroll-container {
     position: absolute;

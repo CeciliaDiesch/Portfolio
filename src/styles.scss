@@ -10,7 +10,11 @@
 
 body{
   max-width: 100vw;
-  overflow: hidden;
+  // overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 $dark_red: #9F0908;
@@ -91,3 +95,46 @@ font-family: "Fira Code", sans-serif;
     src: url('../src/assets/fonts/karla-v31-latin/karla-v31-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   
+  section {
+    width: 100%;      /* passt in den Eltern-Container */
+    min-height: 100vh;
+  }
+
+  .button-sliding-text{
+    width: 172px;
+    height: 48px;
+    border-radius: 100px;
+    border: 1px solid;
+    gap: 10px;
+    padding-top: 13px;
+    padding-right: 24px;
+    padding-bottom: 13px;
+    padding-left: 24px;
+    background-color: transparent;
+    overflow: hidden;             /* Wörter, die aus der Box laufen, werden ausgeblendet */
+    cursor: pointer;
+    transition: border-color 0.3s;
+    color: white;
+    &:hover {
+        border-color: rgba(61, 207, 182, 1);
+        color: rgba(61, 207, 182, 1);
+      }
+    
+      /* Container für den laufenden Text */
+      .slide-container {
+        display: inline-block;
+        white-space: nowrap;
+        /* Anfangs: kein Transform, kein Animation */
+        transform: translateX(0);
+      }
+    
+      /* Nur beim Hover: Slide-Animation anhängen */
+      &:hover .slide-container {
+        animation: slideLeftOnly 4s linear infinite;
+      }
+    }
+    
+    @keyframes slideLeftOnly {
+        0%   { transform: translateX(200%); }   /* startet rechts außerhalb */
+        100% { transform: translateX(-200%); }  /* endet links außerhalb */
+      }

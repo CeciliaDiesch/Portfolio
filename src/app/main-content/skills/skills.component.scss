@@ -1,0 +1,147 @@
+.skill-section {
+    padding: 0 100px;
+    min-height: 100vh;
+    background-image: url('./../../../assets/img/skillSetBackground.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    
+    .technologies-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+    }
+  
+    /* ─── Linke Box ────────────────────────────────────────── */
+    .tech-text-box {
+      flex: none;
+      width: 100%;
+      max-width: 500px;
+      
+      .tech-section-title {
+        font-family: 'Karla', sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        color: rgba(61, 207, 182, 1);
+        margin-bottom: 20px;
+      }
+  
+      .skill-box {
+        border: 1px solid rgba(61, 207, 182, 1);
+        border-radius: 30px;
+        background-color: rgba(61, 207, 182, 0.1019607843);
+        padding: 32px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 40px;
+  
+        h2.skill-title {
+          font-family: 'Fira Code', monospace;
+          font-size: 64px;
+          font-weight: 700;
+          color: #3DCFB6;
+          margin: 0;
+        }
+  
+        p.skill-desc {
+          font-family: 'Karla', sans-serif;
+          font-size: 16px;
+          font-weight: 400;
+          color: white;
+          line-height: 1.5;
+          margin: 0;
+        }
+  
+        p.skill-cta {
+          font-family: 'Fira Code', monospace;
+          font-size: 24px;
+          font-weight: 700;
+          margin: 0;
+          display: flex;
+          align-items: baseline;
+          gap: 8px;
+  
+          .cta-normal {
+            color: white;
+          }
+          .cta-highlight {
+            color: rgba(61, 207, 182, 1);
+          }
+        }
+  
+        p.skill-note {
+          font-family: 'Karla', sans-serif;
+          font-size: 16px;
+          font-weight: 400;
+          color: white;
+          margin: 0;
+          line-height: 1.5;
+        }
+  
+        /* nutzt Deine bestehende Button-Klasse */
+        .button-sliding-text {
+          margin-top: auto; /* ganz unten */
+        }
+      }
+    }
+  
+    /* ─── Rechte Seite: Icons ─────────────────────────────── */
+    .tech-icons {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 72px;
+      justify-content: flex-start;
+  
+      .tech-icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        transition: transform 0.2s;
+  
+        img {
+          width: 64px;
+          height: 64px;
+        }
+  
+        span {
+          font-family: 'Fira Code', monospace;
+          font-size: 18px;
+          font-weight: 400;
+          color: white;
+        }
+  
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  
+    /* ─── Responsive: Mobile unter 768px ─────────────────── */
+    @media (max-width: 768px) {
+      padding: 0 16px;
+  
+      .technologies-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+      }
+  
+      .tech-text-box,
+      .tech-icons {
+        max-width: 100%;
+        width: 100%;
+      }
+      
+      .tech-text-box .skill-box {
+        height: auto;         /* passt sich an Inhalt an */
+        gap: 24px;
+      }
+    }
+  }
+  
