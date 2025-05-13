@@ -1,0 +1,243 @@
+.projects-section {
+    padding: 0 100px;
+    background-color: #000000;
+  
+    .projects-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+    }
+
+    .projects-label {
+        font-family: 'Karla', sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        color: rgba(61, 207, 182, 1);
+        margin-bottom: 20px;
+      }
+  
+      .projects-title {
+        font-family: 'Fira Code', monospace;
+        font-size: 64px;
+        font-weight: 700;
+        color: rgba(61, 207, 182, 1);
+        margin: 0 0 40px;
+      }
+  
+      .projects-desc {
+        font-family: 'Karla', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        color: white;
+        margin: 0 0 40px;
+        line-height: 1.5;
+      }
+  
+    // ─── Linke Seite ───────────────────────────────────────────────
+    .project-list {
+      flex: none;
+      max-width: 880px;
+      width: 100%;
+      padding-bottom: 13%;
+  
+
+  
+      .project-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 32px;
+        position: relative;
+        transition: background-color 0.3s;
+        border-top: 1px solid rgba(61, 207, 182, 1);
+        border-bottom: 1px solid rgba(61, 207, 182, 1);
+  
+  
+        &:hover {
+          background-color: rgba(61, 207, 182, 0.1);
+          ;
+        }
+  
+        .project-name {
+            cursor: pointer;
+          font-family: 'Fira Code', monospace;
+          font-size: 24px;
+          font-weight: 700;
+          color: white;          
+          position: relative;
+          display: inline-flex;
+          align-items: center;
+          gap: 8px; /* Abstand zwischen Name und Icon */
+      
+          .arrow-icon {
+            width: 26px;         /* passe bei Bedarf an */
+            height: 26px;
+            opacity: 0;
+            transition: opacity 0.2s;
+            padding-bottom: 4px;
+          }
+        }
+      
+        &:hover .project-name .arrow-icon {
+          opacity: 1;
+        }
+  
+        .project-tech {
+          font-family: 'Karla', sans-serif;
+          font-size: 18px;
+          font-weight: 400;
+          color: white;
+  
+          .sep {
+            color: rgba(61, 207, 182, 1);
+            margin: 0 4px;
+          }
+        }
+  
+        // .arrow {
+        //     display: inline-block;
+        //     margin-left: 8px;
+        //   width: 12px;
+        //   height: 12px;
+        //   transform: rotate(45deg);
+        //   border-top: 2px solid white;
+        //   border-right: 2px solid white;
+        //   opacity: 0;
+        //   transition: opacity 0.3s;
+        // }
+  
+        // &:hover .arrow {
+        //   opacity: 1;
+        // }
+      }
+    }
+  
+    // ─── Rechte Seite ──────────────────────────────────────────────
+    .project-preview {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+      position: relative;
+      width: 315px;
+      height: 212px;
+
+
+      &.visible {
+        opacity: 1;
+        pointer-events: auto;
+      }
+  
+      .preview-bg {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 100%;
+        height: 100%;
+        border-radius: 16px;
+        background-image: repeating-linear-gradient(
+          -45deg,
+          transparent 0,
+          transparent 10px,
+          rgba(61, 207, 182, 0.3) 10px,
+          rgba(61, 207, 182, 0.3) 11px
+        );
+      }
+  
+      .preview-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 16px;
+      }
+    }
+  
+    // ─── Responsive für Mobile ────────────────────────────────────
+    @media (min-width: 1200px) and (max-width: 1400px) {
+        padding: 0 40px;
+      .project-list {
+        width: 70%;
+      }
+    }
+
+    @media (max-width: 1200px) {
+        padding: 0 20px;
+        // .projects-container {
+        //     .project-preview {
+        //       display: none;
+        //     }
+        //   }
+        .project-row{
+            width: 70%;
+        }
+
+        //   .projects-section {
+        //     .project-list {
+        //       width: 60%;
+        //     }
+        //   }
+        }
+
+        @media (max-width: 900px) {
+            padding: 0 20px;
+            .projects-container {
+                .project-preview {
+                  display: none;
+                }
+              }
+    
+              .projects-section {
+                .project-list {
+                  width: 100%;
+                }
+              }
+            }
+        
+    @media (max-width: 768px) {
+      padding: 0 12px;
+  
+      .projects-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        .project-preview {
+            display: none;
+          }
+      }
+  
+      .project-list,
+      .project-preview {
+        max-width: 100%;
+        width: 100%;
+      }
+  
+      .project-list {
+        .projects-title {
+          font-size: 48px;
+          margin-bottom: 24px;
+        }
+  
+        .projects-desc {
+          margin-bottom: 24px;
+        }
+  
+        .project-row {
+          padding: 24px 16px;
+  
+        //   &:hover.project-name .arrow-icon {
+        //     width: 12px;       
+        //     height: 12px;
+        //   }
+        }
+      }
+
+    }
+  }
+  
+  @media (min-width: 1700px) and (max-width: 2000px) {
+    .project-preview {
+        right: 10%;
+    }
+  }

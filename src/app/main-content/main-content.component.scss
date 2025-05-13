@@ -3,3 +3,28 @@ section{
     overflow-y: auto;
     width: 100%;  
 }
+
+.main-Section{
+    padding: 0 !important;
+}
+
+      // ─── Responsive für Mobile ────────────────────────────────────
+      @media (min-width: 1200px) and (max-width: 1400px) {
+        .main-Section{
+            padding: 0 !important;
+        }
+  
+    }
+  
+    @media (max-width: 1200px) {
+        .main-Section{
+            padding: 0 !important;
+        }
+        }
+        
+    @media (max-width: 768px) {
+        .main-Section{
+            padding: 0 !important;
+        }
+  
+    }

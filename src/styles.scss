@@ -97,7 +97,8 @@ font-family: "Fira Code", sans-serif;
   
   section {
     width: 100%;      /* passt in den Eltern-Container */
-    min-height: 100vh;
+    padding: 0 100px;
+    // min-height: 100vh;
   }
 
   .button-sliding-text{
@@ -138,3 +139,24 @@ font-family: "Fira Code", sans-serif;
         0%   { transform: translateX(200%); }   /* startet rechts außerhalb */
         100% { transform: translateX(-200%); }  /* endet links außerhalb */
       }
+
+          // ─── Responsive für Mobile ────────────────────────────────────
+    @media (min-width: 1200px) and (max-width: 1400px) {
+      section{
+        padding: 0 40px !important;
+      }
+
+  }
+
+  @media (max-width: 1200px) {
+    section{
+      padding: 0 20px;
+    }
+      }
+      
+  @media (max-width: 768px) {
+    section{
+      padding: 0 12px;
+    }
+
+  }

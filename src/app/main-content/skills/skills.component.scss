@@ -1,12 +1,13 @@
 .skill-section {
     padding: 0 100px;
-    min-height: 100vh;
+    background-color: #111;  
     background-image: url('./../../../assets/img/skillSetBackground.png');
     background-size:cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     
     .technologies-content {
+      padding-bottom: 13%;
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
@@ -32,7 +33,7 @@
         border-radius: 30px;
         background-color: rgba(61, 207, 182, 0.1019607843);
         padding: 32px;
-        height: 500px;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -84,12 +85,14 @@
         /* nutzt Deine bestehende Button-Klasse */
         .button-sliding-text {
           margin-top: auto; /* ganz unten */
+          padding-bottom: 24px !important;
         }
       }
     }
   
     /* ─── Rechte Seite: Icons ─────────────────────────────── */
     .tech-icons {
+        margin-top: 48px;
       flex: 1;
       display: flex;
       flex-wrap: wrap;
