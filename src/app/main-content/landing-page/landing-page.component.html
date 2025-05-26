@@ -1,73 +1,75 @@
 <section id="home">
-  <div class="div-Nav"><app-nav-bar></app-nav-bar></div>
-  <h2>Frontend Developer</h2>
-  <h1>Cecilia Diesch</h1>
-  <div class="button-Div">
-    <button class="button-sliding-text">
-      <span class="slide-container">
-        <span class="button-Text">Check my work</span>
-      </span>
-    </button>
-    <button class="button-sliding-text">
-      <span class="slide-container">
-        <span class="button-Text">Contact me</span>
-      </span>
-    </button>
-  </div>
-
-  <div class="scroll-container">
-    <button class="scroll-btn" aria-label="Scroll down">
-      <!-- simple Down-Arrow SVG -->
-      <svg viewBox="0 0 24 24" class="scroll-arrow">
-        <path
-          d="M12 -12v35m0 0l-8-8m8 8l8-8"
-          stroke="currentColor"
-          stroke-width="2.3"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    </button>
-    <div class="scroll-line"></div>
-  </div>
-  <div class="info-container">
-    <a>Ceciliadiesch &#64; yahoo.com</a>
-    <div class="icon-wrapper">
-      <img
-        [src]="
-          isGitHover ? 'assets/img/gitHubHover.svg' : 'assets/img/gitHub.svg'
-        "
-        (mouseenter)="isGitHover = true"
-        (mouseleave)="isGitHover = false"
-        alt="GitHub"
-      />
+  <div class="content">
+    <div class="div-Nav"><app-nav-bar></app-nav-bar></div>
+    <h2>Frontend Developer</h2>
+    <h1>Cecilia Diesch</h1>
+    <div class="button-Div">
+      <button class="button-sliding-text">
+        <span class="slide-container">
+          <span class="button-Text">Check my work</span>
+        </span>
+      </button>
+      <button class="button-sliding-text">
+        <span class="slide-container">
+          <span class="button-Text">Contact me</span>
+        </span>
+      </button>
     </div>
-    <div class="info-line"></div>
-  </div>
 
-  <div class="ticker-bar" #tickerBar>
-    <div class="ticker-content">
-      <div class="ticker-group">
-        <span class="dot"></span>
-        <span class="ticker-item">Available for remote work</span>
-        <span class="dot"></span>
-        <span class="ticker-item">Frontend Developer</span>
-        <span class="dot"></span>
-        <span class="ticker-item">Based in Berlin/Dresden</span>
-        <span class="dot"></span>
-        <span class="ticker-item">Open to work</span>
-        <span class="dot"></span>
+    <div class="scroll-container">
+      <button class="scroll-btn" aria-label="Scroll down">
+        <!-- simple Down-Arrow SVG -->
+        <svg viewBox="0 0 24 24" class="scroll-arrow">
+          <path
+            d="M12 -12v35m0 0l-8-8m8 8l8-8"
+            stroke="currentColor"
+            stroke-width="2.3"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <div class="scroll-line"></div>
+    </div>
+    <div class="info-container">
+      <a>Ceciliadiesch &#64; yahoo.com</a>
+      <div class="icon-wrapper">
+        <img
+          [src]="
+            isGitHover ? 'assets/img/gitHubHover.svg' : 'assets/img/gitHub.svg'
+          "
+          (mouseenter)="isGitHover = true"
+          (mouseleave)="isGitHover = false"
+          alt="GitHub"
+        />
       </div>
-      <!-- gleiche Gruppe noch einmal -->
-      <div class="ticker-group">
-        <span class="ticker-item">Available for remote work</span>
-        <span class="dot"></span>
-        <span class="ticker-item">Frontend Developer</span>
-        <span class="dot"></span>
-        <span class="ticker-item">Based in Berlin/Dresden</span>
-        <span class="dot"></span>
-        <span class="ticker-item">Open to work</span>
+      <div class="info-line"></div>
+    </div>
+
+    <div class="ticker-bar" #tickerBar>
+      <div class="ticker-content">
+        <div class="ticker-group">
+          <span class="dot"></span>
+          <span class="ticker-item">Available for remote work</span>
+          <span class="dot"></span>
+          <span class="ticker-item">Frontend Developer</span>
+          <span class="dot"></span>
+          <span class="ticker-item">Based in Berlin/Dresden</span>
+          <span class="dot"></span>
+          <span class="ticker-item">Open to work</span>
+          <span class="dot"></span>
+        </div>
+        <!-- gleiche Gruppe noch einmal -->
+        <div class="ticker-group">
+          <span class="ticker-item">Available for remote work</span>
+          <span class="dot"></span>
+          <span class="ticker-item">Frontend Developer</span>
+          <span class="dot"></span>
+          <span class="ticker-item">Based in Berlin/Dresden</span>
+          <span class="dot"></span>
+          <span class="ticker-item">Open to work</span>
+        </div>
       </div>
     </div>
   </div>

@@ -1,10 +1,18 @@
 .skill-section {
+  position: relative;
     padding: 0 100px;
-    background-color: #111;  
-    background-image: url('./../../../assets/img/skillSetBackground.png');
-    background-size:cover;
+    background-color: rgb(28, 28, 28);
+    background-image:  radial-gradient(
+      ellipse at center,
+      rgba(28, 28, 28, 0) 70%,
+      rgb(28, 28, 28)     100%
+    ),
+    url('./../../../assets/img/skillSetBackground.png');
+    background-size: cover, cover;
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-position: center, center;
+
+    
     
     .technologies-content {
       padding-bottom: 13%;

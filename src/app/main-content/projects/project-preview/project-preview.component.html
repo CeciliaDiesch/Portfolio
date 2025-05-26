@@ -1,0 +1,37 @@
+<div class="project-modal" *ngIf="isOpen">
+  <div class="modal-backdrop" (click)="close()"></div>
+  <div class="modal-content">
+    <!-- linke Spalte -->
+    <div class="modal-text">
+      <p class="modal-index">{{ project.index | number : "2.0" }}</p>
+      <h1 class="modal-name">{{ project.name }}</h1>
+
+      <h3 class="modal-subtitle">What is this project about?</h3>
+      <p class="modal-description">{{ project.description }}</p>
+
+      <div class="modal-tech">
+        <div class="tech-item" *ngFor="let t of project.tech">
+          <img [src]="t.icon" [alt]="t.name" width="24" height="24" />
+          <span>{{ t.name }}</span>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button>GitHub <img src="assets/icons/arrow_forward.svg" /></button>
+        <button>Live Test<img src="assets/icons/arrow_forward.svg" /></button>
+
+        <!-- <button (click)="open(project.github)">GitHub</button>
+        <button (click)="open(project.live)">Live Test</button> -->
+      </div>
+    </div>
+
+    <!-- rechte Spalte -->
+    <div class="modal-preview">
+      <button class="modal-close" (click)="close()">
+        <img src="assets/icons/close_small.svg" />
+      </button>
+      <img class="preview-img" [src]="project.image" alt="Preview" />
+      <button class="preview-next" (click)="next()">Next project →</button>
+    </div>
+  </div>
+</div>

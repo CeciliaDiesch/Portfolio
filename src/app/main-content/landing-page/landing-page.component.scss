@@ -1,30 +1,32 @@
 
 
 .div-Nav{
-    margin: 0 100px;
-    width: calc(100% - 200px);
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
     height: 98px;
 }
 
 section{
-    // margin: 0 100px;
-    // width: calc(100% - 200px);
-    width: 100%;
-    position: relative;
-    min-height: 100vh;
-    background-image: url('./../../../assets/img/landingPageBackground.png');
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-position:bottom;
-    overflow-x: hidden;
+  background-image: url('./../../../assets/img/landingPageBackground.png');
+  background-size:cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  min-height: 100vh;
+}
+
+.content{
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 50px;
+  // overflow-x: hidden;
 }
 
 
@@ -48,7 +50,7 @@ section{
 .scroll-container {
     position: absolute;
     bottom: 0px;    /* Abstand von unten */
-    left: 100px;      /* Abstand von links */
+    left: 0px;      /* Abstand von links */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,21 +72,21 @@ section{
   .scroll-arrow {
     width: 10px;
     height: 16px;
-    color: white;               // sorgt für weißen Pfeil via currentColor
+    color: white;
     animation: arrowMove 1.5s ease-in-out infinite;
   }
 
   .scroll-line {
     margin-top: 24px;
     width: 1px;
-    height: 240px; /* oder so lang, wie du möchtest */
+    height: 240px;
     background-color: rgba(61, 207, 182, 1);
   }
 
   .info-container{
     position: absolute;
     bottom: 0px;
-    right: 100px;   
+    right: 0px;   
     width: 26px;
     overflow: visible;  
     display: flex;
@@ -102,6 +104,7 @@ section{
         font-weight: 400;
         color: inherit;
         transition: color 0.3s;
+        cursor: pointer;
     
         &:hover {
           color: rgba(61, 207, 182, 1);
@@ -132,9 +135,9 @@ section{
     display: flex;
     align-items: center;
     position: absolute;
-    bottom: 40px;
-    left: 0px;  
-    width: 110vw;
+    bottom: 100px;
+    left: -110px;  
+    width: 120vw;
     height: 62px;
     background-color: rgba(255, 255, 255, 0.12);
     overflow: hidden;

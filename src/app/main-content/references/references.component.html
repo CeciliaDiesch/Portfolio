@@ -1,1 +1,28 @@
-<p>references works!</p>
+<section id="reviews" class="review-section">
+  <h2 class="review-title">What my colleagues say about me</h2>
+
+  <div class="review-carousel">
+    <div *ngFor="let r of window; let idx = index" class="review-item">
+      <p class="review-quote">“{{ r.text }}”</p>
+      <hr class="review-divider" />
+      <p class="review-author">{{ r.author }} – {{ r.role }}</p>
+    </div>
+  </div>
+
+  <div class="review-nav">
+    <button class="nav-arrow" (click)="prev()">
+      <img src="../../../assets/icons/references/arrow_back_white.svg" />
+    </button>
+    <div class="review-dots">
+      <span
+        *ngFor="let _ of reviews; let i = index"
+        class="dot"
+        [class.active]="i === currentIndex"
+        (click)="currentIndex = i"
+      ></span>
+    </div>
+    <button class="nav-arrow" (click)="next()">
+      <img src="../../../assets/icons/references/arrow_forward_white.svg" />
+    </button>
+  </div>
+</section>

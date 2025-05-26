@@ -9,8 +9,13 @@
 }
 
 body{
-  max-width: 100vw;
-  // overflow: hidden;
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+
 }
 
 html {
@@ -96,12 +101,12 @@ font-family: "Fira Code", sans-serif;
   }
   
   section {
-    width: 100%;      /* passt in den Eltern-Container */
+    width: 100%;
     padding: 0 100px;
-    // min-height: 100vh;
+    overflow-x: hidden;
   }
 
-  .button-sliding-text{
+  button{
     width: 172px;
     height: 48px;
     border-radius: 100px;
@@ -112,7 +117,6 @@ font-family: "Fira Code", sans-serif;
     padding-bottom: 13px;
     padding-left: 24px;
     background-color: transparent;
-    overflow: hidden;             /* Wörter, die aus der Box laufen, werden ausgeblendet */
     cursor: pointer;
     transition: border-color 0.3s;
     color: white;
@@ -120,8 +124,10 @@ font-family: "Fira Code", sans-serif;
         border-color: rgba(61, 207, 182, 1);
         color: rgba(61, 207, 182, 1);
       }
-    
-      /* Container für den laufenden Text */
+  }
+
+  .button-sliding-text{
+    overflow: hidden;             /* Wörter, die aus der Box laufen, werden ausgeblendet */
       .slide-container {
         display: inline-block;
         white-space: nowrap;

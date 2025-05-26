@@ -1,18 +1,47 @@
-<section id="projects" class="projects-section">
-  <p class="projects-label">Portfolio</p>
-  <h2 class="projects-title">Featured Projects</h2>
-  <p class="projects-desc">
-    Explore a selection of my work here – interact with each project to see my
-    skills in action.
-  </p>
-  <div #projectsContainer class="projects-container">
-    <!-- Linke Seite: Liste -->
-    <div class="project-list">
-      <div
+<section id="projects">
+  <div class="projects-content">
+    <p class="projects-label">Portfolio</p>
+    <h2 class="projects-title">Featured Projects</h2>
+    <p class="projects-desc">
+      Explore a selection of my work here – interact with each project to see my
+      skills in action.
+    </p>
+    <div #projectsContainer class="projects-container">
+      <!-- Linke Seite: Liste -->
+      <div class="project-list">
+        <div
+          *ngFor="let p of projects; let i = index"
+          class="project-row"
+          #rowEl
+          (mouseenter)="onHoverPreview(rowEl, p.image)"
+          (mouseleave)="onLeavePreview()"
+          (click)="openPreview(i)"
+        >
+          <!-- Projekt-Name + Pfeil -->
+          <span class="project-name">
+            {{ p.name }}
+            <img
+              class="arrow-icon"
+              src="assets/icons/arrow_outward.svg"
+              alt="Arrow"
+            />
+          </span>
+
+          <!-- Tech-Stack als Liste, Pipe dazwischen -->
+          <span class="project-tech">
+            <ng-container *ngFor="let techItem of p.tech; let last = last">
+              {{ techItem.name }}<span *ngIf="!last" class="sep">|</span>
+            </ng-container>
+          </span>
+        </div>
+
+        <!-- <div
+        *ngFor="let p of projects; let i = index"
         class="project-row"
         #row1
         (mouseenter)="onHoverPreview(row1, 'assets/img/projects (4).png')"
         (mouseleave)="onLeavePreview()"
+        (click)="openPreview(i)"
       >
         <span class="project-name"
           >JOIN
@@ -27,61 +56,72 @@
           Angular<span class="sep">|</span>TypeScript<span class="sep">|</span
           >HTML<span class="sep">|</span>CSS<span class="sep">|</span>Firebase
         </span>
+      </div> -->
+
+        <!-- <div
+          *ngFor="let p of projects; let i = index"
+          class="project-row"
+          #row2
+          (mouseenter)="onHoverPreview(row2, 'assets/img/projects (3).png')"
+          (mouseleave)="onLeavePreview()"
+          (click)="openPreview(i)"
+        >
+          <span class="project-name"
+            >EL POLLO LOCO
+            <img
+              class="arrow-icon"
+              src="../../../assets/icons/arrow_outward.svg"
+              alt="Arrow"
+            />
+          </span>
+          <span class="project-tech">
+            HTML<span class="sep">|</span>CSS<span class="sep">|</span>JavaScript
+          </span>
+        </div>
+
+        <div
+          *ngFor="let p of projects; let i = index"
+          class="project-row"
+          #row3
+          (mouseenter)="onHoverPreview(row3, 'assets/img/projects (1).png')"
+          (mouseleave)="onLeavePreview()"
+          (click)="openPreview(i)"
+        >
+          <span class="project-name"
+            >BESTELL APP
+            <img
+              class="arrow-icon"
+              src="../../../assets/icons/arrow_outward.svg"
+              alt="Arrow"
+            />
+          </span>
+          <span class="project-tech">
+            HTML<span class="sep">|</span>CSS<span class="sep">|</span>JavaScript
+          </span>
+        </div> -->
       </div>
 
+      <!-- Rechte Seite: Vorschaubild -->
       <div
-        class="project-row"
-        #row2
-        (mouseenter)="onHoverPreview(row2, 'assets/img/projects (3).png')"
-        (mouseleave)="onLeavePreview()"
+        #projectPreview
+        class="project-preview"
+        [class.visible]="previewSrc"
+        [style.top.px]="previewTop"
       >
-        <span class="project-name"
-          >EL POLLO LOCO
-          <img
-            class="arrow-icon"
-            src="../../../assets/icons/arrow_outward.svg"
-            alt="Arrow"
-          />
-        </span>
-        <span class="project-tech">
-          HTML<span class="sep">|</span>CSS<span class="sep">|</span>JavaScript
-        </span>
-      </div>
-
-      <div
-        class="project-row"
-        #row3
-        (mouseenter)="onHoverPreview(row3, 'assets/img/projects (1).png')"
-        (mouseleave)="onLeavePreview()"
-      >
-        <span class="project-name"
-          >BESTELL APP
-          <img
-            class="arrow-icon"
-            src="../../../assets/icons/arrow_outward.svg"
-            alt="Arrow"
-          />
-        </span>
-        <span class="project-tech">
-          HTML<span class="sep">|</span>CSS<span class="sep">|</span>JavaScript
-        </span>
+        <div class="preview-bg"></div>
+        <img
+          *ngIf="previewSrc"
+          class="preview-img"
+          [src]="previewSrc"
+          alt="Project preview"
+        />
       </div>
     </div>
-
-    <!-- Rechte Seite: Vorschaubild -->
-    <div
-      #projectPreview
-      class="project-preview"
-      [class.visible]="previewSrc"
-      [style.top.px]="previewTop"
-    >
-      <div class="preview-bg"></div>
-      <img
-        *ngIf="previewSrc"
-        class="preview-img"
-        [src]="previewSrc"
-        alt="Project preview"
-      />
-    </div>
+    <app-project-preview
+      [project]="activeProject!"
+      [isOpen]="activeProject != null"
+      [close]="closePreview.bind(this)"
+      [next]="nextPreview.bind(this)"
+    ></app-project-preview>
   </div>
 </section>

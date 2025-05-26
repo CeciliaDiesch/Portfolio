@@ -1,6 +1,10 @@
-.projects-section {
-    padding: 0 100px;
-    background-color: #000000;
+section {
+  background-color: rgb(28, 28, 28);
+}
+
+.projects-content {
+    // padding: 0 100px;
+
   
     .projects-container {
       display: flex;
@@ -174,7 +178,7 @@
             width: 70%;
         }
 
-        //   .projects-section {
+        //   .projects-content {
         //     .project-list {
         //       width: 60%;
         //     }
@@ -189,7 +193,7 @@
                 }
               }
     
-              .projects-section {
+              .projects-content {
                 .project-list {
                   width: 100%;
                 }

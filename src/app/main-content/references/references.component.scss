@@ -1,0 +1,109 @@
+.review-section {
+    background-color: rgb(28, 28, 28);
+    padding: 80px 100px;
+    text-align: center;
+  
+    .review-title {
+      font-family: 'Fira Code';
+      font-weight: 700;
+      font-size: 32px;
+      color: rgba(61, 207, 182, 1);
+      margin-bottom: 40px;
+    }
+  
+    .review-carousel {
+        position: relative;    // damit das Pseudo-Element sich darauf bezieht
+        overflow: hidden;      // damit nichts übersteht
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 24px;
+
+        // Das Fade-Overlay oben drüber
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;   // top/right/bottom/left = 0
+    pointer-events: none;   // Klicks kommen zum Carousel durch
+    background-image: radial-gradient(
+      circle at center,
+      rgba(28, 28, 28, 0) 70%,
+      rgb(28, 28, 28)     100%
+    );
+    z-index: 2;  // hoch genug, um über den .review-item zu liegen
+  }
+  
+      .review-item {
+        position: relative;
+        z-index: 1;
+        flex: 0 0 60%;     /* drei Items nebeneinander */
+        max-width: 60%;
+        background: rgba(61, 207, 182, 0.1);
+        border: 1px solid rgba(61,207,182,1);
+        border-radius: 16px;
+        padding: 24px;
+        color: white;
+        box-sizing: border-box;
+        opacity: 0.5;      /* ausgeblendet für die Neben-Cards */
+        transition:background 0.3s ease,  opacity 0.3s, transform 0.3s ;
+  
+        &:nth-child(2) {
+          /* das mittlere Item */
+          opacity: 1;
+          background: rgba(61, 207, 182, 0.3);
+        }
+  
+        .review-quote {
+          font-family: 'Karla';
+          font-size: 16px;
+          line-height: 1.6;
+          margin: 0 0 16px;
+        }
+        .review-divider {
+          border: none;
+          border-top: 1px solid rgba(255,255,255,0.3);
+          margin: 0 0 12px;
+        }
+        .review-author {
+          font-family: 'Karla';
+          font-size: 14px;
+          margin: 0;
+        }
+      }
+    }
+  
+    .review-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+  
+      .nav-arrow {
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+      }
+  
+      .review-dots {
+        display: flex;
+        gap: 8px;
+        .dot {
+          width: 8px;
+          height: 8px;
+          background: white;
+          border-radius: 50%;
+          opacity: 0.5;
+          cursor: pointer;
+          transition: opacity 0.3s, background 0.3s;
+  
+          &.active {
+            background: rgba(61,207,182,1);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  

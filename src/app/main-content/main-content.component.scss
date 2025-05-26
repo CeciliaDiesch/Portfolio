@@ -1,11 +1,16 @@
-section{
+.main-Section{
     min-height: 100vh;
     overflow-y: auto;
     width: 100%;  
-}
-
-.main-Section{
+    max-width: 1800px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     padding: 0 !important;
+    > * {
+        display: block;  /* custom Elemente sind standardmäßig inline */
+        width: 100%;
+      }
 }
 
       // ─── Responsive für Mobile ────────────────────────────────────
