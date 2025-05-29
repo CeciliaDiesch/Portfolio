@@ -1,109 +1,192 @@
-.review-section {
-    background-color: rgb(28, 28, 28);
-    padding: 80px 100px;
-    text-align: center;
-  
-    .review-title {
-      font-family: 'Fira Code';
-      font-weight: 700;
-      font-size: 32px;
-      color: rgba(61, 207, 182, 1);
-      margin-bottom: 40px;
-    }
-  
-    .review-carousel {
-        position: relative;    // damit das Pseudo-Element sich darauf bezieht
-        overflow: hidden;      // damit nichts übersteht
-      display: flex;
-      justify-content: center;
-      gap: 24px;
-      margin-bottom: 24px;
+/* src/app/main-content/references.component.scss */
 
-        // Das Fade-Overlay oben drüber
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 0;   // top/right/bottom/left = 0
-    pointer-events: none;   // Klicks kommen zum Carousel durch
-    background-image: radial-gradient(
-      circle at center,
-      rgba(28, 28, 28, 0) 70%,
-      rgb(28, 28, 28)     100%
-    );
-    z-index: 2;  // hoch genug, um über den .review-item zu liegen
+/* 1) Grundstil für die Reference-Boxen */
+.reference-box {
+  background-color: #40e0d0;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  height: 250px;
+
+  /* Vollständige Höhe nutzen und Inhalt vertikal zentrieren */
+  // height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+// .item{
+//   top: 0 !important;         
+// }
+
+/* 2) Text-Styles */
+.reference-text {
+  margin-bottom: 0.75rem;
+  font-style: italic;
+  line-height: 1.4;
+}
+.reference-author {
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+.reference-role {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* 3) Beschränke die Breite des Carousels */
+c-carousel {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* 4) Controls unten positionieren und Icons ersetzen */
+:host ::ng-deep .carousel-control-prev,
+:host ::ng-deep .carousel-control-next {
+  top: auto !important;
+  bottom: 1rem !important;
+  width: auto;
+}
+:host ::ng-deep .carousel-control-prev-icon,
+:host ::ng-deep .carousel-control-next-icon {
+  background-image: none;
+}
+:host ::ng-deep .carousel-control-prev::before,
+:host ::ng-deep .carousel-control-next::before {
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+:host ::ng-deep .carousel-control-prev::before {
+  content: '‹';
+}
+:host ::ng-deep .carousel-control-next::before {
+  content: '›';
+}
+
+/* 5) Bullets (Indicators) style */
+:host ::ng-deep .carousel-indicators {
+  margin-bottom: 1.5rem;
+}
+:host ::ng-deep .carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+:host ::ng-deep .carousel-indicators .active {
+  background-color: #40e0d0;
+}
+
+/* 6) Fixhöhe und horizontale Animation */
+:host ::ng-deep .carousel-item {
+  
+  // height: 180px !important;           /* alle Slides gleich hoch */
+  top: 0 !important;                  /* nie vertikal verschieben */
+  transition-property: transform !important; /* nur horizontal animieren */
+}
+
+/* 7) Inner und Items zentrieren, verhindern jegliches vertikales Rutschen */
+:host ::ng-deep .carousel-inner {
+  
+  height: 250px;
+  display: flex !important;
+  // align-items: center !important;
+}
+:host ::ng-deep .carousel-item-next,
+:host ::ng-deep .carousel-item-prev,
+:host ::ng-deep .carousel-item-start,
+:host ::ng-deep .carousel-item-end {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  top: 0 !important;
+}
+
+
+  
+
+// :host {
+//     --card-width: 300px;
+//     --gap: 20px;
+//   }
+  
+//   .testimonials {
+//     text-align: center;
+//     h2 {
+//       font-size: 2rem;
+//       margin-bottom: 20px;
+//       color: #00ffc3;
+//     }
+//   }
+  
+//   .carousel {
+//     position: relative;
+//     display: inline-block;
+//   }
+  
+//   .viewport {
+//     position: relative;
+//     overflow: hidden;
+//     width: calc(var(--card-width) * 2);
+//   }
+  
+//   .quote {
+//     position: absolute;
+//     top: -0.5rem;
+//     left: calc(var(--card-width) / 2 - 3rem);
+//     font-size: 6rem;
+//     color: #fff;
+//     pointer-events: none;
+//     user-select: none;
+//   }
+  
+//   .track {
+//     display: flex;
+//     gap: var(--gap);
+//     will-change: transform;
+//   }
+  
+  .card {
+    flex: 0 0 var(--card-width);
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    color: #fff;
+    background: rgba(61, 207, 182, 1);
+    transition: background 0.3s ease, transform 0.3s ease;
   }
   
-      .review-item {
-        position: relative;
-        z-index: 1;
-        flex: 0 0 60%;     /* drei Items nebeneinander */
-        max-width: 60%;
-        background: rgba(61, 207, 182, 0.1);
-        border: 1px solid rgba(61,207,182,1);
-        border-radius: 16px;
-        padding: 24px;
-        color: white;
-        box-sizing: border-box;
-        opacity: 0.5;      /* ausgeblendet für die Neben-Cards */
-        transition:background 0.3s ease,  opacity 0.3s, transform 0.3s ;
+//     &.center {
+//       background: rgba(61, 207, 182, 0.3);
+//       transform: scale(1.1);
+//       z-index: 1;
+//     }
   
-        &:nth-child(2) {
-          /* das mittlere Item */
-          opacity: 1;
-          background: rgba(61, 207, 182, 0.3);
-        }
+//     footer {
+//       margin-top: 1rem;
+//       font-size: 0.9rem;
+//       opacity: 0.7;
+//       border-top: 1px solid #444;
+//       padding-top: 8px;
+//     }
+//   }
   
-        .review-quote {
-          font-family: 'Karla';
-          font-size: 16px;
-          line-height: 1.6;
-          margin: 0 0 16px;
-        }
-        .review-divider {
-          border: none;
-          border-top: 1px solid rgba(255,255,255,0.3);
-          margin: 0 0 12px;
-        }
-        .review-author {
-          font-family: 'Karla';
-          font-size: 14px;
-          margin: 0;
-        }
-      }
-    }
+//   .arrow {
+//     position: absolute;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     background: none;
+//     border: none;
+//     font-size: 2rem;
+//     color: #fff;
+//     cursor: pointer;
+//     user-select: none;
+//   }
   
-    .review-nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 16px;
-  
-      .nav-arrow {
-        background: transparent;
-        border: none;
-        color: white;
-        font-size: 24px;
-        cursor: pointer;
-      }
-  
-      .review-dots {
-        display: flex;
-        gap: 8px;
-        .dot {
-          width: 8px;
-          height: 8px;
-          background: white;
-          border-radius: 50%;
-          opacity: 0.5;
-          cursor: pointer;
-          transition: opacity 0.3s, background 0.3s;
-  
-          &.active {
-            background: rgba(61,207,182,1);
-            opacity: 1;
-          }
-        }
-      }
-    }
-  }
+//   .arrow.prev { left: -50px; }
+//   .arrow.next { right: -50px; }
   

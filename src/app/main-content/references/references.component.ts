@@ -1,63 +1,57 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
-import { CommonModule} from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule }      from '@angular/common';  
+import { RouterLink } from '@angular/router';
+import {
+  CarouselComponent,
+  CarouselIndicatorsComponent,
+  CarouselInnerComponent,
+  CarouselItemComponent,
+  CarouselControlComponent
+} from '@coreui/angular';
 
-
-interface Review {
-  text: string;
+interface Reference {
+  text:   string;
   author: string;
-  role: string;
+  role:   string;
 }
 
 @Component({
   selector: 'app-references',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    CommonModule, 
+    CarouselComponent,
+    CarouselIndicatorsComponent,
+    CarouselInnerComponent,
+    CarouselItemComponent,
+    CarouselControlComponent,
+    RouterLink
+  ],
   templateUrl: './references.component.html',
-  styleUrl: './references.component.scss'
+  styleUrls: ['./references.component.scss']
 })
-export class ReferencesComponent {
-  @ViewChild('carousel', { static: true }) carousel!: ElementRef<HTMLDivElement>;
+export class ReferencesComponent implements OnInit {
+  slides: Reference[] = new Array(3).fill({ text: '', author: '', role: '' });
 
-  reviews: Review[] = [
-    {
-      text: 'Lukas has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.',
-      author: 'H. Janisch',
-      role: 'Team Partner'
-    },
-    {
-      text: 'I had the good fortune of working with Lukas on a complex UX redesign project at the Developer Akademie. He always stayed calm, coordinated effort, and made sure our team was set up for success.',
-      author: 'T. Schulz',
-      role: 'Frontend Developer'
-    },
-    {
-      text: 'Working alongside Lukas was a pleasure—he is knowledgeable, easy to work with, and I would happily collaborate with him again given the chance.',
-      author: 'M. Becker',
-      role: 'UX Designer'
-    }
-  ];
+  ngOnInit(): void {
+    this.slides[0] = {
+      text: '„Die Zusammenarbeit war erstklassig – ich habe unglaublich viel gelernt.“',
+      author: 'Marina Müller',
+      role: 'Frontend-Entwicklerin'
+    };
+    this.slides[1] = {
+      text: '„Top Performance und super Support: Kann ich nur empfehlen!“',
+      author: 'Jonas Schmidt',
+      role: 'Full-Stack-Engineer'
+    };
+    this.slides[2] = {
+      text: '„Sehr professioneller Workflow und schnelle Umsetzung unserer Wünsche.“',
+      author: 'Sabine Bauer',
+      role: 'Projektmanagerin'
+    };
+  }
 
-   // Aktuell im Fokus
-   currentIndex = 0;
-
-   // Berechnet die drei anzuzeigenden Reviews: [vorheriges, aktuelles, nächstes]
-   get window(): Review[] {
-     const n = this.reviews.length;
-     const prev = (this.currentIndex + n - 1) % n;
-     const next = (this.currentIndex + 1) % n;
-     return [
-       this.reviews[prev],
-       this.reviews[this.currentIndex],
-       this.reviews[next],
-     ];
-   }
- 
-   // Pfeil links
-   prev() {
-     this.currentIndex = (this.currentIndex + this.reviews.length - 1) % this.reviews.length;
-   }
- 
-   // Pfeil rechts
-   next() {
-     this.currentIndex = (this.currentIndex + 1) % this.reviews.length;
-   }
+  trackByText(_: number, item: Reference): string {
+    return item.text;
+  }
 }
