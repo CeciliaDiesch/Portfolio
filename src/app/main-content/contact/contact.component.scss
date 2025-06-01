@@ -1,0 +1,193 @@
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    padding: 4rem;
+    background: #121212;
+    color: #39c4b4;
+    font-family: 'Roboto Mono', monospace;
+  
+    .left {
+      flex: 1 1 300px;
+  
+      .overline {
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+      }
+      h1 {
+        color: #39c4b4;
+        font-size: 2.5rem;
+        margin: 0;
+        line-height: 1.1;
+      }
+      .lead {
+        font-size: 1.1rem;
+        margin: 1rem 0 0.5rem;
+      }
+      .body {
+        color: #ffffff;
+        font-size: 0.9rem;
+        line-height: 1.4;
+  
+        a {
+          color: #39c4b4;
+          text-decoration: none;
+        }
+      }
+      .highlight {
+        color: #39c4b4;      /* Türkis */
+        text-decoration: none; /* Sicherstellen, dass keine Unterstreichung kommt */
+      }
+    }
+
+    .highlight {
+  color: #39c4b4;      /* Türkis */
+  text-decoration: none; /* Sicherstellen, dass keine Unterstreichung kommt */
+  cursor: default;       /* Zeig-Pfeil statt Link-Pointer */
+}
+  
+    .right {
+      flex: 1 1 300px;
+  
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+  
+        .input-group {
+            position: relative;
+
+            .checkbox-group + .error {
+                margin-bottom: 1rem;
+              }
+
+            label {
+            display: block;
+            font-size: 0.9rem;
+  
+            input,
+            textarea {
+              width: 100%;
+              background: transparent;
+              border: none;
+              border-bottom: 1px solid #39c4b4;
+              color: #fff;
+              padding: 0.5rem 0;
+              font-size: 1rem;
+              font-family: inherit;
+            }
+  
+            textarea {
+              resize: vertical;
+              min-height: 5rem;
+            }
+          }
+        }
+
+        .error {
+            margin-top: 0.25rem;
+            font-size: 0.8rem;
+            color: #e63946;  // kräftiges Rot
+            text-align: left;
+          }
+          
+
+  
+        .checkbox-group {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.5rem;
+          font-size: 0.8rem;
+
+          label {
+            cursor: pointer;
+            user-select: none;
+          }
+        
+          /* der tatsächliche Checkbox-Input steht typischerweise vor dem Label-Text: */
+          input[type='checkbox'] + label {
+            font-size: 0.9rem;
+            color: #fff;
+          }
+
+  
+          input[type='checkbox'] {
+            width: 1rem;
+            height: 1rem;
+            accent-color: #39c4b4;
+            cursor: pointer;
+            position: relative;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+             /* Bördel mit türkisem Rahmen, transparenter Hintergrund */
+            border: 1px solid #39c4b4;
+            background-color: transparent;
+            /* sanfter Übergang beim Hover / Check */
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+          }
+           
+            input[type='checkbox']:hover {
+                background-color: rgba(57, 196, 180, 0.5);
+            }
+
+            input[type='checkbox']:checked {
+                background-color: transparent;
+            }
+            input[type='checkbox']:checked::after {
+                content: '';
+                position: absolute;
+                // top: 2px;
+                left: 4px;
+                width: 5px;
+                height: 10px;
+                border: solid #39c4b4;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+            }
+
+  
+          a {
+            color: #39c4b4;
+            text-decoration: underline;
+          }
+        }
+
+        .feedback{
+          display: flex;
+          flex-direction: row;
+          gap: 24px;
+          justify-content: center;
+          align-items: center;
+          font-size: 18px;
+
+        }
+      }
+    }
+
+/* Spinner, das mittig im Button rotiert */
+.button-spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #39c4b4;   /* Türkis */
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin: 0 auto;              /* horizontal zentrieren */
+}
+
+/* Keyframes für die Rotation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+button.loading {
+  cursor: default;
+  pointer-events: none;
+}
+}
+  

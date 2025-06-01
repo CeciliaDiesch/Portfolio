@@ -1,19 +1,49 @@
-<c-carousel [interval]="0" [wrap]="true">
-  <c-carousel-indicators></c-carousel-indicators>
-  <c-carousel-inner>
-    <c-carousel-item
-      class="item"
-      *ngFor="let slide of slides; trackBy: trackByText"
-    >
-      <div class="reference-box">
-        <p class="reference-text">{{ slide.text }}</p>
-        <h5 class="reference-author">{{ slide.author }}</h5>
-        <small class="reference-role">{{ slide.role }}</small>
-      </div>
-    </c-carousel-item>
-  </c-carousel-inner>
+<!-- references.component.html -->
+<section id="reviews" class="review-section">
+  <h2 class="review-title">What my colleagues say about me</h2>
 
-  <!-- Controls bleiben, wir passen sie per CSS an -->
-  <c-carousel-control direction="prev" caption="Previous"></c-carousel-control>
-  <c-carousel-control direction="next" caption="Next"></c-carousel-control>
-</c-carousel>
+  <div class="carousel-container">
+    <div class="quote-icon-static">“</div>
+    <div class="viewport">
+      <ng-container *ngFor="let off of offsets; trackBy: trackByIndex">
+        <div
+          class="card"
+          [ngClass]="{
+            'off-prev': off === -2,
+            prev: off === -1,
+            active: off === 0,
+            next: off === 1,
+            'off-next': off === 2
+          }"
+        >
+          <p class="text">{{ references[getIndex(off)].text }}</p>
+
+          <div class="author">
+            <hr class="review-divider" />
+            <span class="name">{{ references[getIndex(off)].author }}</span>
+            <span class="role"
+              >&nbsp; – {{ references[getIndex(off)].role }}</span
+            >
+          </div>
+        </div>
+      </ng-container>
+    </div>
+
+    <!-- Controls & Dots -->
+    <div class="controls">
+      <button class="btn prev-btn" (click)="showPrev()">
+        <!-- <img src="../../../assets/icons/references/arrow_back_white.svg" /> -->
+      </button>
+      <ul class="dots">
+        <li
+          *ngFor="let r of references; let i = index"
+          [class.active]="i === activeIndex"
+          (click)="activeIndex = i; rotateOffsetsForDirectSelect(i)"
+        ></li>
+      </ul>
+      <button class="btn next-btn" (click)="showNext()">
+        <!-- <img src="../../../assets/icons/references/arrow_forward_white.svg" /> -->
+      </button>
+    </div>
+  </div>
+</section>

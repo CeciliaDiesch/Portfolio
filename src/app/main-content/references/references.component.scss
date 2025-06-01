@@ -1,192 +1,187 @@
-/* src/app/main-content/references.component.scss */
 
-/* 1) Grundstil für die Reference-Boxen */
-.reference-box {
-  background-color: #40e0d0;
-  color: #fff;
-  padding: 1rem;
-  border-radius: 0.5rem;
+.review-section {
+  background-color: rgb(28, 28, 28);
+  padding: 0px;
   text-align: center;
-  position: absolute;
-  top: 0;
-  height: 250px;
+}
 
-  /* Vollständige Höhe nutzen und Inhalt vertikal zentrieren */
-  // height: 100%;
+  .review-title {
+    font-family: 'Fira Code';
+    font-weight: 700;
+    font-size: 32px;
+    color: rgba(61, 207, 182, 1);
+    margin-bottom: 40px;
+  }
+
+/* das statische Icon, nur einmal im DOM */
+.quote-icon-static {
+  position: absolute;
+  top: -70px;
+  // linke Kante der active-Card liegt bei 50% - 15% (=35%) der Viewport-Breite
+  left: calc(50% - 28.5%);
+  font-family: 'Karla';
+  font-size: 220px;
+  color: #fff;
+  pointer-events: none; // Klicks passieren durch
+  z-index: 100;           // über den Cards
+}
+
+
+
+.carousel-container {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  margin-top: 42px;
+  margin-bottom: 42px;
 }
 
-// .item{
-//   top: 0 !important;         
-// }
-
-/* 2) Text-Styles */
-.reference-text {
-  margin-bottom: 0.75rem;
-  font-style: italic;
-  line-height: 1.4;
-}
-.reference-author {
-  margin-bottom: 0.25rem;
-  font-weight: bold;
-}
-.reference-role {
-  font-size: 0.85rem;
-  opacity: 0.8;
-}
-
-/* 3) Beschränke die Breite des Carousels */
-c-carousel {
-  max-width: 600px;
-  margin: auto;
-}
-
-/* 4) Controls unten positionieren und Icons ersetzen */
-:host ::ng-deep .carousel-control-prev,
-:host ::ng-deep .carousel-control-next {
-  top: auto !important;
-  bottom: 1rem !important;
-  width: auto;
-}
-:host ::ng-deep .carousel-control-prev-icon,
-:host ::ng-deep .carousel-control-next-icon {
-  background-image: none;
-}
-:host ::ng-deep .carousel-control-prev::before,
-:host ::ng-deep .carousel-control-next::before {
-  color: #fff;
-  font-size: 1.5rem;
-  line-height: 1;
-}
-:host ::ng-deep .carousel-control-prev::before {
-  content: '‹';
-}
-:host ::ng-deep .carousel-control-next::before {
-  content: '›';
-}
-
-/* 5) Bullets (Indicators) style */
-:host ::ng-deep .carousel-indicators {
-  margin-bottom: 1.5rem;
-}
-:host ::ng-deep .carousel-indicators li {
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  border-radius: 50%;
-}
-:host ::ng-deep .carousel-indicators .active {
-  background-color: #40e0d0;
-}
-
-/* 6) Fixhöhe und horizontale Animation */
-:host ::ng-deep .carousel-item {
-  
-  // height: 180px !important;           /* alle Slides gleich hoch */
-  top: 0 !important;                  /* nie vertikal verschieben */
-  transition-property: transform !important; /* nur horizontal animieren */
-}
-
-/* 7) Inner und Items zentrieren, verhindern jegliches vertikales Rutschen */
-:host ::ng-deep .carousel-inner {
-  
-  height: 250px;
-  display: flex !important;
-  // align-items: center !important;
-}
-:host ::ng-deep .carousel-item-next,
-:host ::ng-deep .carousel-item-prev,
-:host ::ng-deep .carousel-item-start,
-:host ::ng-deep .carousel-item-end {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  top: 0 !important;
-}
-
-
-  
-
-// :host {
-//     --card-width: 300px;
-//     --gap: 20px;
-//   }
-  
-//   .testimonials {
-//     text-align: center;
-//     h2 {
-//       font-size: 2rem;
-//       margin-bottom: 20px;
-//       color: #00ffc3;
-//     }
-//   }
-  
-//   .carousel {
-//     position: relative;
-//     display: inline-block;
-//   }
-  
-//   .viewport {
-//     position: relative;
-//     overflow: hidden;
-//     width: calc(var(--card-width) * 2);
-//   }
-  
-//   .quote {
-//     position: absolute;
-//     top: -0.5rem;
-//     left: calc(var(--card-width) / 2 - 3rem);
-//     font-size: 6rem;
-//     color: #fff;
-//     pointer-events: none;
-//     user-select: none;
-//   }
-  
-//   .track {
-//     display: flex;
-//     gap: var(--gap);
-//     will-change: transform;
-//   }
-  
-  .card {
-    flex: 0 0 var(--card-width);
-    padding: 20px;
-    border-radius: 10px;
-    position: relative;
-    color: #fff;
-    background: rgba(61, 207, 182, 1);
-    transition: background 0.3s ease, transform 0.3s ease;
+.viewport {
+  overflow-x: hidden;
+  overflow-y: visible;
+  width: 100%;
+  position: relative;
+  height: 275px;
+  gap: 24px;
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;   // top/right/bottom/left = 0
+    pointer-events: none;   // Klicks kommen zum Carousel durch
+    background-image: radial-gradient(
+     circle at center,
+      rgba(28, 28, 28, 0) 70%,
+      rgb(28, 28, 28)     100%
+    );
+    z-index: 2;  // hoch genug, um über den .review-item zu liegen
   }
-  
-//     &.center {
-//       background: rgba(61, 207, 182, 0.3);
-//       transform: scale(1.1);
-//       z-index: 1;
-//     }
-  
-//     footer {
-//       margin-top: 1rem;
-//       font-size: 0.9rem;
-//       opacity: 0.7;
-//       border-top: 1px solid #444;
-//       padding-top: 8px;
-//     }
-//   }
-  
-//   .arrow {
-//     position: absolute;
-//     top: 50%;
-//     transform: translateY(-50%);
-//     background: none;
-//     border: none;
-//     font-size: 2rem;
-//     color: #fff;
-//     cursor: pointer;
-//     user-select: none;
-//   }
-  
-//   .arrow.prev { left: -50px; }
-//   .arrow.next { right: -50px; }
-  
+}
+
+.card {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 274px;
+  padding: 40px;
+  background: rgba(61, 207, 182, 0.1);
+  border: 1px solid rgba(61,207,182,1);
+  border-radius: 32px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transform-origin: center center;
+  transition:background 1s ease,  opacity 1s, transform 1s ;
+  opacity: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Karla';
+}
+/* Positionen */
+.card.off-prev { transform: translateX(-250%) scale(0.8); }
+.card.prev     { transform: translateX(-150%) scale(0.9); opacity: 1; z-index: 1; }
+.card.active   { transform: translateX(-50%)  scale(1);   opacity: 1; z-index: 2; background: rgba(61, 207, 182, 0.3); }
+.card.next     { transform: translateX(50%)   scale(0.9); opacity: 1; z-index: 1; }
+.card.off-next { transform: translateX(150%)  scale(0.8); }
+
+
+.text {
+  font-weight: 400;
+  font-size: 18px;
+  text-align: left;
+  flex: 1;                
+  display: flex;
+  align-items: center;
+  margin: 0;   
+}
+
+.review-divider {
+  flex: 1;
+  border: none;
+  border-top: 1px solid rgba(255,255,255,1);
+  // margin: 0 0 12px;
+  margin-right: 16px;
+}
+
+.author {
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: auto;   
+  text-align: right;
+  .name { font-weight: 400; }
+  .role { opacity: 0.8; }
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 1rem;
+}
+
+.btn {
+  width: 40px !important;
+  height: 40px !important;
+  padding: 0 !important;
+  background: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 24px;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  transition: transform 0.4s ease, color 1s;
+}
+
+
+/* Prev-Button: Standard-Icon (white), Hover-Icon (colored) */
+.prev-btn {
+  background-image: url('../../../assets/icons/references/arrow_back_white.svg');
+
+  &:hover {
+    background-image: url('../../../assets/icons/references/arrow_back.svg');
+    transform: translateX(-4px);
+  }
+}
+
+/* Next-Button: Standard-Icon (white), Hover-Icon (colored) */
+.next-btn {
+  background-image: url('../../../assets/icons/references/arrow_forward_white.svg');
+
+  &:hover {
+    background-image: url('../../../assets/icons/references/arrow_forward.svg');
+    transform: translateX(4px);
+  }
+}
+
+/* Dots-Container */
+.dots {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding-bottom: 4px;
+  padding-left: 12px;
+  padding-top: 0;
+  padding-right: 12px;
+  margin: 0;
+}
+
+.dots li {
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* Aktiver Dot */
+.dots li.active {
+  background: #39c4b4;
+}
+

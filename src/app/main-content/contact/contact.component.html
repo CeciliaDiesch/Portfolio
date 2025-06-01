@@ -1,1 +1,132 @@
-<p>contact works!</p>
+<section class="contact-section">
+  <div class="left">
+    <p class="overline">Contact me</p>
+    <h1>Let’s work<br />together</h1>
+    <p class="lead">Got a problem to solve?</p>
+    <p class="body">
+      Feel free to reach out if you’re looking for someone who’s eager to learn,
+      works meticulously, and thrives in a team.<br />
+      I’m passionate about crafting clean, user-friendly interfaces and adding
+      real value to your projects.<br />
+      Need a Frontend developer? <span class="highlight">Let’s talk!</span>
+    </p>
+  </div>
+
+  <div class="right">
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" novalidate>
+      <!-- Name-Feld -->
+      <div class="input-group">
+        <label>
+          What’s your name?
+          <input
+            name="name"
+            type="text"
+            placeholder="Your name goes here"
+            [(ngModel)]="contactData.name"
+            #nameCtrl="ngModel"
+            required
+          />
+        </label>
+        <!-- Fehlermeldung, sobald touched oder formSubmitted -->
+        <p
+          class="error"
+          *ngIf="nameCtrl.invalid && (nameCtrl.touched || formSubmitted)"
+        >
+          Please enter your name.
+        </p>
+      </div>
+
+      <!-- E-Mail-Feld -->
+      <div class="input-group">
+        <label>
+          What’s your email?
+          <input
+            name="email"
+            type="text"
+            placeholder="youremail@email.com"
+            [(ngModel)]="contactData.email"
+            #emailCtrl="ngModel"
+            required
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+            email
+          />
+        </label>
+        <!-- Wenn required verletzt -->
+        <p
+          class="error"
+          *ngIf="emailCtrl.errors?.['required'] && (emailCtrl.touched || formSubmitted)"
+        >
+          Please enter your email.
+        </p>
+        <!-- Wenn ungültiges E-Mail-Format -->
+        <p
+          class="error"
+          *ngIf="emailCtrl.errors?.['pattern'] && (emailCtrl.touched || formSubmitted)"
+        >
+          Please enter a valid email address.
+        </p>
+      </div>
+
+      <!-- Nachrichten-Feld -->
+      <div class="input-group">
+        <label>
+          How can I help you?
+          <textarea
+            name="message"
+            placeholder="Hello Cecilia, I am interested in..."
+            [(ngModel)]="contactData.message"
+            #msgCtrl="ngModel"
+            required
+          ></textarea>
+        </label>
+        <p
+          class="error"
+          *ngIf="msgCtrl.invalid && (msgCtrl.touched || formSubmitted)"
+        >
+          Please write a message.
+        </p>
+      </div>
+
+      <div class="checkbox-group">
+        <div>
+          <input
+            type="checkbox"
+            id="privacy"
+            name="privacy"
+            [(ngModel)]="contactData.privacyChecked"
+            #privacyCtrl="ngModel"
+            required
+          />
+          <label for="privacy">
+            I’ve read the <a href="#">privacy policy</a> and agree to the
+            processing of my data as outlined.
+          </label>
+        </div>
+        <p
+          class="error"
+          *ngIf="privacyCtrl.invalid && (privacyCtrl.touched || formSubmitted)"
+        >
+          You must agree to the privacy policy.
+        </p>
+      </div>
+      <div class="feedback">
+        <button
+          type="submit"
+          [class.button-sliding-text]="contactForm.valid"
+          [class.disabled]="!contactForm.valid"
+          [class.loading]="isLoading"
+        >
+          <ng-container *ngIf="!isLoading; else loadingTpl">
+            <span class="slide-container">Say Hello :)</span>
+          </ng-container>
+          <ng-template #loadingTpl>
+            <div class="button-spinner"></div>
+          </ng-template>
+        </button>
+        <div *ngIf="!isLoading && mailSent" class="success-message">
+          <p>Vielen Dank! Deine Nachricht wurde erfolgreich versendet.</p>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
