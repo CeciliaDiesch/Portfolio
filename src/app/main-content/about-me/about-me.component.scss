@@ -1,25 +1,20 @@
 
 .about-section {
     background-color: rgb(28, 28, 28);
-    // height: 100vh;
     margin: 0;
     display: flex;
     justify-content: center;
     
     .about-content {
-        // margin: 145px 100px;
-        // height: 100vh;
       display: flex;
       justify-content: space-between;
       gap: 96px;
       width: 95%;
   
-      /* Linke Seite: Bild + Pattern */
       .about-image {
-        width: 100%;         /* skaliert mit dem Container */
-        max-width: 414px;     /* deine Basis-Breite */
+        width: 100%;
+        max-width: 414px;   
         aspect-ratio: 414 / 568;
-        margin-top: 13%;
         position: relative;
         align-self: flex-start;
         border-radius: 30px;
@@ -55,14 +50,10 @@
         }
       }
   
-      /* Rechte Seite: Textbox */
       .about-text {
-        padding-bottom: 13%;
-        margin-top: 243px;
-        // flex: 1;
+        margin-top: 98px;
         display: flex;
         flex-direction: column;
-        // justify-content: flex-end;
   
         .section-subtitle {
             text-align: left;

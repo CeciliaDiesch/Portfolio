@@ -2,11 +2,12 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm  }   from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule, HttpClientModule],
+  imports: [CommonModule, FormsModule, HttpClientModule, RouterModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
@@ -24,7 +25,7 @@ export class ContactComponent {
   
   // Flag, um anzuzeigen, dass der Nutzer einmal auf "Say Hello" geklickt hat
   formSubmitted = false;
-  mailSent = false;
+  mailSent = true;
   isLoading = false; 
 
   post = {

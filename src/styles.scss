@@ -26,7 +26,12 @@ html {
   scroll-behavior: smooth;
 }
 
-$dark_red: #9F0908;
+$turquoise: rgba(61, 207, 182, 1);
+
+.column{
+  display: flex;
+  flex-direction: column;
+}
 
 a {
   text-decoration: none;
@@ -106,11 +111,12 @@ font-family: "Fira Code", sans-serif;
   
   section {
     width: 100%;
-    padding: 0 100px;
+    padding: 145px 100px 0 100px;
     overflow-x: hidden;
   }
 
   button{
+    white-space: nowrap;
     font-family: 'Karla';
     font-weight: 400;
     font-size: 18px;
@@ -145,11 +151,8 @@ font-family: "Fira Code", sans-serif;
       .slide-container {
         display: inline-block;
         white-space: nowrap;
-        /* Anfangs: kein Transform, kein Animation */
         transform: translateX(0);
       }
-    
-      /* Nur beim Hover: Slide-Animation anhängen */
       &:hover .slide-container {
         animation: slideLeftOnly 4s linear infinite;
       }
@@ -163,20 +166,24 @@ font-family: "Fira Code", sans-serif;
           // ─── Responsive für Mobile ────────────────────────────────────
     @media (min-width: 1200px) and (max-width: 1400px) {
       section{
-        padding: 0 40px !important;
+        padding: 75px 60px 0 60px !important;
       }
-
   }
 
-  @media (max-width: 1200px) {
+  @media (min-width: 770px) and (max-width: 1200px) {
     section{
-      padding: 0 20px;
+      padding: 70px 50px 0 50px !important;
     }
-      }
+ }
       
-  @media (max-width: 768px) {
+  @media (min-width: 520px) and (max-width: 770px) {
+    section{
+      padding: 30px 20px 0 20px !important;
+    }
+  }
+
+  @media (max-width: 520px) {
     section{
       padding: 0 12px;
     }
-
   }

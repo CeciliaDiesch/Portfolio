@@ -4,45 +4,53 @@
     <h2>Frontend Developer</h2>
     <h1>Cecilia Diesch</h1>
     <div class="button-Div">
-      <button class="button-sliding-text">
-        <span class="slide-container">
-          <span class="button-Text">Check my work</span>
-        </span>
-      </button>
-      <button class="button-sliding-text">
-        <span class="slide-container">
-          <span class="button-Text">Contact me</span>
-        </span>
-      </button>
+      <a href="#projects">
+        <button class="button-sliding-text">
+          <span class="slide-container">
+            <span class="button-Text">Check my work</span>
+          </span>
+        </button></a
+      >
+      <a href="#contact">
+        <button class="button-sliding-text">
+          <span class="slide-container">
+            <span class="button-Text">Contact me</span>
+          </span>
+        </button></a
+      >
     </div>
 
     <div class="scroll-container">
-      <button class="scroll-btn" aria-label="Scroll down">
-        <!-- simple Down-Arrow SVG -->
-        <svg viewBox="0 0 24 24" class="scroll-arrow">
-          <path
-            d="M12 -12v35m0 0l-8-8m8 8l8-8"
-            stroke="currentColor"
-            stroke-width="2.3"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </button>
+      <a href="#about">
+        <button class="scroll-btn" aria-label="Scroll down">
+          <svg viewBox="0 0 24 24" class="scroll-arrow">
+            <path
+              d="M12 -12v35m0 0l-8-8m8 8l8-8"
+              stroke="currentColor"
+              stroke-width="2.3"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg></button
+      ></a>
       <div class="scroll-line"></div>
     </div>
     <div class="info-container">
-      <a>Ceciliadiesch &#64; yahoo.com</a>
+      <a href="#contact">Ceciliadiesch &#64; yahoo.com</a>
+
       <div class="icon-wrapper">
-        <img
-          [src]="
-            isGitHover ? 'assets/img/gitHubHover.svg' : 'assets/img/gitHub.svg'
-          "
-          (mouseenter)="isGitHover = true"
-          (mouseleave)="isGitHover = false"
-          alt="GitHub"
-        />
+        <a href="https://github.com/ceciliadiesch" target="_blank">
+          <img
+            [src]="
+              isGitHover
+                ? 'assets/img/gitHubHover.svg'
+                : 'assets/img/gitHub.svg'
+            "
+            (mouseenter)="isGitHover = true"
+            (mouseleave)="isGitHover = false"
+            alt="GitHub"
+        /></a>
       </div>
       <div class="info-line"></div>
     </div>

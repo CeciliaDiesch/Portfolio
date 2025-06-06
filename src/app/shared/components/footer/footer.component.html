@@ -1,1 +1,34 @@
-<a href="imprint">Legal notes</a>
+<section class="footer-section">
+  <div class="left">
+    <div class="logoDiv">
+      <img
+        [src]="isHover ? 'assets/logo/logoS.png' : 'assets/logo/logoTransS.png'"
+        (mouseenter)="isHover = true"
+        (mouseleave)="isHover = false"
+        alt="Logo"
+      />
+      <img
+        [src]="
+          isHover ? 'assets/logo/logoName.png' : 'assets/logo/logoNameTrans.png'
+        "
+        (mouseenter)="isHover = true"
+        (mouseleave)="isHover = false"
+        alt="Logo"
+      />
+    </div>
+    <div class="column">
+      <span>Web Developer</span>
+      <span>Dresden Germany</span>
+    </div>
+  </div>
+
+  <div class="middle">
+    <span class="copyright-symbol">&copy;</span>
+    <span>Cecilia Diesch 2025</span>
+  </div>
+  <div class="right">
+    <a href="https://github.com/ceciliadiesch" target="_blank">Github</a>
+    <a href="#contact">Email</a>
+    <a routerLink="/legal-notice">Legal Notice</a>
+  </div>
+</section>

@@ -43,7 +43,6 @@ section {
       flex: none;
       max-width: 880px;
       width: 100%;
-      padding-bottom: 13%;
   
 
   
@@ -75,11 +74,11 @@ section {
           gap: 8px; /* Abstand zwischen Name und Icon */
       
           .arrow-icon {
-            width: 26px;         /* passe bei Bedarf an */
-            height: 26px;
+            width: 30px;         /* passe bei Bedarf an */
+            height: 30px;
             opacity: 0;
             transition: opacity 0.2s;
-            padding-bottom: 4px;
+            padding-bottom: 2px;
           }
         }
       
@@ -160,32 +159,31 @@ section {
     }
   
     // ─── Responsive für Mobile ────────────────────────────────────
+    @media (min-width: 1700px) and (max-width: 2000px) {
+      .project-preview {
+          right: 10%;
+      }
+    }
+    
     @media (min-width: 1200px) and (max-width: 1400px) {
         padding: 0 40px;
       .project-list {
         width: 70%;
       }
     }
-
-    @media (max-width: 1200px) {
+    @media (min-width: 900px) and (max-width: 1200px) {
         padding: 0 20px;
-        // .projects-container {
-        //     .project-preview {
-        //       display: none;
-        //     }
-        //   }
         .project-row{
             width: 70%;
         }
-
-        //   .projects-content {
-        //     .project-list {
-        //       width: 60%;
-        //     }
-        //   }
+        // .projects-container {
+        //   width: 70%;
+        //   gap: 20px;
+    
+        // }
         }
 
-        @media (max-width: 900px) {
+        @media (min-width: 770px) and (max-width: 900px) {
             padding: 0 20px;
             .projects-container {
                 .project-preview {
@@ -200,7 +198,7 @@ section {
               }
             }
         
-    @media (max-width: 768px) {
+    @media (max-width: 770px) {
       padding: 0 12px;
   
       .projects-container {
@@ -240,8 +238,3 @@ section {
     }
   }
   
-  @media (min-width: 1700px) and (max-width: 2000px) {
-    .project-preview {
-        right: 10%;
-    }
-  }
