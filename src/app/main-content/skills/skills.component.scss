@@ -58,8 +58,9 @@
           font-size: 16px;
           font-weight: 400;
           color: white;
-          line-height: 1.5;
+          line-height: 120%;
           margin: 0;
+          text-align: justify;
         }
   
         p.skill-cta {
@@ -67,7 +68,7 @@
           font-size: 24px;
           font-weight: 700;
           margin: 0;
-          display: flex;
+          // display: flex;
           align-items: baseline;
           gap: 8px;
   
@@ -85,7 +86,7 @@
           font-weight: 400;
           color: white;
           margin: 0;
-          line-height: 1.5;
+          line-height: 120%;
         }
   
         /* nutzt Deine bestehende Button-Klasse */
@@ -98,12 +99,13 @@
   
     /* ─── Rechte Seite: Icons ─────────────────────────────── */
     .tech-icons {
-        margin-top: 48px;
-      flex: 1;
-      display: flex;
+      margin-top: 48px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
       flex-wrap: wrap;
       gap: 72px;
-      justify-content: flex-start;
+      justify-items: center; 
+      align-items: center; 
   
       .tech-icon {
         display: flex;
@@ -116,6 +118,7 @@
         img {
           width: 64px;
           height: 64px;
+          object-fit: contain;
         }
   
         span {
@@ -123,6 +126,7 @@
           font-size: 18px;
           font-weight: 400;
           color: white;
+          white-space: nowrap;
         }
   
         &:hover {
@@ -133,7 +137,6 @@
   
     /* ─── Responsive: Mobile unter 768px ─────────────────── */
     @media (max-width: 768px) {
-      padding: 0 16px;
   
       .technologies-content {
         flex-direction: column;
@@ -151,6 +154,43 @@
         height: auto;         /* passt sich an Inhalt an */
         gap: 24px;
       }
+
+      .tech-icons {
+        gap: 16px;
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+
+  @media (max-width: 1000px) and (orientation: portrait) and (pointer: coarse) and (hover: none){
+    h2{
+      font-size: 46px !important;
+    }
+
+    p.skill-cta{
+      font-size: 18px !important;
+    }
+
+    button{
+      width: 122px;
+      height: 48px;
+      padding: 10px 16px 16px 16px !important;
+    }
+  }
+
+  @media (max-width: 1000px) and (orientation: landscape) and (pointer: coarse) and (hover: none){
+    h2{
+      font-size: 46px !important;
+    }
+
+    p.skill-cta{
+      font-size: 18px !important;
+    }
+
+    button{
+      width: 122px;
+      height: 48px;
+      padding: 10px 16px 16px 16px !important;
     }
   }
   

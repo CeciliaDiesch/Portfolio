@@ -35,7 +35,8 @@ section {
         font-weight: 400;
         color: white;
         margin: 0 0 40px;
-        line-height: 1.5;
+        line-height: 120%;
+        text-align: justify;
       }
   
     // ─── Linke Seite ───────────────────────────────────────────────
@@ -166,25 +167,17 @@ section {
     }
     
     @media (min-width: 1200px) and (max-width: 1400px) {
-        padding: 0 40px;
       .project-list {
         width: 70%;
       }
     }
     @media (min-width: 900px) and (max-width: 1200px) {
-        padding: 0 20px;
         .project-row{
             width: 70%;
         }
-        // .projects-container {
-        //   width: 70%;
-        //   gap: 20px;
-    
-        // }
         }
 
         @media (min-width: 770px) and (max-width: 900px) {
-            padding: 0 20px;
             .projects-container {
                 .project-preview {
                   display: none;
@@ -199,7 +192,6 @@ section {
             }
         
     @media (max-width: 770px) {
-      padding: 0 12px;
   
       .projects-container {
         flex-direction: column-reverse;
@@ -226,7 +218,7 @@ section {
         }
   
         .project-row {
-          padding: 24px 16px;
+          padding: 24px 0px;
   
         //   &:hover.project-name .arrow-icon {
         //     width: 12px;       
@@ -234,7 +226,52 @@ section {
         //   }
         }
       }
+    }
+  }
 
+  
+  @media (max-width: 1000px) and (orientation: landscape) and (pointer: coarse) and (hover: none){
+    h2{
+      font-size: 46px !important;
+      line-height: 100% !important;
+    }
+
+    .projects-desc{
+      font-size: 16px !important;
+    }
+
+    .project-row{
+      flex-direction: column !important;
+      justify-content: flex-start !important;
+      align-items: flex-start !important;
+    }
+
+    .project-tech{
+      display: flex;
+      gap: 0;
+    }
+  }
+
+  @media (max-width: 1000px) and (orientation: portrait) and (pointer: coarse) and (hover: none){
+    h2{
+      font-size: 46px !important;
+      line-height: 100% !important;
+    }
+
+    .projects-desc{
+      font-size: 16px !important;
+    }
+
+    .project-row{
+      flex-direction: column !important;
+      justify-content: flex-start !important;
+      align-items: flex-start !important;
+    }
+
+    .project-tech{
+      margin-top: 8px;
+      display: flex;
+      gap: 0;
     }
   }
   

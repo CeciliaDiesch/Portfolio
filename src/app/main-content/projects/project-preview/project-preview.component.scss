@@ -27,6 +27,9 @@
       border-color: rgba(61, 207, 182, 1);
       overflow: hidden;
       box-shadow: 0 0 40px rgba(0,0,0,0.8);
+      >img{
+        display:none !important ;
+      }
   
       /* Linke Spalte */
       .modal-text {
@@ -166,6 +169,14 @@
           object-fit: cover;
           border-radius: 16px;
         }
+
+        .desktopPreview{
+          display: flex !important;
+        }
+
+        .mobilePreview{
+          display: none !important;
+        }
   
         .preview-next {
           // position: absolute;
@@ -189,4 +200,31 @@
   body.modal-open {
     overflow: hidden;
   }
-  
+  // and (orientation: portrait)
+  @media (max-width: 1000px) and (pointer: coarse) and (hover: none){
+    .modal-content {
+      flex-direction: column !important;
+      aspect-ratio: auto !important;
+      >img{
+        display:flex ;
+      }
+    }
+
+    .modal-text{
+      max-width: 95% !important;
+      padding: 0 4px 0 4px !important;
+      flex: none !important;
+    }
+
+    .project-modal{
+      align-items: auto;
+    }
+
+    .desktopPreview{
+      display: none !important;
+    }
+
+    .mobilePreview{
+      display: flex !important;
+    }
+  }

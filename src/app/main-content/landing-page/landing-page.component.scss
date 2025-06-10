@@ -84,6 +84,7 @@ section{
     background-color: rgba(61, 207, 182, 1);
   }
 
+
   .info-container{
     position: absolute;
     bottom: 0px;
@@ -112,6 +113,14 @@ section{
         }
     }
 
+    .emailDesktop{
+      display: flex;
+    }
+
+    .emailMobile{
+      display: none;
+    }
+
     .icon-wrapper {
         margin-top: 96px;
         width: 26px;
@@ -129,6 +138,10 @@ section{
         background-color: white;
         margin-left: 6px;
       }
+}
+
+.mobileGitImg{
+  display: none;
 }
 
 .ticker-bar {
@@ -175,7 +188,143 @@ section{
     border-radius: 50%;
     background-color: rgba(61, 207, 182, 1);
   }
-  
+  // and (orientation: landscape)
+  @media (max-width: 1200px) and (pointer: coarse) and (hover: none){
+    h1{
+      font-size: 48px; 
+    }
+
+    h2{
+      font-size: 20px;
+    }
+
+    .content{
+      padding-top: 50px;
+    }
+
+    .button-Div{
+      margin-top: 20px;
+      gap: 32px;
+      font-size: 12px;
+    }
+
+    button{
+      font-size: 12px;
+      width: 120px;
+      height: 36px;
+      padding-top: 6px;
+      padding-right: 12px;
+      padding-bottom: 6px;
+      padding-left: 12px;
+    }
+
+    button:hover{
+      border-color: white;
+      color: white;
+    }
+
+    .button-sliding-text:hover .slide-container{
+      animation: none !important;
+    }
+
+    .scroll-btn{
+      width: 30px;
+      height: 48px;
+      font-size: 12px !important;
+    }
+
+    .scroll-line{
+      margin-top: 12px;
+      height: 164px;
+    }
+
+    .scroll-arrow{
+      width: 11px;
+      height: 13px;
+      animation: arrowMove2 1.5s ease-in-out infinite;
+    }
+
+    @keyframes arrowMove2 {
+      0%   { transform: translateY(0); }
+      50%  { transform: translateY(5px); }
+      100% { transform: translateY(0); }
+    }
+
+    .info-container{
+      width: 18px;
+      gap: 4px;
+      // >a{
+      //   display: none;
+      //   // font-size: 12px;
+      // }
+      .icon-wrapper{
+        margin-top: 0;
+        // width: 13px;
+        // height: 13px;
+        >a img{
+          width: 26px;
+          height: 26px;
+          // padding-top: 8px;
+          // padding-right: 4px;
+        }
+      }
+
+      .emailIcon{
+        transform: rotate(90deg);
+        height: 26px;
+        width: 26px;
+      }
+
+      .emailDesktop{
+        display: none;
+      }
+
+      .emailMobile{
+        display: flex;
+      }
+
+      a:hover{
+        color: white;
+      }
+
+      .info-line{
+        height: 100px;
+        margin-left: 0;
+      }
+
+      .desktopGitImg{
+        display: none;
+      }
+      .mobileGitImg{
+        display: flex;
+      }
+    }
+
+    .ticker-bar{
+      bottom: 25px;
+      left: -60px;
+      height: 31px;
+    }
+    .ticker-group{
+      margin-left: 28px;
+      gap: 28px;
+    }
+    .dot{
+      height: 5px;
+      width: 5px;
+    }
+    .ticker-item{
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 800px) and (orientation: landscape) and (pointer: coarse) and (hover: none){
+
+  }
+
+  @media (max-height: 1000px) and (orientation: portrait) and (pointer: coarse) and (hover: none){
+
+  }
   
 
 

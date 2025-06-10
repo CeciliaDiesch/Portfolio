@@ -37,11 +37,15 @@
       <div class="scroll-line"></div>
     </div>
     <div class="info-container">
-      <a href="#contact">Ceciliadiesch &#64; yahoo.com</a>
+      <a class="emailDesktop" href="#contact">Ceciliadiesch &#64; yahoo.com</a>
+      <a class="emailMobile" href="#contact"
+        ><img class="emailIcon" [src]="'assets/icons/email.svg'"
+      /></a>
 
       <div class="icon-wrapper">
         <a href="https://github.com/ceciliadiesch" target="_blank">
           <img
+            class="desktopGitImg"
             [src]="
               isGitHover
                 ? 'assets/img/gitHubHover.svg'
@@ -50,7 +54,13 @@
             (mouseenter)="isGitHover = true"
             (mouseleave)="isGitHover = false"
             alt="GitHub"
-        /></a>
+          />
+          <img
+            class="mobileGitImg"
+            [src]="'assets/img/gitHub.svg'"
+            alt="GitHub"
+          />
+        </a>
       </div>
       <div class="info-line"></div>
     </div>
@@ -68,7 +78,7 @@
           <span class="ticker-item">Open to work</span>
           <span class="dot"></span>
         </div>
-        <!-- gleiche Gruppe noch einmal -->
+
         <div class="ticker-group">
           <span class="ticker-item">Available for remote work</span>
           <span class="dot"></span>

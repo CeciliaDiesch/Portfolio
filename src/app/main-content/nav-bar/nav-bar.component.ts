@@ -11,4 +11,9 @@ export class NavBarComponent {
   isHover = false;
   isGerHover = false;
   isEngHover = false;
+  isMenuOpen = false;
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 }

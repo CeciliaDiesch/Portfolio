@@ -1,0 +1,27 @@
+.static-layout {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  
+    main {
+      flex: 1;
+      overflow: hidden; // kein Scrollen
+    }
+  
+    app-footer {
+      flex-shrink: 0;
+    }
+  }
+  
+  .scroll-layout {
+    min-height: 100vh;
+  
+    main {
+      overflow: auto;
+    }
+  
+    app-footer {
+      margin-top: 48px; // Abstand oder einfach normaler Flow
+    }
+  }
+  

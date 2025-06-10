@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { Router } from '@angular/router';
 import { FooterComponent } from './shared/components/footer/footer.component';
 
 @Component({
@@ -12,4 +13,9 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 })
 export class AppComponent {
   title = 'portfolio';
+  constructor(public router: Router) {}
+
+  isStaticPage(): boolean {
+    return this.router.url === '/legal-notice' || this.router.url === '/privacy-policy';
+  }
 }

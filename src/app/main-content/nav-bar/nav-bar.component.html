@@ -1,35 +1,56 @@
-<nav>
-  <div>
-    <img
-      [src]="isEngHover ? 'assets/img/eng.svg' : 'assets/img/engHover.svg'"
-      (mouseenter)="isEngHover = true"
-      (mouseleave)="isEngHover = false"
-      alt="Logo"
-    />
-    <!-- <img
+<nav class="navbar">
+  <div class="nav__links" [class.open]="isMenuOpen">
+    <div role="menuitem">
+      <img
+        [src]="isEngHover ? 'assets/img/eng.svg' : 'assets/img/engHover.svg'"
+        (mouseenter)="isEngHover = true"
+        (mouseleave)="isEngHover = false"
+        alt="Logo"
+      />
+      <!-- <img
       [src]="isGerHover ? 'assets/img/ger.png' : 'assets/img/gerHover.png'"
       (mouseenter)="isGerHover = true"
       (mouseleave)="isGerHover = false"
       alt="Logo"
     /> -->
-    <a href="#about">About me</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
+    </div>
+    <div role="menuitem">
+      <a href="#about">About me</a>
+    </div>
+    <div role="menuitem">
+      <a href="#skills">Skills</a>
+    </div>
+    <div role="menuitem">
+      <a href="#projects">Projects</a>
+    </div>
   </div>
   <div class="logoDiv">
     <img
-      [src]="isHover ? 'assets/logo/logoS.png' : 'assets/logo/logoTransS.png'"
+      class="initials"
+      [src]="!isHover ? 'assets/logo/logoS.png' : 'assets/logo/logoTransS.png'"
       (mouseenter)="isHover = true"
       (mouseleave)="isHover = false"
       alt="Logo"
     />
     <img
+      class="name"
       [src]="
-        isHover ? 'assets/logo/logoName.png' : 'assets/logo/logoNameTrans.png'
+        !isHover ? 'assets/logo/logoName.png' : 'assets/logo/logoNameTrans.png'
       "
       (mouseenter)="isHover = true"
       (mouseleave)="isHover = false"
       alt="Logo"
     />
   </div>
+  <!-- Hamburger-Button -->
+  <button
+    class="burger"
+    aria-label="Menü öffnen"
+    [attr.aria-expanded]="isMenuOpen"
+    (click)="toggleMenu()"
+  >
+    <span class="burger__line"></span>
+    <span class="burger__line"></span>
+    <span class="burger__line"></span>
+  </button>
 </nav>

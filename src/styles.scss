@@ -115,6 +115,7 @@ font-family: "Fira Code", sans-serif;
     overflow-x: hidden;
   }
 
+
   button{
     white-space: nowrap;
     font-family: 'Karla';
@@ -145,6 +146,7 @@ font-family: "Fira Code", sans-serif;
         }
       }
   }
+
 
   .button-sliding-text{
     overflow: hidden;             /* Wörter, die aus der Box laufen, werden ausgeblendet */
@@ -178,12 +180,12 @@ font-family: "Fira Code", sans-serif;
       
   @media (min-width: 520px) and (max-width: 770px) {
     section{
-      padding: 30px 20px 0 20px !important;
+      padding: 60px 20px 0 20px !important;
     }
   }
 
   @media (max-width: 520px) {
     section{
-      padding: 0 12px;
+      padding: 60px 20px 0 20px !important;
     }
   }

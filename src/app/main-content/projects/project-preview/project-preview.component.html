@@ -2,6 +2,7 @@
   <div class="modal-backdrop" (click)="close()"></div>
   <div class="modal-content">
     <!-- linke Spalte -->
+    <img class="mobilePreview" [src]="project.image" alt="Preview" />
     <div class="modal-text">
       <p class="modal-index">{{ project.index | number : "2.0" }}</p>
       <h1 class="modal-name">{{ project.name }}</h1>
@@ -30,7 +31,11 @@
       <button class="modal-close" (click)="close()">
         <img src="assets/icons/close_small.svg" />
       </button>
-      <img class="preview-img" [src]="project.image" alt="Preview" />
+      <img
+        class="preview-img desktopPreview"
+        [src]="project.image"
+        alt="Preview"
+      />
       <button class="preview-next" (click)="next()">Next project →</button>
     </div>
   </div>
