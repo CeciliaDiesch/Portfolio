@@ -2,6 +2,9 @@
   <div class="modal-backdrop" (click)="close()"></div>
   <div class="modal-content">
     <!-- linke Spalte -->
+    <button class="modal-close-mobile" (click)="close()">
+      <span class="cross-icon"></span>
+    </button>
     <img class="mobilePreview" [src]="project.image" alt="Preview" />
     <div class="modal-text">
       <p class="modal-index">{{ project.index | number : "2.0" }}</p>
@@ -29,14 +32,20 @@
     <!-- rechte Spalte -->
     <div class="modal-preview">
       <button class="modal-close" (click)="close()">
-        <img src="assets/icons/close_small.svg" />
+        <span class="cross-icon"></span>
       </button>
       <img
         class="preview-img desktopPreview"
         [src]="project.image"
         alt="Preview"
       />
-      <button class="preview-next" (click)="next()">Next project →</button>
+      <button class="preview-next" (click)="next()">
+        Next project
+        <img
+          class="arrowForward"
+          src="assets/icons/arrow_forward_turquoise.svg"
+        />
+      </button>
     </div>
   </div>
 </div>
