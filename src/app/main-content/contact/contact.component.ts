@@ -25,7 +25,7 @@ export class ContactComponent {
   
   // Flag, um anzuzeigen, dass der Nutzer einmal auf "Say Hello" geklickt hat
   formSubmitted = false;
-  mailSent = true;
+  mailSent = false;
   isLoading = false; 
 
   post = {

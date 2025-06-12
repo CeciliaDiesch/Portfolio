@@ -1,0 +1,339 @@
+@media (max-width: 1300px) and (min-height: 1500px){
+  .project-modal .modal-content {
+    padding: 40px;
+    width: 95vw;
+    max-height: calc(100vh - 40px);
+    aspect-ratio: auto;
+    align-items: center;
+
+    .modal-text {
+        flex: 1;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        min-height: 0;
+        max-width: 100%;
+
+        .modal-index { font-size: 48px; line-height: 100%; }
+        .modal-name { font-size: 36px; line-height: 100%; }
+        .modal-subtitle { font-size: 20px; margin-top: 14px; }
+        .modal-description { font-size: 14px; margin-top: 10px; }
+        .modal-tech { margin-top: 14px; gap: 8px; img { height: 16px; width: 16px; } span { font-size: 14px; } }
+        .modal-actions { margin-top: 14px; gap: 16px; button { width: 90px; height: 28px; font-size: 12px; } }
+    }
+    .modal-preview {
+      flex: 0 0 auto;
+      justify-content: space-between;
+      width: 80%;
+      >.preview-img{
+        width: 80%;
+      }
+      >button.preview-next {
+          font-size: 16px;
+      }
+    }
+  }
+}
+
+
+/* ===================================================================== */
+/* 1. TABLET - LANDSCAPE (Querformat) */
+/* Bsp: iPad Air/Pro (1180x820, 1366x1024), Surface Pro (1368x912), Asus Zenbook Fold (1280x853) */
+/* Breite: 768px (iPad Mini L) bis 1400px. */
+/* Hier passt oft noch ein 2-Spalten-Layout, aber mit reduzierten Abständen. */
+@media (min-width: 768px) and (max-width: 1300px) and (orientation: landscape) and (pointer: coarse) and (hover: none) {
+  .project-modal .modal-content {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    width: 95vw;
+    height: 90%;
+    max-height: calc(100vh - 40px);
+    aspect-ratio: auto;
+    
+    .mobilePreview { display: none; }
+    .modal-close-mobile { display: none; }
+    .modal-preview .desktopPreview { display: flex; }
+    .modal-preview .modal-close { display: inline-block; align-self: end;}
+
+    .modal-text {
+        flex: 0 0 50%;
+        max-width: 50%;
+        .modal-index { font-size: 80px; line-height: 100px; }
+        .modal-name { font-size: 48px; line-height: 100%; }
+        .modal-subtitle { font-size: 20px; margin-top: 30px; }
+        .modal-description { font-size: 14px; margin-top: 15px; }
+        .modal-tech { margin-top: 24px; gap: 16px; }
+        .modal-actions { margin-top: 30px; gap: 16px; }
+    }
+    .modal-preview {
+      flex: 0 0 45%;
+      max-width: 55%;
+      align-items: center;
+      justify-content: space-around;
+      max-height: unset;
+      
+      >button.preview-next {
+          font-size: 16px;
+          align-self: end;
+      }
+    }
+  }
+}
+
+// Ipad Air portrait
+@media (min-width: 1050px) and (max-width: 1200px) and (orientation: portrait) and (pointer: coarse) and (hover: none) {
+
+  .project-modal .modal-content {
+    gap: 20px;
+    padding: 20px;
+
+    .modal-text {
+      .modal-index { font-size: 72px; line-height: 100px; }
+      .modal-name { font-size: 56px; line-height: 100%; }
+      .modal-subtitle { font-size: 20px; margin-top: 24px; }
+      .modal-description { font-size: 16px; margin-top: 16px; }
+      .modal-tech { margin-top: 16px; gap: 14px; }
+      .modal-actions { margin-top: 32px; gap: 12px; }
+    }
+    .modal-preview {
+      max-width: 50%;
+      
+      >button.preview-next {
+          font-size: 16px;
+      }
+    }
+  }
+}
+
+/* ===================================================================== */
+/* 2. TABLET - PORTRAIT (Hochformat) */
+/* Bsp: iPad Mini (768x1024), iPad Air (820x1180), iPad Pro (1024x1366), Surface Pro (912x1368) */
+/* Breite: 768px bis 1024px. Hier ist ein Spalten-Layout meist besser. */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (pointer: coarse) and (hover: none) {
+  .project-modal .modal-content {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    width: 95vw;
+    height: 90%;
+    max-height: calc(100vh - 40px);
+    aspect-ratio: auto;
+
+    .mobilePreview {
+      display: flex;
+      width: 98%;
+      height: auto;
+      max-height: 35vh;
+      object-fit: contain;
+      flex-shrink: 0;
+      margin-top: 48px;
+    }
+    .modal-close-mobile {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+    }
+    .modal-preview .desktopPreview { display: none; }
+    .modal-preview .modal-close { display: none; }
+    .modal-text {
+      flex: auto;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      min-height: 0;
+      max-width: 100%;
+
+      .modal-index { font-size: 64px; line-height: 100%; }
+      .modal-name { font-size: 40px; line-height: 100%; }
+      .modal-subtitle { font-size: 18px; margin-top: 24px; }
+      .modal-description { font-size: 14px; margin-top: 12px; }
+      .modal-tech { margin-top: 16px; gap: 12px; }
+      .modal-actions {align-self: center; margin-top: 24px; gap: 16px; }
+    }
+    .modal-preview {
+      flex: 0 0 auto;
+      max-height: unset;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+    }
+  }
+}
+
+// Surface Pro 7 portrait
+@media (min-width: 900px) and (max-width: 1024px) and (min-height: 1300px) and (orientation: portrait) and (pointer: coarse) and (hover: none) {
+  .project-modal .modal-content {
+    gap: 40px;
+    padding: 40px;
+
+    .mobilePreview {
+      margin-top: 64px;
+    }
+    .modal-close-mobile {
+      display: block;
+      position: absolute;
+      top: 24px;
+      right: 32px;
+    }
+
+    .modal-text {
+      .modal-index { font-size: 80px; line-height: 120%; }
+      .modal-name { font-size: 56px; line-height: 100%; }
+      .modal-subtitle { font-size: 24px; margin-top: 32px; }
+      .modal-description { font-size: 20px; margin-top: 16px; }
+      .modal-tech { margin-top: 20px; gap: 16px; }
+      .modal-actions {align-self: center; margin-top: 32px; gap: 24px; }
+    }
+    .modal-preview {
+      gap: 16px;
+    }
+  }
+}
+
+// Surface Duo landscape- wird nicht als landscape erkannt
+@media (max-width: 720px){
+  .project-modal .modal-content {
+    gap: 8px;
+    padding: 40px;
+    width: 95vw;
+    max-height: calc(100vh - 40px);
+    aspect-ratio: auto;
+    align-items: center;
+
+    .modal-text {
+      flex: 1;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      min-height: 0;
+      max-width: 100%;
+
+      .modal-index { font-size: 48px; line-height: 100%; }
+      .modal-name { font-size: 36px; line-height: 100%; }
+      .modal-subtitle { font-size: 20px; margin-top: 14px; }
+      .modal-description { font-size: 14px; margin-top: 10px; }
+      .modal-tech { margin-top: 14px; gap: 8px; img { height: 16px; width: 16px; } span { font-size: 14px; } }
+      .modal-actions { margin-top: 14px; gap: 16px; button { width: 90px; height: 28px; font-size: 12px; } }
+    }
+    .modal-preview {
+      flex: 0 0 auto;
+      justify-content: space-between;
+      width: 80%;
+      >.preview-img{
+        width: 80%;
+      }
+      >button.preview-next {
+          font-size: 16px;
+      }
+    }
+  }
+}
+
+/* ===================================================================== */
+/* 3. PHONE - LANDSCAPE (Querformat) */
+/* Bsp: Alle Telefone im Querformat (z.B. iPhone 14 Pro Max 932x430, iPhone SE 667x375) */
+/* Breite: bis 932px, aber SEHR GERINGE HÖHE (meist < 500px). */
+/* Hier ist der Platz extrem begrenzt, oft noch vertikales Layout nötig. */
+@media (max-width: 932px) and (orientation: landscape) and (max-height: 500px) and (pointer: coarse) and (hover: none) {
+  .project-modal .modal-content {
+    gap: 8px;
+    padding: 20px;
+    width: 95vw;
+    height: 90%;
+    max-height: calc(100vh - 40px);
+    aspect-ratio: auto;
+
+    .modal-text {
+      flex: 1;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      min-height: 0;
+      max-width: 100%;
+
+      .modal-index { font-size: 36px; line-height: 100%; }
+      .modal-name { font-size: 28px; line-height: 100%; }
+      .modal-subtitle { font-size: 14px; margin-top: 10px; }
+      .modal-description { font-size: 10px; margin-top: 6px; }
+      .modal-tech { margin-top: 10px; gap: 6px; img { height: 14px; width: 14px; } span { font-size: 10px; } }
+      .modal-actions { margin-top: 10px; gap: 8px; button { width: 90px; height: 28px; font-size: 10px; } }
+    }
+    .modal-preview {
+      flex: 0 0 auto;
+      gap: 6px;
+      width: 70%;
+      >.preview-img{
+        width: 70%;
+      }
+      >button.preview-next {
+          font-size: 10px;
+      }
+    }
+  }
+}
+
+
+/* ===================================================================== */
+/* 4. PHONE - PORTRAIT (Hochformat) */
+/* Bsp: iPhone SE (375x667), iPhone XR (414x896), Galaxy S8+ (360x740) */
+/* Breite: bis 767px (alle Telefone im Portrait). Dies ist die kleinste Ansicht. */
+@media (max-width: 767px) and (orientation: portrait) and (pointer: coarse) and (hover: none) {
+  .project-modal .modal-content {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 8px;
+    width: 95vw;
+    height: auto;
+    max-height: calc(100vh - 40px);
+    aspect-ratio: auto;
+
+    .mobilePreview {
+        display: flex;
+        width: 98%;
+        height: auto;
+        max-height: 30vh;
+        // object-fit: contain;
+        flex-shrink: 0;
+        border-radius: 18px;
+    }
+    .modal-close-mobile {
+        display: block;
+        position: absolute;
+        top: 8px;
+        right: 12px;
+    }
+    .modal-preview .desktopPreview { display: none; }
+    .modal-preview .modal-close { display: none; }
+    .modal-text {
+      flex: 1;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      min-height: 0;
+      max-width: 100%;
+
+      .modal-index { font-size: 48px; line-height: 100%; letter-spacing: -0.02em; }
+      .modal-name { font-size: 32px; line-height: 100%; }
+      .modal-subtitle { font-size: 16px; margin-top: 16px; }
+      .modal-description { font-size: 12px; margin-top: 8px; }
+      .modal-tech { margin-top: 12px; gap: 8px; img { height: 16px; width: 16px; } span { font-size: 11px; } }
+      .modal-actions {align-self: center; margin-top: 16px; gap: 12px; button { width: 100px; height: 32px; font-size: 12px; } }
+    }
+    .modal-preview {
+      flex: 0 0 auto;
+      max-height: unset;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      align-self: flex-end;
+      >button.preview-next {
+          font-size: 12px;
+      }
+    }
+  }
+}

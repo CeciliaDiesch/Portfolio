@@ -167,8 +167,8 @@ font-family: "Fira Code", sans-serif;
 /* Verhindere Scrollen der Seite, wenn Modal offen ist */
 html.modal-open, body.modal-open {
   overflow: hidden !important;
-  height: 100vh !important;
-  width: 100vw !important;
+  height: 95vh !important;
+  width: 95vw !important;
 }
 
 
@@ -180,7 +180,9 @@ html.modal-open, body.modal-open {
 
 @media (min-width: 770px) and (max-width: 1200px) {
   section{
+    transform: translateX(-1vw);    //vllt wieder raus
     padding: 70px 50px 0 50px !important;
+    max-width: 95vw;
   }
 }
     

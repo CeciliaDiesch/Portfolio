@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, SimpleChanges } from '@angular/core';
 import {Project} from '../project.model'
 
 @Component({
@@ -16,5 +16,11 @@ export class ProjectPreviewComponent {
     /** Events werden per Output() oder Callback-Funktionen an den Parent zurückgemeldet */
     @Input() close!: () => void;
     @Input() next!: () => void;
+
+    ngOnChanges(changes: SimpleChanges) {
+      if (changes['isOpen']) {
+        document.body.style.overflow = this.isOpen ? 'hidden' : '';
+      }
+    }
 
 }

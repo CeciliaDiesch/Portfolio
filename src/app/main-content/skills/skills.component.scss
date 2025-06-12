@@ -1,163 +1,207 @@
 .skill-section {
   position: relative;
-    background-color: rgb(28, 28, 28);
-    background-image:  radial-gradient(
-      ellipse at center,
-      rgba(28, 28, 28, 0) 70%,
-      rgb(28, 28, 28)     100%
-    ),
-    url('./../../../assets/img/skillSetBackground.png');
-    background-size: cover, cover;
-    background-repeat: no-repeat;
-    background-position: center, center;
+  background-color: rgb(28, 28, 28);
+  background-image:  radial-gradient(
+    ellipse at center,
+    rgba(28, 28, 28, 0) 70%,
+    rgb(28, 28, 28)     100%
+  ),
+  url('./../../../assets/img/skillSetBackground.png');
+  background-size: cover, cover;
+  background-repeat: no-repeat;
+  background-position: center, center;
 
-    
-    
-    .technologies-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 40px;
-    }
+  .technologies-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+  }
   
-    /* ─── Linke Box ────────────────────────────────────────── */
-    .tech-text-box {
-      flex: none;
-      width: 100%;
-      max-width: 500px;
-      
-      .tech-section-title {
+  /* ─── Linke Box ────────────────────────────────────────── */
+  .tech-text-box {
+    flex: none;
+    width: 100%;
+    max-width: 500px;
+    
+    .tech-section-title {
+      font-family: 'Karla', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: rgba(61, 207, 182, 1);
+      margin-bottom: 20px;
+    }
+
+    .skill-box {
+      border: 1px solid rgba(61, 207, 182, 1);
+      border-radius: 30px;
+      background-color: rgba(61, 207, 182, 0.1019607843);
+      padding: 32px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 40px;
+
+      h2.skill-title {
+        font-family: 'Fira Code', monospace;
+        font-size: 64px;
+        font-weight: 700;
+        color: #3DCFB6;
+        margin: 0;
+      }
+  
+      p.skill-desc {
         font-family: 'Karla', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        color: white;
+        line-height: 120%;
+        margin: 0;
+        text-align: justify;
+      }
+
+      p.skill-cta {
+        font-family: 'Fira Code', monospace;
         font-size: 24px;
         font-weight: 700;
-        color: rgba(61, 207, 182, 1);
-        margin-bottom: 20px;
-      }
-  
-      .skill-box {
-        border: 1px solid rgba(61, 207, 182, 1);
-        border-radius: 30px;
-        background-color: rgba(61, 207, 182, 0.1019607843);
-        padding: 32px;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        gap: 40px;
-  
-        h2.skill-title {
-          font-family: 'Fira Code', monospace;
-          font-size: 64px;
-          font-weight: 700;
-          color: #3DCFB6;
-          margin: 0;
-        }
-  
-        p.skill-desc {
-          font-family: 'Karla', sans-serif;
-          font-size: 16px;
-          font-weight: 400;
-          color: white;
-          line-height: 120%;
-          margin: 0;
-          text-align: justify;
-        }
-  
-        p.skill-cta {
-          font-family: 'Fira Code', monospace;
-          font-size: 24px;
-          font-weight: 700;
-          margin: 0;
-          // display: flex;
-          align-items: baseline;
-          gap: 8px;
-  
-          .cta-normal {
-            color: white;
-          }
-          .cta-highlight {
-            color: rgba(61, 207, 182, 1);
-          }
-        }
-  
-        p.skill-note {
-          font-family: 'Karla', sans-serif;
-          font-size: 16px;
-          font-weight: 400;
-          color: white;
-          margin: 0;
-          line-height: 120%;
-        }
-  
-        /* nutzt Deine bestehende Button-Klasse */
-        .button-sliding-text {
-          margin-top: auto; /* ganz unten */
-          padding-bottom: 24px !important;
-        }
-      }
-    }
-  
-    /* ─── Rechte Seite: Icons ─────────────────────────────── */
-    .tech-icons {
-      margin-top: 48px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      flex-wrap: wrap;
-      gap: 72px;
-      justify-items: center; 
-      align-items: center; 
-  
-      .tech-icon {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        margin: 0;
+        // display: flex;
+        align-items: baseline;
         gap: 8px;
-        cursor: pointer;
-        transition: transform 0.2s;
-  
-        img {
-          width: 64px;
-          height: 64px;
-          object-fit: contain;
-        }
-  
-        span {
-          font-family: 'Fira Code', monospace;
-          font-size: 18px;
-          font-weight: 400;
+
+        .cta-normal {
           color: white;
-          white-space: nowrap;
         }
-  
-        &:hover {
-          transform: scale(1.1);
+        .cta-highlight {
+          color: rgba(61, 207, 182, 1);
         }
+      }
+
+      p.skill-note {
+        font-family: 'Karla', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        color: white;
+        margin: 0;
+        line-height: 120%;
+      }
+
+      .button-sliding-text {
+        margin-top: auto;
+        padding-bottom: 24px !important;
       }
     }
+  }
   
-    /* ─── Responsive: Mobile unter 768px ─────────────────── */
-    @media (max-width: 768px) {
-  
-      .technologies-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
+  /* ─── Rechte Seite: Icons ─────────────────────────────── */
+  .tech-icons {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    flex-wrap: wrap;
+    gap: 72px;
+    justify-items: center; 
+    align-items: center; 
+
+    .tech-icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: transform 0.2s;
+
+      img {
+        width: 64px;
+        height: 64px;
+        object-fit: contain;
       }
-  
-      .tech-text-box,
-      .tech-icons {
-        max-width: 100%;
-        width: 100%;
+
+      span {
+        font-family: 'Fira Code', monospace;
+        font-size: 18px;
+        font-weight: 400;
+        color: white;
+        white-space: nowrap;
       }
-      
-      .tech-text-box .skill-box {
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  
+  /* ─── Responsive: Mobile unter 768px ─────────────────── */
+
+  @media (max-width: 1300px) {
+    .tech-text-box{
+      max-width: 45vw;
+
+      .skill-box {
         height: auto;         /* passt sich an Inhalt an */
         gap: 24px;
       }
+    } 
 
-      .tech-icons {
+    .tech-icons {
+      gap: 16px;
+      grid-template-columns: repeat(3, 1fr);
+      align-self: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .technologies-content {
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .tech-text-box,
+    .tech-icons {
+      max-width: 100%;
+      width: 100%;
+    }
+    
+    .tech-text-box .skill-box {
+      height: auto;
+      gap: 24px;
+    }
+
+    .tech-icons {
+      gap: 16px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-height: 440px) and (max-width:920px){
+    .tech-text-box{
+      max-height: 120vh !important;
+      .skill-box{
+        justify-content: center;
+        max-height: 92vh;
+        height: 92vh !important;
+        gap: 14px;
+        padding: 14px;
+        h2.skill-title{
+          font-size: 28px;
+        }
+      }
+    }
+  }
+
+  @media (max-height: 440px) and (max-width:880px) {
+    .tech-text-box{
+      max-height: 120vh !important;
+      .skill-box{
+        max-height: 90vh;
+        height: 90vh !important;
         gap: 16px;
-        grid-template-columns: repeat(3, 1fr);
+        padding: 16px;
+        h2.skill-title{
+          font-size: 32px;
+        }
       }
     }
   }
@@ -179,8 +223,13 @@
   }
 
   @media (max-width: 1000px) and (orientation: landscape) and (pointer: coarse) and (hover: none){
-    h2{
-      font-size: 46px !important;
+    .tech-text-box{
+      max-height: 95vh;
+      .skill-box{
+        h2.skill-title{
+          font-size: 46px;
+        }
+      }
     }
 
     p.skill-cta{
@@ -193,4 +242,5 @@
       padding: 10px 16px 16px 16px !important;
     }
   }
+}
   

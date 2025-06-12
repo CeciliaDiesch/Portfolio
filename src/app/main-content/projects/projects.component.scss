@@ -3,275 +3,330 @@ section {
 }
 
 .projects-content {
-    // padding: 0 100px;
 
+  .projects-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .projects-label {
+    font-family: 'Karla', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: rgba(61, 207, 182, 1);
+    margin-bottom: 20px;
+  }
+
+  .projects-title {
+    font-family: 'Fira Code', monospace;
+    font-size: 64px;
+    font-weight: 700;
+    color: rgba(61, 207, 182, 1);
+    margin: 0 0 40px;
+  }
+
+  .projects-desc {
+    font-family: 'Karla', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    margin: 0 0 40px;
+    line-height: 120%;
+    text-align: justify;
+  }
+
+  // ─── Linke Seite ───────────────────────────────────────────────
+  .project-list {
+    flex: none;
+    max-width: 880px;
+    width: 100%;
   
-    .projects-container {
+    .project-row {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
-      gap: 40px;
-    }
+      align-items: center;
+      padding: 40px 32px;
+      position: relative;
+      transition: background-color 0.3s;
+      border-top: 1px solid rgba(61, 207, 182, 1);
+      &:last-child {
+        border-bottom: 1px solid rgba(61, 207, 182, 1);
+      }
+      &:hover {
+        background-color: rgba(61, 207, 182, 0.1);
+        ;
+      }
 
-    .projects-label {
-        font-family: 'Karla', sans-serif;
+      .project-name {
+        cursor: pointer;
+        font-family: 'Fira Code', monospace;
         font-size: 24px;
         font-weight: 700;
-        color: rgba(61, 207, 182, 1);
-        margin-bottom: 20px;
+        color: white;          
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    
+        .arrow-icon {
+          width: 30px;
+          height: 30px;
+          opacity: 0;
+          transition: opacity 0.2s;
+          padding-bottom: 2px;
+        }
       }
-  
-      .projects-title {
-        font-family: 'Fira Code', monospace;
-        font-size: 64px;
-        font-weight: 700;
-        color: rgba(61, 207, 182, 1);
-        margin: 0 0 40px;
+    
+      &:hover .project-name .arrow-icon {
+        opacity: 1;
       }
-  
-      .projects-desc {
+
+      .project-tech {
         font-family: 'Karla', sans-serif;
         font-size: 18px;
         font-weight: 400;
         color: white;
-        margin: 0 0 40px;
-        line-height: 120%;
-        text-align: justify;
-      }
-  
-    // ─── Linke Seite ───────────────────────────────────────────────
-    .project-list {
-      flex: none;
-      max-width: 880px;
-      width: 100%;
-  
 
-  
-      .project-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 40px 32px;
-        position: relative;
-        transition: background-color 0.3s;
-        border-top: 1px solid rgba(61, 207, 182, 1);
-        border-bottom: 1px solid rgba(61, 207, 182, 1);
-  
-  
-        &:hover {
-          background-color: rgba(61, 207, 182, 0.1);
-          ;
-        }
-  
-        .project-name {
-            cursor: pointer;
-          font-family: 'Fira Code', monospace;
-          font-size: 24px;
-          font-weight: 700;
-          color: white;          
-          position: relative;
-          display: inline-flex;
-          align-items: center;
-          gap: 8px; /* Abstand zwischen Name und Icon */
-      
-          .arrow-icon {
-            width: 30px;         /* passe bei Bedarf an */
-            height: 30px;
-            opacity: 0;
-            transition: opacity 0.2s;
-            padding-bottom: 2px;
-          }
-        }
-      
-        &:hover .project-name .arrow-icon {
-          opacity: 1;
-        }
-  
-        .project-tech {
-          font-family: 'Karla', sans-serif;
-          font-size: 18px;
-          font-weight: 400;
-          color: white;
-  
-          .sep {
-            color: rgba(61, 207, 182, 1);
-            margin: 0 4px;
-          }
-        }
-  
-        // .arrow {
-        //     display: inline-block;
-        //     margin-left: 8px;
-        //   width: 12px;
-        //   height: 12px;
-        //   transform: rotate(45deg);
-        //   border-top: 2px solid white;
-        //   border-right: 2px solid white;
-        //   opacity: 0;
-        //   transition: opacity 0.3s;
-        // }
-  
-        // &:hover .arrow {
-        //   opacity: 1;
-        // }
-      }
-    }
-  
-    // ─── Rechte Seite ──────────────────────────────────────────────
-    .project-preview {
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s;
-      position: relative;
-      width: 315px;
-      height: 212px;
-
-
-      &.visible {
-        opacity: 1;
-        pointer-events: auto;
-      }
-  
-      .preview-bg {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        width: 100%;
-        height: 100%;
-        border-radius: 16px;
-        background-image: repeating-linear-gradient(
-          -45deg,
-          transparent 0,
-          transparent 10px,
-          rgba(61, 207, 182, 0.3) 10px,
-          rgba(61, 207, 182, 0.3) 11px
-        );
-      }
-  
-      .preview-img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 16px;
-      }
-    }
-  
-    // ─── Responsive für Mobile ────────────────────────────────────
-    @media (min-width: 1700px) and (max-width: 2000px) {
-      .project-preview {
-          right: 10%;
-      }
-    }
-    
-    @media (min-width: 1200px) and (max-width: 1400px) {
-      .project-list {
-        width: 70%;
-      }
-    }
-    @media (min-width: 900px) and (max-width: 1200px) {
-        .project-row{
-            width: 70%;
-        }
-        }
-
-        @media (min-width: 770px) and (max-width: 900px) {
-            .projects-container {
-                .project-preview {
-                  display: none;
-                }
-              }
-    
-              .projects-content {
-                .project-list {
-                  width: 100%;
-                }
-              }
-            }
-        
-    @media (max-width: 770px) {
-  
-      .projects-container {
-        flex-direction: column-reverse;
-        align-items: center;
-        .project-preview {
-            display: none;
-          }
-      }
-  
-      .project-list,
-      .project-preview {
-        max-width: 100%;
-        width: 100%;
-      }
-  
-      .project-list {
-        .projects-title {
-          font-size: 48px;
-          margin-bottom: 24px;
-        }
-  
-        .projects-desc {
-          margin-bottom: 24px;
-        }
-  
-        .project-row {
-          padding: 24px 0px;
-  
-        //   &:hover.project-name .arrow-icon {
-        //     width: 12px;       
-        //     height: 12px;
-        //   }
+        .sep {
+          color: rgba(61, 207, 182, 1);
+          margin: 0 4px;
         }
       }
     }
   }
 
+  // ─── Rechte Seite ──────────────────────────────────────────────
+  .project-preview {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    position: relative;
+    width: 315px;
+    height: 212px;
+    &.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .preview-bg {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      background-image: repeating-linear-gradient(
+        -45deg,
+        transparent 0,
+        transparent 10px,
+        rgba(61, 207, 182, 0.3) 10px,
+        rgba(61, 207, 182, 0.3) 11px
+      );
+    }
+
+    .preview-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+  }
   
-  @media (max-width: 1000px) and (orientation: landscape) and (pointer: coarse) and (hover: none){
+
+  @media (min-width: 1700px) and (max-width: 2000px) {
+    .project-preview {
+        right: 10%;
+    }
+  }
+    
+  @media (min-width: 1200px) and (max-width: 1400px) {
+    .project-list {
+      width: 70%;
+    }
+  }
+
+  @media (min-width: 900px) and (max-width: 1200px) {
+    .project-list .project-row{
+        width: 80%;
+    }
+  }
+
+  @media (min-width: 770px) and (max-width: 900px) {  
+    .project-preview {
+      display: none;
+      .preview-bg{
+        display: none;
+        opacity: 0;
+      }
+    }
+  
+    .project-list {
+      width: 100%;
+    }    
+  }
+    
+  @media (max-width: 770px) {
+    .projects-container {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    .project-preview {
+      display: none;
+      .preview-bg{
+        display: none;
+        opacity: 0;
+      }
+    }
+
+    .project-list,
+    .project-preview {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .projects-title {
+      font-size: 48px;
+      margin-bottom: 24px;
+    }
+
+    .projects-desc {
+      margin-bottom: 24px;
+    }
+    .project-list .project-row {
+        padding: 24px 0px;
+    }
+  }
+
+  @media screen and (max-height: 1200px) {
+    .project-list{
+      .project-row{
+        &:hover {
+          background-color: transparent;
+        }
+        .project-name .arrow-icon {
+          opacity: 1;
+        } 
+      }        
+    }
+  }
+
+  @media (max-width: 1400px) and (pointer: coarse) and (hover: none){
+    .project-list{
+      .project-row{
+        &:hover {
+          background-color: transparent;
+        }
+        .project-name .arrow-icon {
+          opacity: 1;
+        } 
+      }        
+    }
+    .project-preview {
+      .preview-bg{
+        display: none;
+        opacity: 0;
+      }
+    }
+  }
+
+  @media (max-width: 1300px) and (orientation: landscape) and (pointer: coarse) and (hover: none){
     h2{
-      font-size: 46px !important;
-      line-height: 100% !important;
+      font-size: 46px;
+      line-height: 100%;
+      margin: 0 0 16px;
     }
 
     .projects-desc{
-      font-size: 16px !important;
+      font-size: 16px;
+      margin: 0 0 20px;
     }
 
-    .project-row{
-      flex-direction: column !important;
-      justify-content: flex-start !important;
-      align-items: flex-start !important;
+    .project-list .project-row{
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 16px 32px;
+      .project-tech{
+        display: flex;
+        gap: 0;
+      }
     }
-
-    .project-tech{
-      display: flex;
-      gap: 0;
+    
+    .project-preview {
+      .preview-bg{
+        display: none;
+        opacity: 0;
+      }
     }
   }
 
   @media (max-width: 1000px) and (orientation: portrait) and (pointer: coarse) and (hover: none){
     h2{
-      font-size: 46px !important;
-      line-height: 100% !important;
+      font-size: 46px;
+      line-height: 100%;
+    }
+
+    .projects-label {
+      font-size: 18px;
+      margin-bottom: 16px;
     }
 
     .projects-desc{
-      font-size: 16px !important;
+      font-size: 16px;
     }
 
-    .project-row{
-      flex-direction: column !important;
-      justify-content: flex-start !important;
-      align-items: flex-start !important;
+    .project-list .project-row{
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      .project-tech{
+        margin-top: 8px;
+        display: flex;
+        gap: 0;
+      }
     }
 
-    .project-tech{
-      margin-top: 8px;
-      display: flex;
-      gap: 0;
+    .project-preview {
+      .preview-bg{
+        display: none;
+        opacity: 0;
+      }
     }
   }
+
+  @media (max-width: 890px) and (orientation: portrait) and (pointer: coarse) and (hover: none){
+    h2{
+      font-size: 36px;
+    }
+
+    .projects-desc{
+      font-size: 14px;
+    }
+
+    .project-list .project-row{
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      .project-tech{
+        font-size: 15px;
+        margin-top: 8px;
+        display: flex;
+        gap: 0;
+      }
+    }
+
+    .project-preview {
+      .preview-bg{
+        display: none;
+        opacity: 0;
+      }
+    }
+  }
+}
   

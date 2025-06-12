@@ -21,11 +21,11 @@ interface Reference {
 })
 export class ReferencesComponent{
   references: Reference[] = [
-    { id: 1, text: 'Cecilia hat sich als absolut verlässliche Kollegin erwiesen. Ihre technische Expertise und ihr Engagement haben unser Projekt zum Erfolg geführt.', author: 'A. Janisch', role: 'Team Partner' },
-    { id: 2, text: 'Die Zusammenarbeit mit Cecilia war großartig: stets ruhig, kompetent und lösungsorientiert. Ich würde jederzeit wieder mit ihr arbeiten.', author: 'B. BMüller', role: 'Projektleiter' },
-    { id: 3, text: 'Cecilia bringt technische Tiefe und eine strukturierte Vorgehensweise in jedes Team – absolut empfehlenswert!', author: 'C. Schulz', role: 'Frontend Developer' },
-    { id: 4, text: 'Ihre proaktive Art und klaren Kommunikation haben wesentlich dazu beigetragen, dass wir Termine und Qualitätsziele eingehalten haben.', author: 'D. Becker', role: 'Scrum Master' },
-    { id: 5, text: 'Ich schätze besonders Cecilias’ Belastbarkeit und ihre Fähigkeit, auch unter Druck den Überblick zu behalten.', author: 'E. Wagner', role: 'UX Designer' },
+    { id: 1, text: 'Cecilia demonstrated team and problem-solving skills with a self-motivated attitude to learn new programs. She was able to carry forth the project.', author: 'Uni. Prof. Dr. Thoralf Niendorf', role: 'Professor' },
+    { id: 2, text: 'Frau Diesch zeigte eine hohe Einsatzbereitschaft in jeglichem Aufgabenbereich und eine sehr schnelle Auffassungsgabe.', author: 'A. Martin', role: 'Einrichtungsleitung' },
+    { id: 3, text: 'She has been an indispensable part of our team. Her loyalty and highly motivating kind helped through many processes as well as her courage of trying ot the unknown.', author: 'M. Lederer', role: 'Team Leader' },
+    { id: 4, text: 'Frau Diesch arbeitete sehr gewissenhaft und teamorientiert. Wir haben sie als freundliche Mitarbeiterin kennengelernt und würden sie jederzeit erneut einstellen.', author: 'Prof. Dr. med. Pirus Ghadjar', role: 'Team Leader' },
+    { id: 5, text: 'Ich schätze besonders Cecilias’ Belastbarkeit und ihre Fähigkeit, auch unter Druck den Überblick zu behalten.', author: 'P. Wagner', role: 'Frontend Developer' },
   ];
 
 
