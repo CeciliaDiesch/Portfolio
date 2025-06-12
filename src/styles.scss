@@ -19,7 +19,6 @@ body{
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
-
 }
 
 html {
@@ -165,27 +164,34 @@ font-family: "Fira Code", sans-serif;
         100% { transform: translateX(-200%); }  /* endet links außerhalb */
       }
 
-          // ─── Responsive für Mobile ────────────────────────────────────
-    @media (min-width: 1200px) and (max-width: 1400px) {
-      section{
-        padding: 75px 60px 0 60px !important;
-      }
-  }
+/* Verhindere Scrollen der Seite, wenn Modal offen ist */
+html.modal-open, body.modal-open {
+  overflow: hidden !important;
+  height: 100vh !important;
+  width: 100vw !important;
+}
 
-  @media (min-width: 770px) and (max-width: 1200px) {
-    section{
-      padding: 70px 50px 0 50px !important;
-    }
- }
-      
-  @media (min-width: 520px) and (max-width: 770px) {
-    section{
-      padding: 60px 20px 0 20px !important;
-    }
-  }
 
-  @media (max-width: 520px) {
-    section{
-      padding: 60px 20px 0 20px !important;
-    }
+@media (min-width: 1200px) and (max-width: 1400px) {
+  section{
+    padding: 75px 60px 0 60px !important;
   }
+}
+
+@media (min-width: 770px) and (max-width: 1200px) {
+  section{
+    padding: 70px 50px 0 50px !important;
+  }
+}
+    
+@media (min-width: 520px) and (max-width: 770px) {
+  section{
+    padding: 60px 20px 0 20px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  section{
+    padding: 60px 20px 0 20px !important;
+  }
+}

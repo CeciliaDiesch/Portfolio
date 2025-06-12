@@ -235,10 +235,7 @@
   }
 }
   
-/* Verhindere Scrollen der Seite, wenn Modal offen ist */
-body.modal-open {
-  overflow: hidden;
-}
+
 
 @media  (max-width:1300px) {
   .project-modal .modal-content{
@@ -292,7 +289,8 @@ body.modal-open {
       max-width: 400px;
     }
     >.modal-close-mobile{
-      top: 8px !important;
+      top: 4px !important;
+      right: 8px !important;
     }
     >.modal-preview{
       flex: auto;
@@ -372,22 +370,27 @@ body.modal-open {
 }
 @media (max-width: 1400px)and (orientation: portrait) and (pointer: coarse) and (hover: none){
   .project-modal{
-    align-items: auto;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
     >.modal-content {
       flex-direction: column;
       justify-content: center;
       aspect-ratio: auto;
       gap: 18px;
       padding: 8px;
-      height: 98vh;
-      width: 95vw;
+      height: 98%;
+      // width: 95%;
       >img{
         display:flex ;
       }
       >.mobilePreview{
         display: flex;
+        max-height: 30vh;
         // height: 200px;
         border-radius: 18px;
+        margin-top: 46px;
       }
       >.modal-close-mobile{
         display: block;
@@ -397,7 +400,7 @@ body.modal-open {
         z-index: 2001;
       }
       >.modal-preview{
-        flex: auto;
+        flex: 0 0 auto;
         max-width: none;
         gap: 0;
         flex-direction: row;
@@ -417,7 +420,7 @@ body.modal-open {
       >.modal-text{
         max-width: 95%;
         padding: 0 4px 0 4px;
-        flex: none;
+        // flex: 1;
         >.modal-name{
           font-size: 40px;
         }
