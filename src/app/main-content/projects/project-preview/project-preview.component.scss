@@ -6,8 +6,7 @@
   justify-content: center;
   z-index: 2000;
   overflow: hidden;
-  // max-height: calc(100vh - 40px);
-  
+   
   .modal-backdrop {
     position: absolute;
     inset: 0;
@@ -48,16 +47,13 @@
         display: flex;
         height: 18px;
         width: 18px;
-        background-color: transparent; /* Die Startfarbe des Kreuzes */
+        background-color: transparent;
         background-image: url('../../../../assets/icons/close_small.svg');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
       }
     }
-    // .mobile-close-cross{
-    //   display: none;
-    // }
 
     /* Linke Spalte */
     .modal-text {
@@ -116,7 +112,6 @@
           height: 24px;
         }
         span {
-          // margin-right: 14px;
           font-family: 'Karla';
           font-size: 16px;
           font-weight: 400;
@@ -182,7 +177,7 @@
           display: flex;
           height: 18px;
           width: 18px;
-          background-color: transparent; /* Die Startfarbe des Kreuzes */
+          background-color: transparent;
           background-image: url('../../../../assets/icons/close_small.svg');
           transition: background-image 0.2s ease-in-out, transform 0.2s ease;
           background-size: contain;
@@ -200,9 +195,6 @@
       }
   
       .preview-img {
-        // position: absolute;
-        // top: 0;
-        // right: 0;
         width: 100%;
         height: auto;
         object-fit: cover;
@@ -210,9 +202,6 @@
       }
 
       >button.preview-next {
-        // position: absolute;
-        // bottom: 40px;
-        // right: 40px;
         background: transparent;
         border: none;
         font-family: 'Karla';
@@ -235,6 +224,19 @@
           >img{
             transform: translate(6px);
           }
+        }
+      }
+    }
+  }
+}
+
+@media (pointer: coarse) and (hover: none){
+  .project-modal .modal-content .modal-preview{
+    >button.preview-next{
+      &:hover{
+        color: #3DCFB6;
+        >img{
+          transform: translate(0px);
         }
       }
     }

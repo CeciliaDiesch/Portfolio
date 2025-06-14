@@ -21,10 +21,10 @@ interface Reference {
 })
 export class ReferencesComponent{
   references: Reference[] = [
-    { id: 1, text: 'Cecilia demonstrated team and problem-solving skills with a self-motivated attitude to learn new programs. She was able to carry forth the project.', author: 'Uni. Prof. Dr. Thoralf Niendorf', role: 'Professor' },
+    { id: 1, text: 'Cecilia demonstrated team and problem-solving skills with a self-motivated attitude to learn new programs. She was able to carry forth the project.', author: 'Uni. Prof. Dr. A. Niendorf', role: 'Professor' },
     { id: 2, text: 'Frau Diesch zeigte eine hohe Einsatzbereitschaft in jeglichem Aufgabenbereich und eine sehr schnelle Auffassungsgabe.', author: 'A. Martin', role: 'Einrichtungsleitung' },
     { id: 3, text: 'She has been an indispensable part of our team. Her loyalty and highly motivating kind helped through many processes as well as her courage of trying ot the unknown.', author: 'M. Lederer', role: 'Team Leader' },
-    { id: 4, text: 'Frau Diesch arbeitete sehr gewissenhaft und teamorientiert. Wir haben sie als freundliche Mitarbeiterin kennengelernt und würden sie jederzeit erneut einstellen.', author: 'Prof. Dr. med. Pirus Ghadjar', role: 'Team Leader' },
+    { id: 4, text: 'Frau Diesch arbeitete sehr gewissenhaft und teamorientiert. Wir haben sie als freundliche Mitarbeiterin kennengelernt und würden sie jederzeit erneut einstellen.', author: 'Prof. Dr. med. P. Ghadjar', role: 'Team Leader' },
     { id: 5, text: 'Ich schätze besonders Cecilias’ Belastbarkeit und ihre Fähigkeit, auch unter Druck den Überblick zu behalten.', author: 'P. Wagner', role: 'Frontend Developer' },
   ];
 

@@ -16,6 +16,6 @@ export class AppComponent {
   constructor(public router: Router) {}
 
   isStaticPage(): boolean {
-    return this.router.url === '/legal-notice' || this.router.url === '/privacy-policy';
+    return this.router.url === '/legal-notice' ;
   }
 }

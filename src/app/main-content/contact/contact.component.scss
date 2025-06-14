@@ -131,6 +131,12 @@
         input[type='checkbox']:hover {
             background-color: rgba(57, 196, 180, 0.5);
         }
+        
+        @media (pointer: coarse) and (hover: none){
+          input[type='checkbox']:hover {
+            background-color: transparent;
+        }
+        }
 
         input[type='checkbox']:checked {
             background-color: transparent;

@@ -35,9 +35,6 @@ $turquoise: rgba(61, 207, 182, 1);
 a {
   text-decoration: none;
   color: white;
-  &:hover{
-    color: red;
-}
 }
 
 h1 {
@@ -169,6 +166,17 @@ html.modal-open, body.modal-open {
   overflow: hidden !important;
   height: 95vh !important;
   width: 95vw !important;
+}
+
+@media (pointer: coarse) and (hover: none){
+  button:hover{
+    border-color: white;
+    color: white;
+  }
+
+  .button-sliding-text:hover .slide-container{
+    animation: none !important;
+  }
 }
 
 

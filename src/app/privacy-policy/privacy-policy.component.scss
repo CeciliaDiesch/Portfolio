@@ -1,0 +1,199 @@
+p{
+    color: white;
+}
+
+.content, .wrapper {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    min-width: 0;
+  }
+  
+.wrapper{
+    padding-top: 40px;
+    width: 100vw;
+    max-width: 2000px;
+    min-height: 100vh;
+    background-image: url('./../../assets/img/landingPageBackground.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: 'Karla', Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+.content * {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+  
+.content{
+    max-width: 100vw;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: white;
+    font-family: 'Karla', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+h1{
+    color: rgb(61, 207, 182);
+    font-family: "Fira Code";
+    font-size: 64px;
+    margin-bottom: 40px;
+}
+
+h2{
+    font-family: "Fira Code";
+    font-size: 32px;
+    font-weight: 700;
+    color: #3DCFB6;
+    margin: 40px 0 0 0;
+}
+
+h3{
+    font-family: "Fira Code";
+    font-size: 24px;
+    font-weight: 700;
+    color: #3DCFB6;
+    margin: 40px 0 0 0;
+}
+
+.imprintButtonBack {
+    margin-top: 80px;
+    font-size: 40px;
+    font-weight: 400;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    :host {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      
+@media (max-width: 900px) {
+.content {
+    padding: 40px;
+    max-width: calc(100vw - 50px);
+}
+}
+      
+@media (min-height: 400px) and (min-width: 300px) and (max-width: 1000px)and (pointer: coarse) and (hover: none){
+    .content{
+        font-size: 12px !important;
+    }
+
+    h1{
+        font-size: 24px !important;
+        margin-bottom: 8px !important;
+        padding-top: 10px !important;
+    }
+
+    h2{
+        font-size: 20px !important;
+        font-weight:400 !important;
+        margin: 14px 0 0 0 !important;
+    }
+
+    h3{
+        font-size: 18px !important;
+        font-weight:400 !important;
+        margin: 14px 0 0 0 !important;
+    }
+    
+    h3{
+        font-size: 14px !important;
+        font-weight:400 !important;
+        margin: 14px 0 0 0 !important;
+    }
+
+    .imprintButtonBack {
+        margin-top: 24px !important;
+        font-size: 18px !important;
+        height: 20px !important;
+        width: 80px !important;
+        }
+}
+
+@media (max-width: 800px) and (pointer: coarse) and (hover: none){
+    .wrapper{
+        padding: 10px !important;
+    }
+}
+
+@media (max-height: 950px) and (pointer: coarse) and (hover: none){
+    .wrapper{
+        padding-top: 10px;
+    }
+
+    .content{
+        font-size: 24px;
+    }
+
+    h1{
+        font-size: 40px;
+        margin-bottom: 8px;
+        padding-top: 10px;
+    }
+
+    h2{
+        font-size: 36px;
+        font-weight:400;
+        margin: 14px 0 0 0;
+    }
+    
+    h3{
+        font-size: 32px;
+        font-weight:400;
+        margin: 14px 0 0 0;
+    }
+
+    .imprintButtonBack {
+        margin-top: 24px;
+        font-size: 24px;
+        height: 28px;
+        width: 100px;
+        }
+}
+
+@media (max-height: 400px) and (pointer: coarse) and (hover: none){
+    .content{
+        margin-top: 8px;
+        font-size: 12px !important;
+    }
+
+    h1{
+        font-size: 18px;
+        margin-bottom: 8px;
+        padding-top: 0px;
+    }
+
+    h2{
+        font-size:16px;
+        font-weight:400;
+        margin: 16px 0 0 0;
+    }
+    
+    h3{
+        font-size:14px;
+        font-weight:400;
+        margin: 16px 0 0 0;
+    }
+
+    .imprintButtonBack {
+        margin-top: 12px;
+        font-size: 10px;
+        height: 8px;
+        width: 40px;
+        }
+}

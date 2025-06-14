@@ -1,54 +1,49 @@
 .footer-section{
-    padding-bottom: 46px !important;
-    padding-top: 46px !important;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    // height: 126px;
-    color: white;
-    font-family: 'Karla';
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 120%;
-    background: rgb(28, 28, 28);
-    font-size:16px;
+  padding-bottom: 46px !important;
+  padding-top: 46px !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  // height: 126px;
+  color: white;
+  font-family: 'Karla';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+  background: rgb(28, 28, 28);
+  font-size:16px;
 }
 
 .left{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 32px;
-    // position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
 
-    
-    .logoDiv{
-        display: flex;
-        flex-direction: row;
-        gap: 4px !important;
-        // position: absolute;
-        // top: 0;
-        // left: 0;
-        >img{
-            height: 48px;
-        }
+  .logoDiv{
+    display: flex;
+    flex-direction: row;
+    gap: 4px !important;
+    >img{
+        height: 48px;
     }
+  }
 }
 
 .copyright-symbol {
-    font-size: 0.9rem;
-    display: inline-block;
-    vertical-align: middle;
-    margin-bottom: 3%;
-  }
+  font-size: 0.9rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 3%;
+}
 
 .middle{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
-    color: rgba(61, 207, 182, 1);
-    gap: 12px;
+  color: rgba(61, 207, 182, 1);
+  gap: 12px;
 }
 .right {
   display: flex;
@@ -62,7 +57,6 @@
     text-decoration: none;
     color: white;
     cursor: pointer;
-    
   
     &:hover {
       color: #39c4b4;
@@ -76,6 +70,16 @@
         color: #39c4b4;       
         font-size: 2rem;       
         line-height: 1;
+      }
+    }
+
+    @media (pointer: coarse) and (hover: none){
+      &:hover {
+        color: white;
+    
+        &::before {
+          content: '';
+        }
       }
     }
   }
@@ -121,19 +125,18 @@
     padding-bottom: 8px !important;
     padding-top: 8px !important;
     font-size:12px;
-}
+  }
 
-.left{
-  gap: 12px;
-  .logoDiv{
+  .left{
+    gap: 12px;
+    .logoDiv{
       display: flex;
       flex-direction: row;
       gap: 3px !important;
       >img{
           height: 28px;
       }
+    }
   }
-}
-
 }
   

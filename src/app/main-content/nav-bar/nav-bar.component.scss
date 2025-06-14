@@ -145,3 +145,42 @@ nav {
     width: 50px;
   }
 }
+
+@media (min-height: 1050px) and (orientation: portrait) and (pointer: coarse) and (hover: none){
+  .burger{
+    width: 50px;
+    gap: 20px;
+    height: 98px;
+  }
+
+  button{
+    height: auto;
+  }
+
+  .burger__line{
+    width: 50px;
+    height: 6px;
+  }
+
+  .logoDiv{
+    transform: translateY(-10px);
+    >img{
+      height: 78px !important;
+    }
+  }
+
+  .nav__links.open{
+    max-height: 280px;
+    height: 220px;
+    margin-top: 36px;
+    gap: 16px;
+    >div a{
+      font-size: 24px;
+    }
+    >div img{
+      margin-bottom: 24px;
+      width: 82px;
+      height: 48px;
+    }
+  }
+}

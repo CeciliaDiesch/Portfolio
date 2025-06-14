@@ -318,12 +318,142 @@ section{
     }
   }
 
-  @media (max-width: 800px) and (orientation: landscape) and (pointer: coarse) and (hover: none){
+  @media (min-height: 1050px) and (orientation: portrait) and (pointer: coarse) and (hover: none){
+    h1{
+      font-size: 96px; 
+    }
+
+    h2{
+      font-size: 40px;
+    }
+
+    .content{
+      padding-top: 100px;
+    }
+
+    .button-Div{
+      margin-top: 40px;
+      gap: 64px;
+      font-size: 24px;
+    }
+
+    button{
+      font-size: 24px;
+      width: 240px;
+      height: 72px;
+      padding-top: 12px;
+      padding-right: 24px;
+      padding-bottom: 12px;
+      padding-left: 24px;
+    }
+
+    .button-sliding-text:hover .slide-container{
+      animation: none !important;
+    }
+
+    .scroll-btn{
+      width: 60px;
+      height: 96px;
+      font-size: 24px !important;
+    }
+
+    .scroll-line{
+      margin-top: 24px;
+      height: 328px;
+    }
+
+    .scroll-arrow{
+      width: 22px;
+      height: 26px;
+      animation: arrowMove2 1.5s ease-in-out infinite;
+    }
+
+    @keyframes arrowMove2 {
+      0%   { transform: translateY(0); }
+      50%  { transform: translateY(10px); }
+      100% { transform: translateY(0); }
+    }
+
+    .info-container{
+      width: 36px;
+      gap:80px;
+      // >a{
+      //   display: none;
+      //   // font-size: 12px;
+      // }
+      .icon-wrapper{
+        margin-top: 0;
+        // width: 13px;
+        // height: 13px;
+        // padding-top: 16px;
+        // padding-right: 8px;
+        >a img{
+          width: 52px;
+          height: 52px;
+          transform: translate(-14px, 36px);
+        }
+      }
+
+      .emailIcon{
+        transform: rotate(90deg);
+        height: 52px;
+        width: 52px;
+      }
+
+      .emailDesktop{
+        display: flex;
+        padding-right: 6px;
+      }
+
+      .emailMobile{
+        display: none;
+      }
+
+      a:hover{
+        color: white;
+      }
+
+      .info-line{
+        height: 200px;
+        margin-left: 0;
+      }
+
+      .desktopGitImg{
+        display: none;
+      }
+      .mobileGitImg{
+        display: flex;
+      }
+    }
+
+    .ticker-bar{
+      bottom: 50px;
+      left: -120px;
+      height: 62px;
+    }
+    .ticker-group{
+      margin-left: 56px;
+      gap: 58px;
+    }
+    .dot{
+      height: 10px;
+      width: 10px;
+    }
+    .ticker-item{
+      font-size: 32px;
+    }
+
+    .div-Nav{
+      top: -24px;
+      height: 280px;
+    }
 
   }
 
-  @media (max-height: 1000px) and (orientation: portrait) and (pointer: coarse) and (hover: none){
-
+  @media (max-width: 400px) and (orientation: portrait) and (pointer: coarse) and (hover: none){
+    h1{
+      font-size: 40px;
+    }
   }
   
 

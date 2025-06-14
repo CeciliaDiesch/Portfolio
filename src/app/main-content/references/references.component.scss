@@ -157,7 +157,22 @@
   }
 }
 
-/* Dots-Container */
+@media (pointer: coarse) and (hover: none){
+  .prev-btn {
+    &:hover {
+      background-image: url('../../../assets/icons/references/arrow_back_white.svg');
+      transform: translateX(0px);
+    }
+  }
+  
+  .next-btn {  
+    &:hover {
+      background-image: url('../../../assets/icons/references/arrow_forward_white.svg');
+      transform: translateX(0px);
+    }
+  }
+}
+
 .dots {
   display: flex;
   gap: 20px;
