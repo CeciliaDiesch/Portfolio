@@ -1,0 +1,234 @@
+{
+    "NAV": {
+      "ABOUT_ME": "About Me",
+      "SKILLS": "Skills",
+      "PROJECTS": "Projekte"
+    },
+    "PRIVACY_POLICY": {
+      "TITLE": "Datenschutzerklärung",
+      "RESPONSIBLE_PARTY_INTRO": "Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO), ist:",
+      "YOUR_RIGHTS_TITLE": "Ihre Betroffenenrechte",
+      "YOUR_RIGHTS_INTRO": "Unter den angegebenen Kontaktdaten unseres Datenschutzbeauftragten können Sie jederzeit folgende Rechte ausüben:",
+      "RIGHTS_ITEM1": "Auskunft über Ihre bei uns gespeicherten Daten und deren Verarbeitung (Art. 15 DSGVO),",
+      "RIGHTS_ITEM2": "Berichtigung unrichtiger personenbezogener Daten (Art. 16 DSGVO),",
+      "RIGHTS_ITEM3": "Löschung Ihrer bei uns gespeicherten Daten (Art. 17 DSGVO),",
+      "RIGHTS_ITEM4": "Einschränkung der Datenverarbeitung, sofern wir Ihre Daten aufgrund gesetzlicher Pflichten noch nicht löschen dürfen (Art. 18 DSGVO),",
+      "RIGHTS_ITEM5": "Widerspruch gegen die Verarbeitung Ihrer Daten bei uns (Art. 21 DSGVO) und",
+      "RIGHTS_ITEM6": "Datenübertragbarkeit, sofern Sie in die Datenverarbeitung eingewilligt haben oder einen Vertrag mit uns abgeschlossen haben (Art. 20 DSGVO).",
+      "CONSENT_REVOCATION": "Sofern Sie uns eine Einwilligung erteilt haben, können Sie diese jederzeit mit Wirkung für die Zukunft widerrufen.",
+      "COMPLAINT_AUTHORITY": "Sie können sich jederzeit mit einer Beschwerde an eine Aufsichtsbehörde wenden, z. B. an die zuständige Aufsichtsbehörde des Bundeslands Ihres Wohnsitzes oder an die für uns als verantwortliche Stelle zuständige Behörde.",
+      "AUTHORITY_LIST_INTRO": "Eine Liste der Aufsichtsbehörden (für den nichtöffentlichen Bereich) mit Anschrift finden Sie unter:",
+      "AUTHORITY_LIST_LINK_TEXT": "https://www.bfdi.bund.de/DE/Service/Anschriften/Laender/Laender-node.html",
+  
+      "GENERAL_INFO_TITLE": "Erfassung allgemeiner Informationen beim Besuch unserer Website",
+      "GENERAL_INFO_TYPE_PURPOSE_TITLE": "Art und Zweck der Verarbeitung:",
+      "GENERAL_INFO_PARAGRAPH1": "Wenn Sie auf unsere Website zugreifen, d.h., wenn Sie sich nicht registrieren oder anderweitig Informationen übermitteln, werden automatisch Informationen allgemeiner Natur erfasst. Diese Informationen (Server-Logfiles) beinhalten etwa die Art des Webbrowsers, das verwendete Betriebssystem, den Domainnamen Ihres Internet-Service-Providers, Ihre IP-Adresse und ähnliches.",
+      "GENERAL_INFO_PARAGRAPH2": "Sie werden insbesondere zu folgenden Zwecken verarbeitet:",
+      "GENERAL_INFO_ITEM1": "Sicherstellung eines problemlosen Verbindungsaufbaus der Website,",
+      "GENERAL_INFO_ITEM2": "Sicherstellung einer reibungslosen Nutzung unserer Website,",
+      "GENERAL_INFO_ITEM3": "Auswertung der Systemsicherheit und -stabilität sowie",
+      "GENERAL_INFO_ITEM4": "zur Optimierung unserer Website.",
+      "GENERAL_INFO_PARAGRAPH3": "Wir verwenden Ihre Daten nicht, um Rückschlüsse auf Ihre Person zu ziehen. Informationen dieser Art werden von uns ggfs. anonymisiert statistisch ausgewertet, um unseren Internetauftritt und die dahinterstehende Technik zu optimieren.",
+      "GENERAL_INFO_LEGAL_BASIS_TITLE": "Rechtsgrundlage und berechtigtes Interesse:",
+      "GENERAL_INFO_LEGAL_BASIS_PARAGRAPH1": "Die Verarbeitung erfolgt gemäß Art. 6 Abs. 1 lit. f DSGVO auf Basis unseres berechtigten Interesses an der Verbesserung der Stabilität und Funktionalität unserer Website.",
+      "GENERAL_INFO_RECIPIENT_TITLE": "Empfänger:",
+      "GENERAL_INFO_RECIPIENT_PARAGRAPH1": "Empfänger der Daten sind ggf. technische Dienstleister, die für den Betrieb und die Wartung unserer Webseite als Auftragsverarbeiter tätig werden.",
+      "GENERAL_INFO_STORAGE_DURATION_TITLE": "Speicherdauer:",
+      "GENERAL_INFO_STORAGE_DURATION_PARAGRAPH1": "Die Daten werden gelöscht, sobald diese für den Zweck der Erhebung nicht mehr erforderlich sind. Dies ist für die Daten, die der Bereitstellung der Website dienen, grundsätzlich der Fall, wenn die jeweilige Sitzung beendet ist.",
+      "GENERAL_INFO_STORAGE_DURATION_PARAGRAPH2": "Im Falle der Speicherung der Daten in Logfiles ist dies nach spätestens 14 Tagen der Fall. Eine darüberhinausgehende Speicherung ist möglich. In diesem Fall werden die IP-Adressen der Nutzer anonymisiert, sodass eine Zuordnung des aufrufenden Clients nicht mehr möglich ist.",
+      "GENERAL_INFO_PROVISION_REQUIRED_TITLE": "Bereitstellung vorgeschrieben oder erforderlich:",
+      "GENERAL_INFO_PROVISION_REQUIRED_PARAGRAPH1": "Die Bereitstellung der vorgenannten personenbezogenen Daten ist weder gesetzlich noch vertraglich vorgeschrieben. Ohne die IP-Adresse ist jedoch der Dienst und die Funktionsfähigkeit unserer Website nicht gewährleistet. Zudem können einzelne Dienste und Services nicht verfügbar oder eingeschränkt sein. Aus diesem Grund ist ein Widerspruch ausgeschlossen.",
+  
+      "CONTACT_FORM_TITLE": "Kontaktformular",
+      "CONTACT_FORM_TYPE_PURPOSE_TITLE": "Art und Zweck der Verarbeitung:",
+      "CONTACT_FORM_PARAGRAPH1": "Die von Ihnen eingegebenen Daten werden zum Zweck der individuellen Kommunikation mit Ihnen gespeichert. Hierfür ist die Angabe einer validen E-Mail-Adresse sowie Ihres Namens erforderlich. Diese dient der Zuordnung der Anfrage und der anschließenden Beantwortung derselben. Die Angabe weiterer Daten ist optional.",
+      "CONTACT_FORM_LEGAL_BASIS_TITLE": "Rechtsgrundlage:",
+      "CONTACT_FORM_LEGAL_BASIS_PARAGRAPH1": "Die Verarbeitung der in das Kontaktformular eingegebenen Daten erfolgt auf der Grundlage eines berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO).",
+      "CONTACT_FORM_LEGAL_BASIS_PARAGRAPH2": "Durch Bereitstellung des Kontaktformulars möchten wir Ihnen eine unkomplizierte Kontaktaufnahme ermöglichen. Ihre gemachten Angaben werden zum Zwecke der Bearbeitung der Anfrage sowie für mögliche Anschlussfragen gespeichert.",
+      "CONTACT_FORM_LEGAL_BASIS_PARAGRAPH3": "Sofern Sie mit uns Kontakt aufnehmen, um ein Angebot zu erfragen, erfolgt die Verarbeitung der in das Kontaktformular eingegebenen Daten zur Durchführung vorvertraglicher Maßnahmen (Art. 6 Abs. 1 lit. b DSGVO).",
+      "CONTACT_FORM_RECIPIENT_TITLE": "Empfänger:",
+      "CONTACT_FORM_RECIPIENT_PARAGRAPH1": "Empfänger der Daten sind ggf. Auftragsverarbeiter.",
+      "CONTACT_FORM_STORAGE_DURATION_TITLE": "Speicherdauer:",
+      "CONTACT_FORM_STORAGE_DURATION_PARAGRAPH1": "Daten werden spätestens 6 Monate nach Bearbeitung der Anfrage gelöscht.",
+      "CONTACT_FORM_STORAGE_DURATION_PARAGRAPH2": "Sofern es zu einem Vertragsverhältnis kommt, unterliegen wir den gesetzlichen Aufbewahrungsfristen nach HGB und löschen Ihre Daten nach Ablauf dieser Fristen.",
+      "CONTACT_FORM_PROVISION_REQUIRED_TITLE": "Bereitstellung vorgeschrieben oder erforderlich:",
+      "CONTACT_FORM_PROVISION_REQUIRED_PARAGRAPH1": "Die Bereitstellung Ihrer personenbezogenen Daten erfolgt freiwillig. Wir können Ihre Anfrage jedoch nur bearbeiten, sofern Sie uns Ihren Namen, Ihre E-Mail-Adresse und den Grund der Anfrage mitteilen.",
+  
+      "GOOGLE_WEB_FONTS_TITLE": "Verwendung von Scriptbibliotheken (Google Webfonts)",
+      "GOOGLE_WEB_FONTS_PARAGRAPH1": "Um unsere Inhalte browserübergreifend korrekt und grafisch ansprechend darzustellen, verwenden wir auf dieser Website „Google Web Fonts“ der Google LLC (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA; nachfolgend „Google“) zur Darstellung von Schriften.",
+      "GOOGLE_WEB_FONTS_PARAGRAPH2_PART1": "Weitere Informationen zu Google Web Fonts finden Sie unter",
+      "GOOGLE_WEB_FONTS_LINK1_TEXT": "https://developers.google.com/fonts/faq",
+      "GOOGLE_WEB_FONTS_PARAGRAPH2_PART2": "und in der Datenschutzerklärung von Google:",
+      "GOOGLE_WEB_FONTS_LINK2_TEXT": "https://www.google.com/policies/privacy/",
+  
+      "GOOGLE_MAPS_TITLE": "Verwendung von Google Maps",
+      "GOOGLE_MAPS_PARAGRAPH1_PART1": "Auf dieser Website nutzen wir das Angebot von Google Maps. Google Maps wird von Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA (nachfolgend „Google“) betrieben. Dadurch können wir Ihnen interaktive Karten direkt in der Webseite anzeigen und ermöglichen Ihnen die komfortable Nutzung der Karten-Funktion.",
+      "GOOGLE_MAPS_PARAGRAPH1_PART2": "Nähere Informationen über die Datenverarbeitung durch Google können Sie den Google-Datenschutzhinweisen entnehmen:",
+      "GOOGLE_MAPS_LINK1_TEXT": "https://policies.google.com/privacy",
+      "GOOGLE_MAPS_PARAGRAPH1_PART3": "Dort können Sie im Datenschutzcenter auch Ihre persönlichen Datenschutz-Einstellungen verändern.",
+      "GOOGLE_MAPS_PARAGRAPH2_PART1": "Ausführliche Anleitungen zur Verwaltung der eigenen Daten im Zusammenhang mit Google-Produkten finden Sie hier:",
+      "GOOGLE_MAPS_LINK2_TEXT": "https://www.dataliberation.org",
+      "GOOGLE_MAPS_PARAGRAPH3": "Durch den Besuch der Website erhält Google Informationen, dass Sie die entsprechende Unterseite unserer Webseite aufgerufen haben. Dies erfolgt unabhängig davon, ob Google ein Nutzerkonto bereitstellt, über das Sie eingeloggt sind, oder ob keine Nutzerkonto besteht. Wenn Sie bei Google eingeloggt sind, werden Ihre Daten direkt Ihrem Konto zugeordnet.",
+      "GOOGLE_MAPS_PARAGRAPH4": "Wenn Sie die Zuordnung in Ihrem Profil bei Google nicht wünschen, müssen Sie sich vor Aktivierung des Buttons bei Google ausloggen. Google speichert Ihre Daten als Nutzungsprofile und nutzt sie für Zwecke der Werbung, Marktforschung und/oder bedarfsgerechter Gestaltung seiner Websites. Eine solche Auswertung erfolgt insbesondere (selbst für nicht eingeloggte Nutzer) zur Erbringung bedarfsgerechter Werbung und um andere Nutzer des sozialen Netzwerks über Ihre Aktivitäten auf unserer Website zu informieren. Ihnen steht ein Widerspruchsrecht zu gegen die Bildung dieser Nutzerprofile, wobei Sie sich zur Ausübung dessen an Google richten müssen.",
+      "GOOGLE_MAPS_CONSENT_REVOCATION_TITLE": "Widerruf der Einwilligung:",
+      "GOOGLE_MAPS_CONSENT_REVOCATION_PARAGRAPH1": "Vom Anbieter wird derzeit keine Möglichkeit für einen einfachen Opt-out oder ein Blockieren der Datenübertragung angeboten. Wenn Sie eine Nachverfolgung Ihrer Aktivitäten auf unserer Website verhindern wollen, widerrufen Sie bitte im Cookie-Consent-Tool Ihre Einwilligung für die entsprechende Cookie-Kategorie oder alle technisch nicht notwendigen Cookies und Datenübertragungen. In diesem Fall können Sie unsere Website jedoch ggfs. nicht oder nur eingeschränkt nutzen.",
+  
+      "SSL_ENCRYPTION_TITLE": "SSL-Verschlüsselung",
+      "SSL_ENCRYPTION_PARAGRAPH1": "Um die Sicherheit Ihrer Daten bei der Übertragung zu schützen, verwenden wir dem aktuellen Stand der Technik entsprechende Verschlüsselungsverfahren (z. B. SSL) über HTTPS.",
+  
+      "RIGHT_TO_OBJECT_TITLE": "Information über Ihr Widerspruchsrecht nach Art. 21 DSGVO",
+      "RIGHT_TO_OBJECT_INDIVIDUAL_TITLE": "Einzelfallbezogenes Widerspruchsrecht",
+      "RIGHT_TO_OBJECT_PARAGRAPH1": "Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung Sie betreffender personenbezogener Daten, die aufgrund Art. 6 Abs. 1 lit. f DSGVO (Datenverarbeitung auf der Grundlage einer Interessenabwägung) erfolgt, Widerspruch einzulegen; dies gilt auch für ein auf diese Bestimmung gestütztes Profiling im Sinne von Art. 4 Nr. 4 DSGVO.",
+      "RIGHT_TO_OBJECT_PARAGRAPH2": "Legen Sie Widerspruch ein, werden wir Ihre personenbezogenen Daten nicht mehr verarbeiten, es sei denn, wir können zwingende schutzwürdige Gründe für die Verarbeitung nachweisen, die Ihre Interessen, Rechte und Freiheiten überwiegen, oder die Verarbeitung dient der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.",
+      "RIGHT_TO_OBJECT_RECIPIENT_TITLE": "Empfänger eines Widerspruchs",
+  
+      "CHANGES_TITLE": "Änderung unserer Datenschutzbestimmungen",
+      "CHANGES_PARAGRAPH1": "Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen, z.B. bei der Einführung neuer Services. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.",
+  
+      "QUESTIONS_TITLE": "Fragen an den Datenschutzbeauftragten",
+      "QUESTIONS_PARAGRAPH1": "Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail oder wenden Sie sich direkt an die für den Datenschutz verantwortliche Person in unserer Organisation:",
+      "FOOTNOTE_PART1": "Die Datenschutzerklärung wurde mithilfe der activeMind AG erstellt, den Experten für",
+      "FOOTNOTE_LINK_TEXT": "externe Datenschutzbeauftragte",
+      "FOOTNOTE_PART2": "(Version #2020-09-30)."
+    },
+    "LEGAL_NOTICE": {
+    "TITLE": "Impressum",
+    "INFO_TITLE": "Angaben gemäß § 5 TMG:",
+    "REPRESENTED_BY_TITLE": "Vertreten durch:",
+    "CONTACT_TITLE": "Kontakt:",
+    "PHONE": "Telefon: +49 (0)175-30467796",
+    "EMAIL_LABEL": "E-Mail"
+    },
+    "FOOTER": {
+      "LEGAL_NOTICE_LINK": "Impressum"
+    },
+    "BUTTONS": {
+      "BACK": "Zurück"
+    },
+    "LANGUAGE_SWITCH": {
+      "EN": "English",
+      "DE": "Deutsch"
+    },
+    "ABOUT_ME": {
+      "MAIN_TEXT": "Ich liebe IT, weil sie es mir ermöglicht, reale Probleme mit Code zu lösen. Apps von Grund auf neu zu entwickeln, macht mir Freude.",
+      "LOCATION_TEXT": "Ich bin in Berlin und Dresden ansässig und sehr offen für Remote-Arbeit.",
+      "EDUCATION_TEXT": "Ich bin begeistert daran interessiert, immer neue Technologien zu erkunden und neue Fähigkeiten zu erwerben.",
+      "PROBLEM_SOLVING_TEXT": "Ich gehe Herausforderungen Schritt für Schritt an: Während meines Physikstudiums lernte ich komplexe Probleme mit Beharrlichkeit zu lösen."
+    },
+    "CONTACT": {
+      "LEAD_TEXT": "Haben Sie ein Problem?",
+      "BODY_TEXT_PART1": "Melden Sie sich gerne, wenn Sie jemanden suchen, der lernbegierig ist, akribisch arbeitet und im Team aufblüht.",
+      "BODY_TEXT_PART2": "Ich bin leidenschaftlich daran interessiert, saubere, benutzerfreundliche Oberflächen zu erstellen und Ihren Projekten echten Mehrwert zu verleihen.",
+      "CALL_TO_ACTION_PART1": "Benötigen Sie einen Frontend-Entwickler?",
+      "CALL_TO_ACTION_HIGHLIGHT": "Lass uns reden!",
+      "FORM": {
+        "NAME_LABEL": "Wie ist Ihr Name?",
+        "NAME_PLACEHOLDER": "Ihr Name bitte",
+        "NAME_REQUIRED_ERROR": "Bitte geben Sie Ihren Namen ein.",
+        "EMAIL_LABEL": "Wie ist Ihre E-Mail-Adresse?",
+        "EMAIL_PLACEHOLDER": "Ihremail@email.com",
+        "EMAIL_REQUIRED_ERROR": "Bitte geben Sie Ihre E-Mail-Adresse ein.",
+        "EMAIL_INVALID_ERROR": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+        "MESSAGE_LABEL": "Wie kann ich Ihnen helfen?",
+        "MESSAGE_PLACEHOLDER": "Hallo Cecilia, ich bin interessiert an...",
+        "MESSAGE_REQUIRED_ERROR": "Bitte schreiben Sie eine Nachricht.",
+        "PRIVACY_CONSENT_PART1": "Ich habe die",
+        "PRIVACY_CONSENT_LINK_TEXT": "Datenschutzerklärung",
+        "PRIVACY_CONSENT_PART2": "gelesen und stimme der dort beschriebenen Verarbeitung meiner Daten zu.",
+        "PRIVACY_CONSENT_ERROR": "Sie müssen der Datenschutzerklärung zustimmen.",
+        "SUBMIT_BUTTON_TEXT": "Sag Hallo :)",
+        "SUCCESS_MESSAGE": "Vielen Dank! Ihre Nachricht wurde erfolgreich versendet."
+      },
+      "ERROR_MESSAGE": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es später erneut."
+    },
+    "LANDING_PAGE": {
+      "TICKER_ITEM1": "Verfügbar für Remote-Arbeit",
+      "TICKER_ITEM2": "Frontend Entwicklerin",
+      "TICKER_ITEM3": "Based in Berlin/Dresden",
+      "TICKER_ITEM4": "Offen für neue Projekte"
+    },
+    "PROJECTS": {
+      "DESCRIPTION_INTRO": "Hier ist eine Auswahl meiner Projekte – erkunden Sie es gerne in Aktion.",
+      "ARROW_ICON_ALT": "Pfeil Symbol",
+      "PREVIEW_IMAGE_ALT": "Projektvorschau",
+  
+      "MODAL_SUBTITLE": "Worum geht es in diesem Projekt?",
+      "MODAL_PREVIEW_ALT": "Vorschau",
+      "MODAL_BUTTON_GITHUB": "Github",
+      "MODAL_BUTTON_LIVE_TEST": "Live Test",
+      "MODAL_BUTTON_NEXT_PROJECT": "Nächstes Projekt",
+      "ARROW_FORWARD_ALT": "Pfeil vorwärts Symbol",
+  
+      "PROJECT_1": {
+        "DESCRIPTION": "Task-Manager, inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben per Drag & Drop, weisen Sie sie Benutzern und Kategorien zu."
+      },
+      "PROJECT_2": {
+        "DESCRIPTION": "Jump, Run and Throw Spiel, basierend auf objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen."
+      },
+      "PROJECT_3": {
+        "DESCRIPTION": "Diese App ist eine Lieferando-ähnliche Essensbestellplattform. Sie können Menüs mehrerer lokaler Restaurants durchsuchen, Gerichte anpassen und Bestellungen mit wenigen Klicks aufgeben."
+      }
+    },
+    "REFERENCES": {
+      "TITLE": "Was meine Kollegen über mich sagen",
+      "PREV_BUTTON_ARIA_LABEL": "Vorherige Referenz",
+      "NEXT_BUTTON_ARIA_LABEL": "Nächste Referenz",
+      "DOT_ARIA_LABEL": "Referenz",
+      "ARROW_BACK_ALT": "Pfeil zurück Symbol",
+      "ARROW_FORWARD_ALT": "Pfeil vorwärts Symbol",
+
+      "REFERENCE_1": {
+        "TEXT": "Cecilia zeigte Team- und Problemlösungsfähigkeiten mit einer selbstmotivierten Einstellung, neue Programme zu lernen. Sie war in der Lage, das Projekt voranzutreiben.",
+        "AUTHOR": "Uni. Prof. Dr. A. Niendorf",
+        "ROLE": "Professor"
+      },
+      "REFERENCE_2": {
+        "TEXT": "Frau Diesch zeigte eine hohe Einsatzbereitschaft in jeglichem Aufgabenbereich und eine sehr schnelle Auffassungsgabe.",
+        "AUTHOR": "A. Martin",
+        "ROLE": "Einrichtungsleitung"
+      },
+      "REFERENCE_3": {
+        "TEXT": "Sie war ein unverzichtbarer Teil unseres Teams. Ihre Loyalität und ihre sehr motivierende Art halfen durch viele Prozesse, ebenso wie ihr Mut, Unbekanntes auszuprobieren.",
+        "AUTHOR": "M. Lederer",
+        "ROLE": "Teamleiter"
+      },
+      "REFERENCE_4": {
+        "TEXT": "Frau Diesch arbeitete sehr gewissenhaft und teamorientiert. Wir haben sie als freundliche Mitarbeiterin kennengelernt und würden sie jederzeit erneut einstellen.",
+        "AUTHOR": "Prof. Dr. med. P. Ghadjar",
+        "ROLE": "Teamleiter"
+      },
+      "REFERENCE_5": {
+        "TEXT": "Ich schätze besonders Cecilias’ Belastbarkeit und ihre Fähigkeit, auch unter Druck den Überblick zu behalten.",
+        "AUTHOR": "P. Wagner",
+        "ROLE": "Frontend Entwickler"
+      }
+    },
+    "SKILLS": {
+      "SECTION_TITLE": "Technologien",
+      "TITLE": "Skills",
+      "DESCRIPTION": "Hier ist ein Überblick über mein Frontend-Toolkit. Bisher habe ich hauptsächlich mit JavaScript/TypeScript in Angular gearbeitet, unterstützt von Firebase und GitHub.",
+      "CTA_NORMAL": "Sie benötigen ",
+      "CTA_HIGHLIGHT": "eine andere Fähigkeit?",
+      "NOTE": "Melden Sie sich gerne – ich bin immer offen dafür, neue Technologien und Frameworks zu lernen.",
+      "BUTTON_TEXT": "Lass uns reden",
+
+      "ICON_HTML_ALT": "HTML5 Symbol",
+      "ICON_HTML_LABEL": "HTML",
+      "ICON_CSS_ALT": "CSS3 Symbol",
+      "ICON_CSS_LABEL": "CSS",
+      "ICON_JAVASCRIPT_ALT": "JavaScript Symbol",
+      "ICON_JAVASCRIPT_LABEL": "JavaScript",
+      "ICON_ANGULAR_ALT": "Angular Symbol",
+      "ICON_ANGULAR_LABEL": "Angular",
+      "ICON_TYPESCRIPT_ALT": "TypeScript Symbol",
+      "ICON_TYPESCRIPT_LABEL": "TypeScript",
+      "ICON_FIREBASE_ALT": "Firebase Symbol",
+      "ICON_FIREBASE_LABEL": "Firebase",
+      "ICON_GIT_ALT": "GIT Symbol",
+      "ICON_GIT_LABEL": "GIT",
+      "ICON_SCRUM_ALT": "Scrum Symbol",
+      "ICON_SCRUM_LABEL": "Scrum",
+      "ICON_RESTAPI_ALT": "Rest-API Symbol",
+      "ICON_RESTAPI_LABEL": "Rest-API"
+    }
+  }

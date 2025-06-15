@@ -3,8 +3,7 @@
     <p class="projects-label">Portfolio</p>
     <h2 class="projects-title">Featured Projects</h2>
     <p class="projects-desc">
-      Here is a selection of my work – interact with each project to explore
-      them in action.
+      {{ "PROJECTS.DESCRIPTION_INTRO" | translate }}
     </p>
     <div #projectsContainer class="projects-container">
       <!-- Linke Seite: Liste -->
@@ -17,91 +16,26 @@
           (mouseleave)="onLeavePreview()"
           (click)="openPreview(i)"
         >
-          <!-- Projekt-Name + Pfeil -->
+          <!-- Projekt-Name bleibt dynamisch -->
           <span class="project-name">
             {{ p.name }}
             <img
               class="arrow-icon"
               src="assets/icons/arrow_outward.svg"
-              alt="Arrow"
+              alt="{{ 'PROJECTS.ARROW_ICON_ALT' | translate }}"
             />
           </span>
 
-          <!-- Tech-Stack als Liste, Pipe dazwischen -->
+          <!-- Tech-Stack als Liste, Tech-Namen bleiben dynamisch -->
           <span class="project-tech">
             <ng-container *ngFor="let techItem of p.tech; let last = last">
               {{ techItem.name }}<span *ngIf="!last" class="sep">|</span>
             </ng-container>
           </span>
         </div>
-
-        <!-- <div
-        *ngFor="let p of projects; let i = index"
-        class="project-row"
-        #row1
-        (mouseenter)="onHoverPreview(row1, 'assets/img/projects (4).png')"
-        (mouseleave)="onLeavePreview()"
-        (click)="openPreview(i)"
-      >
-        <span class="project-name"
-          >JOIN
-          <img
-            class="arrow-icon"
-            src="../../../assets/icons/arrow_outward.svg"
-            alt="Arrow"
-          />
-        </span>
-
-        <span class="project-tech">
-          Angular<span class="sep">|</span>TypeScript<span class="sep">|</span
-          >HTML<span class="sep">|</span>CSS<span class="sep">|</span>Firebase
-        </span>
-      </div> -->
-
-        <!-- <div
-          *ngFor="let p of projects; let i = index"
-          class="project-row"
-          #row2
-          (mouseenter)="onHoverPreview(row2, 'assets/img/projects (3).png')"
-          (mouseleave)="onLeavePreview()"
-          (click)="openPreview(i)"
-        >
-          <span class="project-name"
-            >EL POLLO LOCO
-            <img
-              class="arrow-icon"
-              src="../../../assets/icons/arrow_outward.svg"
-              alt="Arrow"
-            />
-          </span>
-          <span class="project-tech">
-            HTML<span class="sep">|</span>CSS<span class="sep">|</span>JavaScript
-          </span>
-        </div>
-
-        <div
-          *ngFor="let p of projects; let i = index"
-          class="project-row"
-          #row3
-          (mouseenter)="onHoverPreview(row3, 'assets/img/projects (1).png')"
-          (mouseleave)="onLeavePreview()"
-          (click)="openPreview(i)"
-        >
-          <span class="project-name"
-            >BESTELL APP
-            <img
-              class="arrow-icon"
-              src="../../../assets/icons/arrow_outward.svg"
-              alt="Arrow"
-            />
-          </span>
-          <span class="project-tech">
-            HTML<span class="sep">|</span>CSS<span class="sep">|</span>JavaScript
-          </span>
-        </div> -->
       </div>
 
-      <!-- Rechte Seite: Vorschaubild -->
+      <!-- Rechte Seite: Vorschaubild (Alt-Text übersetzen) -->
       <div
         #projectPreview
         class="project-preview"
@@ -113,10 +47,11 @@
           *ngIf="previewSrc"
           class="preview-img"
           [src]="previewSrc"
-          alt="Project preview"
+          alt="{{ 'PROJECTS.PREVIEW_IMAGE_ALT' | translate }}"
         />
       </div>
     </div>
+    <!-- project-preview-Komponente: muss auch TranslateModule importieren und Texte übersetzen -->
     <app-project-preview
       [project]="activeProject!"
       [isOpen]="activeProject != null"

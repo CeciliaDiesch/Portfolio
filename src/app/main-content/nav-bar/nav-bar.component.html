@@ -1,29 +1,45 @@
 <nav class="navbar">
   <div class="nav__links" [class.open]="isMenuOpen">
     <div role="menuitem">
-      <img
-        [src]="isEngHover ? 'assets/img/eng.svg' : 'assets/img/engHover.svg'"
-        (mouseenter)="isEngHover = true"
-        (mouseleave)="isEngHover = false"
-        alt="Logo"
-      />
-      <!-- <img
-      [src]="isGerHover ? 'assets/img/ger.png' : 'assets/img/gerHover.png'"
-      (mouseenter)="isGerHover = true"
-      (mouseleave)="isGerHover = false"
-      alt="Logo"
-    /> -->
+      <button
+        class="language-button"
+        (click)="switchLanguage(currentLanguage === 'en' ? 'de' : 'en')"
+        (mouseenter)="onEnter()"
+        (mouseleave)="onLeave()"
+        [attr.aria-label]="
+          (currentLanguage === 'en'
+            ? 'Sprache auf Deutsch ändern'
+            : 'Change language to English'
+          ) | translate
+        "
+      >
+        <img
+          [src]="getLanguageImageSrc()"
+          alt="{{
+            (currentLanguage === 'en' ? 'Englische Flagge' : 'Deutsche Flagge')
+              | translate
+          }}"
+        />
+      </button>
+    </div>
+
+    <div role="menuitem">
+      <a href="#about-me" (click)="toggleMenu()">{{
+        "NAV.ABOUT_ME" | translate
+      }}</a>
     </div>
     <div role="menuitem">
-      <a href="#about">About me</a>
+      <a href="#skills" (click)="toggleMenu()">{{
+        "NAV.SKILLS" | translate
+      }}</a>
     </div>
     <div role="menuitem">
-      <a href="#skills">Skills</a>
-    </div>
-    <div role="menuitem">
-      <a href="#projects">Projects</a>
+      <a href="#projects" (click)="toggleMenu()">{{
+        "NAV.PROJECTS" | translate
+      }}</a>
     </div>
   </div>
+
   <div class="logoDiv">
     <img
       class="initials"

@@ -2,15 +2,16 @@
   <div class="left">
     <p class="overline">Contact me</p>
     <h1>Let’s work<br />together</h1>
-    <p class="lead">Got a problem to solve?</p>
+    <p class="lead">{{ "CONTACT.LEAD_TEXT" | translate }}</p>
     <p class="body">
-      Feel free to reach out if you’re looking for someone who’s eager to learn,
-      works meticulously, and thrives in a team.<br />
-      I’m passionate about crafting clean, user-friendly interfaces and adding
-      real value to your projects.
+      {{ "CONTACT.BODY_TEXT_PART1" | translate }}<br />
+      {{ "CONTACT.BODY_TEXT_PART2" | translate }}
     </p>
     <p class="body">
-      Need a Frontend developer? <span class="highlight">Let’s talk!</span>
+      {{ "CONTACT.CALL_TO_ACTION_PART1" | translate }}
+      <span class="highlight">{{
+        "CONTACT.CALL_TO_ACTION_HIGHLIGHT" | translate
+      }}</span>
     </p>
   </div>
 
@@ -19,11 +20,11 @@
       <!-- Name-Feld -->
       <div class="input-group">
         <label>
-          What’s your name?
+          {{ "CONTACT.FORM.NAME_LABEL" | translate }}
           <input
             name="name"
             type="text"
-            placeholder="Your name goes here"
+            [placeholder]="'CONTACT.FORM.NAME_PLACEHOLDER' | translate"
             [(ngModel)]="contactData.name"
             #nameCtrl="ngModel"
             required
@@ -34,18 +35,18 @@
           class="error"
           *ngIf="nameCtrl.invalid && (nameCtrl.touched || formSubmitted)"
         >
-          Please enter your name.
+          {{ "CONTACT.FORM.NAME_REQUIRED_ERROR" | translate }}
         </p>
       </div>
 
       <!-- E-Mail-Feld -->
       <div class="input-group">
         <label>
-          What’s your email?
+          {{ "CONTACT.FORM.EMAIL_LABEL" | translate }}
           <input
             name="email"
             type="text"
-            placeholder="youremail@email.com"
+            [placeholder]="'CONTACT.FORM.EMAIL_PLACEHOLDER' | translate"
             [(ngModel)]="contactData.email"
             #emailCtrl="ngModel"
             required
@@ -58,24 +59,24 @@
           class="error"
           *ngIf="emailCtrl.errors?.['required'] && (emailCtrl.touched || formSubmitted)"
         >
-          Please enter your email.
+          {{ "CONTACT.FORM.EMAIL_REQUIRED_ERROR" | translate }}
         </p>
         <!-- Wenn ungültiges E-Mail-Format -->
         <p
           class="error"
           *ngIf="emailCtrl.errors?.['pattern'] && (emailCtrl.touched || formSubmitted)"
         >
-          Please enter a valid email address.
+          {{ "CONTACT.FORM.EMAIL_INVALID_ERROR" | translate }}
         </p>
       </div>
 
       <!-- Nachrichten-Feld -->
       <div class="input-group">
         <label>
-          How can I help you?
+          {{ "CONTACT.FORM.MESSAGE_LABEL" | translate }}
           <textarea
             name="message"
-            placeholder="Hello Cecilia, I am interested in..."
+            [placeholder]="'CONTACT.FORM.MESSAGE_PLACEHOLDER' | translate"
             [(ngModel)]="contactData.message"
             #msgCtrl="ngModel"
             required
@@ -85,7 +86,7 @@
           class="error"
           *ngIf="msgCtrl.invalid && (msgCtrl.touched || formSubmitted)"
         >
-          Please write a message.
+          {{ "CONTACT.FORM.MESSAGE_REQUIRED_ERROR" | translate }}
         </p>
       </div>
 
@@ -100,18 +101,18 @@
             required
           />
           <label for="privacy">
-            I’ve read the
-            <a class="privacy-policy" routerLink="/privacy-policy"
-              >privacy policy</a
-            >
-            and agree to the processing of my data as outlined.
+            {{ "CONTACT.FORM.PRIVACY_CONSENT_PART1" | translate }}
+            <a class="privacy-policy" routerLink="/privacy-policy">
+              {{ "CONTACT.FORM.PRIVACY_CONSENT_LINK_TEXT" | translate }}
+            </a>
+            {{ "CONTACT.FORM.PRIVACY_CONSENT_PART2" | translate }}
           </label>
         </div>
         <p
           class="error"
           *ngIf="privacyCtrl.invalid && (privacyCtrl.touched || formSubmitted)"
         >
-          You must agree to the privacy policy.
+          {{ "CONTACT.FORM.PRIVACY_CONSENT_ERROR" | translate }}
         </p>
       </div>
       <div class="feedback">
@@ -122,14 +123,16 @@
           [class.loading]="isLoading"
         >
           <ng-container *ngIf="!isLoading; else loadingTpl">
-            <span class="slide-container">Say Hello :)</span>
+            <span class="slide-container">{{
+              "CONTACT.FORM.SUBMIT_BUTTON_TEXT" | translate
+            }}</span>
           </ng-container>
           <ng-template #loadingTpl>
             <div class="button-spinner"></div>
           </ng-template>
         </button>
         <div *ngIf="!isLoading && mailSent" class="success-message">
-          <p>Vielen Dank! Deine Nachricht wurde erfolgreich versendet.</p>
+          <p>{{ "CONTACT.FORM.SUCCESS_MESSAGE" | translate }}</p>
         </div>
       </div>
     </form>

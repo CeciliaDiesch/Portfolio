@@ -5,12 +5,20 @@
     <button class="modal-close-mobile" (click)="close()">
       <span class="cross-icon"></span>
     </button>
-    <img class="mobilePreview" [src]="project.image" alt="Preview" />
+    <img
+      class="mobilePreview"
+      [src]="project.image"
+      alt="{{ project.name | translate }} {{
+        'PROJECTS.MODAL_PREVIEW_ALT' | translate
+      }}"
+    />
     <div class="modal-text">
       <p class="modal-index">{{ project.index | number : "2.0" }}</p>
       <h1 class="modal-name">{{ project.name }}</h1>
 
-      <h3 class="modal-subtitle">What is this project about?</h3>
+      <h3 class="modal-subtitle">
+        {{ "PROJECTS.MODAL_SUBTITLE" | translate }}
+      </h3>
       <p class="modal-description">{{ project.description }}</p>
 
       <div class="modal-tech">
@@ -21,14 +29,26 @@
       </div>
 
       <div class="modal-actions">
+        <!-- Button "Github" -->
         <button>
-          <a href="https://github.com/ceciliadiesch" target="_blank">Github</a>
-          <img src="assets/icons/arrow_forward.svg" />
+          <a [href]="project.github" target="_blank">{{
+            "PROJECTS.MODAL_BUTTON_GITHUB" | translate
+          }}</a>
+          <img
+            src="assets/icons/arrow_forward.svg"
+            alt="{{ 'PROJECTS.ARROW_FORWARD_ALT' | translate }}"
+          />
         </button>
-        <button>Live Test<img src="assets/icons/arrow_forward.svg" /></button>
-
-        <!-- <button (click)="open(project.github)">GitHub</button>
-        <button (click)="open(project.live)">Live Test</button> -->
+        <!-- Button "Live Test" -->
+        <button>
+          <a [href]="project.live" target="_blank">{{
+            "PROJECTS.MODAL_BUTTON_LIVE_TEST" | translate
+          }}</a>
+          <img
+            src="assets/icons/arrow_forward.svg"
+            alt="{{ 'PROJECTS.ARROW_FORWARD_ALT' | translate }}"
+          />
+        </button>
       </div>
     </div>
 
@@ -40,13 +60,16 @@
       <img
         class="preview-img desktopPreview"
         [src]="project.image"
-        alt="Preview"
+        alt="{{ project.name | translate }} {{
+          'PROJECTS.MODAL_PREVIEW_ALT' | translate
+        }}"
       />
       <button class="preview-next" (click)="next()">
-        Next project
+        {{ "PROJECTS.MODAL_BUTTON_NEXT_PROJECT" | translate }}
         <img
           class="arrowForward"
           src="assets/icons/arrow_forward_turquoise.svg"
+          alt="{{ 'PROJECTS.ARROW_FORWARD_ALT' | translate }}"
         />
       </button>
     </div>

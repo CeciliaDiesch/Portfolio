@@ -3,17 +3,19 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm  }   from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { TranslateService, TranslateModule } from '@ngx-translate/core'; 
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule, HttpClientModule, RouterModule],
+  imports: [CommonModule, FormsModule, HttpClientModule, RouterModule, TranslateModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
 
   private http = inject(HttpClient);
+  private translate = inject(TranslateService);
 
   contactData = {
     name: "",

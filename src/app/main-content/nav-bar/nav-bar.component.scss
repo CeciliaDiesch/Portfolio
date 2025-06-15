@@ -2,185 +2,218 @@
 @import './../../../mixin.scss';
 
 nav {
-    @include dFlex($jc: space-between);
-    position: relative;
-    max-width: 100%;
-    width: 100%;
-    height: 100%;
+  @include dFlex($jc: space-between);
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
 
-  
-    > div {
-        display: flex;
-        gap: 16px;
-        align-items: center;
-        font-weight: 400;
-        font-size: 20px;
-  
-      a {
-        position: relative;
-        display: inline-block;
-        margin-top: 10px; 
-        padding-bottom: 10px;   
-        color: white;               
-        text-decoration: none;
-        transition: color 0.1s;
-  
+
+  // >div statt -.nav_links
+  >div{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-weight: 400;
+    font-size: 20px;
+
+    .language-button {
+      width: auto;
+      height: auto;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0; // Entferne internes Padding des Buttons
+      display: flex; // Zentriert das Bild, falls es kleiner ist
+      align-items: center;
+      justify-content: flex-start;
+      
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 3px; // Optional: leicht abgerundete Ecken für Flaggen
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2); // Optional: leichter Schatten
+        transition: transform 0.2s ease-in-out;
+      }
+    }
+      
+    a {
+      position: relative;
+      display: inline-block;
+      margin-top: 10px; 
+      padding-bottom: 10px;   
+      color: white;               
+      text-decoration: none;
+      transition: color 0.1s;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: rgba(61, 207, 182, 1);
+        opacity: 0;
+        transition: opacity 0.1s;
+      }
+
+      &:hover {
+        color: rgba(61, 207, 182, 1);
+
         &::after {
-          content: '';
-          position: absolute;
-          left: 50%;
-          bottom: 0;
-          transform: translateX(-50%);
-          width: 6px;
-          height: 6px;
-          border-radius: 50%;
-          background-color: rgba(61, 207, 182, 1);
-          opacity: 0;
-          transition: opacity 0.1s;
-        }
-  
-        &:hover {
-          color: rgba(61, 207, 182, 1);
-  
-          &::after {
-            opacity: 1;
-          }
+          opacity: 1;
         }
       }
     }
   }
 
-.logoDiv{
-  display: flex;
-  flex-direction: row;
-  gap: 4px !important;
-    >img{
-        height: 48px !important;
-    }
-}
 
-.burger {
-  display: none;
-  flex-direction: column;
-  gap: 0.4rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
+  .logoDiv{
+    display: flex;
+    flex-direction: row;
+    gap: 4px !important;
+      >img{
+          height: 48px !important;
+      }
+  }
 
-.burger__line {
-  width: 25px;
-  height: 1px;
-  background: #fff;
+  .burger {
+    display: none;
+    flex-direction: column;
+    gap: 0.4rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .burger__line {
+    width: 25px;
+    height: 1px;
+    background: #fff;
+  }
 }
 
 
 @media (max-width: 1200px) and (pointer: coarse) and (hover: none){
-  nav div{
-    gap: 0;
-    >a{
-      margin-top: 8px;
-      padding-bottom: 0;
+  nav {
+    div{
+      gap: 0;
+      >a{
+        margin-top: 8px;
+        padding-bottom: 0;
+      }
     }
-  }
 
-  .nav__links{
-    display: none;
-  }
-
-  .burger {
-    display: flex;
-    padding-left: 0;
-    width: 25px;
-  }
-
-  .nav__links {
-    background: transparent;
-    flex-direction: column;
-    align-items: flex-end;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    padding: 0;
-  }
-
-  .nav__links.open {
-    max-height: 100px;
-    transition: max-height 0.3s ease-in;
-    padding:0;
-  }
-
-  .nav__links > div {
-    width: 100%;
-    height: 20px;
-    a {
-      font-size: 12px;
-      display: block;
+    .nav__links{
+      display: none;
     }
-    img {
-      margin-top: 0;
-      margin-bottom: 12px;
-      width: 42px;
-      height: 24px;
+  
+    .burger {
+      display: flex;
+      padding-left: 0;
+      width: 25px;
     }
-  }
+  
+    .nav__links {
+      display: none;
+      background: transparent;
+      flex-direction: column;
+      align-items: flex-end;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      padding: 0;
+    }
+  
+    .nav__links.open {
+      display: flex;
+      max-height: 100px;
+      transition: max-height 0.3s ease-in;
+      padding:0;
+    }
+  
+    .nav__links > div {
+      width: 100%;
+      height: 20px;
+      a {
+        font-size: 12px;
+        display: block;
+      }
 
-  .name{
-    display: none;
-  }
+      img {
+        margin-top: 0;
+        margin-bottom: 12px;
+        width: 42px;
+        height: 24px;
+      }
+    }
+  
+    .name{
+      display: none;
+    }
+  
+    .initials{
+      height: 32px;
+    }
+  } 
 
-  .initials{
-    height: 32px;
-  }
 }
 
 @media (max-height: 1000px) and (orientation: portrait) and (pointer: coarse) and (hover: none){
-  .nav__links {
-    position: absolute !important;
-    top: 65%;
-    right: 0%;
-  }
-
-  .burger{
-    width: 50px;
-  }
+  nav{
+    .nav__links {
+      position: absolute !important;
+      top: 65%;
+      right: 0%;
+    }
+  
+    .burger{
+      width: 50px;
+    }
+  } 
 }
 
 @media (min-height: 1050px) and (orientation: portrait) and (pointer: coarse) and (hover: none){
-  .burger{
-    width: 50px;
-    gap: 20px;
-    height: 98px;
-  }
-
-  button{
-    height: auto;
-  }
-
-  .burger__line{
-    width: 50px;
-    height: 6px;
-  }
-
-  .logoDiv{
-    transform: translateY(-10px);
-    >img{
-      height: 78px !important;
+  nav{
+    .burger{
+      width: 50px;
+      gap: 20px;
+      height: 98px;
     }
-  }
-
-  .nav__links.open{
-    max-height: 280px;
-    height: 220px;
-    margin-top: 36px;
-    gap: 16px;
-    >div a{
-      font-size: 24px;
+  
+    button{
+      height: auto;
     }
-    >div img{
-      margin-bottom: 24px;
-      width: 82px;
-      height: 48px;
+  
+    .burger__line{
+      width: 50px;
+      height: 6px;
+    }
+  
+    .logoDiv{
+      transform: translateY(-10px);
+      >img{
+        height: 78px !important;
+      }
+    }
+  
+    .nav__links.open{
+      display: flex;
+      max-height: 280px;
+      height: 220px;
+      margin-top: 36px;
+      gap: 16px;
+      >div a{
+        font-size: 24px;
+      }
+      >div img{
+        margin-bottom: 0;
+        width: 82px;
+        height: 48px;
+      }
     }
   }
 }

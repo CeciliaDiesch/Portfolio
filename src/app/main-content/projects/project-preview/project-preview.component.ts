@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, SimpleChanges } from '@angular/core';
-import {Project} from '../project.model'
+import {Project} from '../project.model';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-project-preview',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './project-preview.component.html',
   styleUrl: './project-preview.component.scss'
 })

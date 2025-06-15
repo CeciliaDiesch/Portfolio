@@ -1,24 +1,24 @@
 <div class="wrapper">
   <div class="content">
-    <h1>Imprint</h1>
+    <h1>{{ "LEGAL_NOTICE.TITLE" | translate }}</h1>
 
     <span>
-      <h3>Information pursuant to § 5 TMG:</h3>
+      <h3>{{ "LEGAL_NOTICE.INFO_TITLE" | translate }}</h3>
       <br />
       Cecilia Diesch <br />
-      Essener Str 2<br />
+      Emdener Str 2<br />
       10555 Berlin <br />
     </span>
     <span>
-      <h3>Represented by:</h3>
+      <h3>{{ "LEGAL_NOTICE.REPRESENTED_BY_TITLE" | translate }}</h3>
       <br />
       Cecilia Diesch<br />
     </span>
     <span>
-      <h3>Contact:</h3>
+      <h3>{{ "LEGAL_NOTICE.CONTACT_TITLE" | translate }}</h3>
       <br />
-      Phone: +49 (0)176-30465596<br />
-      E-Mail:
+      {{ "LEGAL_NOTICE.PHONE" | translate }}<br />
+      {{ "LEGAL_NOTICE.EMAIL_LABEL" | translate }}:
       <a href="mailto:cecilia-diesch@web.de">cecilia-diesch &#64; web.de</a
       ><br />
     </span>
@@ -27,6 +27,8 @@
       onclick="window.history.back()"
     >
       <span class="slide-container">←</span>
+      <!-- Oder wenn der Button "Zurück" heißen soll: -->
+      <!-- {{ 'BUTTONS.BACK' | translate }} -->
     </button>
   </div>
 </div>

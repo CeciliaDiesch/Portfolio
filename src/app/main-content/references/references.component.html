@@ -1,5 +1,5 @@
 <section id="reviews" class="review-section">
-  <h2 class="review-title">What my colleagues say about me</h2>
+  <h2 class="review-title">{{ "REFERENCES.TITLE" | translate }}</h2>
 
   <div class="carousel-container">
     <div class="quote-icon-static">“</div>
@@ -20,9 +20,7 @@
           <div class="author">
             <hr class="review-divider" />
             <span class="name">{{ references[getIndex(off)].author }}</span>
-            <span class="role"
-              >&nbsp; – {{ references[getIndex(off)].role }}</span
-            >
+            <span class="role">  – {{ references[getIndex(off)].role }}</span>
           </div>
         </div>
       </ng-container>
@@ -30,17 +28,31 @@
 
     <!-- Controls & Dots -->
     <div class="controls">
-      <button class="btn prev-btn" (click)="showPrev()">
+      <!-- Korrektur für den prev-Button -->
+      <button
+        class="btn prev-btn"
+        (click)="showPrev()"
+        [attr.aria-label]="'REFERENCES.PREV_BUTTON_ARIA_LABEL' | translate"
+      >
         <!-- <img src="../../../assets/icons/references/arrow_back_white.svg" /> -->
       </button>
       <ul class="dots">
+        <!-- Korrektur für das li-Element -->
         <li
           *ngFor="let r of references; let i = index"
           [class.active]="i === activeIndex"
           (click)="activeIndex = i; rotateOffsetsForDirectSelect(i)"
+          [attr.aria-label]="
+            ('REFERENCES.DOT_ARIA_LABEL' | translate) + ' ' + (i + 1)
+          "
         ></li>
       </ul>
-      <button class="btn next-btn" (click)="showNext()">
+      <!-- Korrektur für den next-Button -->
+      <button
+        class="btn next-btn"
+        (click)="showNext()"
+        [attr.aria-label]="'REFERENCES.NEXT_BUTTON_ARIA_LABEL' | translate"
+      >
         <!-- <img src="../../../assets/icons/references/arrow_forward_white.svg" /> -->
       </button>
     </div>

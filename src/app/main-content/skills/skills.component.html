@@ -2,31 +2,35 @@
   <div class="technologies-content">
     <!-- Linke Seite: Text-Box -->
     <div class="tech-text-box">
-      <p class="tech-section-title">Technologies</p>
+      <!-- "Technologies" übersetzen -->
+      <p class="tech-section-title">{{ "SKILLS.SECTION_TITLE" | translate }}</p>
 
       <div class="skill-box">
-        <h2 class="skill-title">Skill Set</h2>
+        <!-- "Skill Set" Überschrift übersetzen -->
+        <h2 class="skill-title">{{ "SKILLS.TITLE" | translate }}</h2>
 
+        <!-- Beschreibungstext übersetzen -->
         <p class="skill-desc">
-          A concise overview of my front-end toolkit. Until now, I mainly worked
-          on JavaScript/TypeScript in Angular, backed by Firebase and GitHub.
-          <!-- I stay curious about new frameworks and  
-          love teaming up on large-scale work.-->
+          {{ "SKILLS.DESCRIPTION" | translate }}
         </p>
 
+        <!-- Call-to-action Text übersetzen -->
         <p class="skill-cta">
-          <span class="cta-normal">You need </span>
-          <span class="cta-highlight">another skill?</span>
+          <span class="cta-normal">{{ "SKILLS.CTA_NORMAL" | translate }} </span>
+          <span class="cta-highlight">{{
+            "SKILLS.CTA_HIGHLIGHT" | translate
+          }}</span>
         </p>
 
+        <!-- Hinweis-Text übersetzen -->
         <p class="skill-note">
-          Feel free to reach out—I’m always open to learn new technologies and
-          frameworks.
-          <!-- expanding my expertise. -->
+          {{ "SKILLS.NOTE" | translate }}
         </p>
         <a href="#contact">
           <button class="button-sliding-text">
-            <span class="slide-container">Let’s Talk</span>
+            <span class="slide-container">{{
+              "SKILLS.BUTTON_TEXT" | translate
+            }}</span>
           </button></a
         >
       </div>
@@ -34,47 +38,77 @@
 
     <!-- Rechte Seite: Icon-Grid -->
     <div class="tech-icons">
+      <!-- HTML Icon -->
       <div class="tech-icon">
-        <img src="../../../assets/icons/frontend/HTML.svg" alt="HTML5" />
-        <span>HTML</span>
+        <img
+          src="../../../assets/icons/frontend/HTML.svg"
+          alt="{{ 'SKILLS.ICON_HTML_ALT' | translate }}"
+        />
+        <span>{{ "SKILLS.ICON_HTML_LABEL" | translate }}</span>
       </div>
+      <!-- CSS Icon -->
       <div class="tech-icon">
-        <img src="../../../assets/icons/frontend/CSS.svg" alt="CSS3" />
-        <span>CSS</span>
+        <img
+          src="../../../assets/icons/frontend/CSS.svg"
+          alt="{{ 'SKILLS.ICON_CSS_ALT' | translate }}"
+        />
+        <span>{{ "SKILLS.ICON_CSS_LABEL" | translate }}</span>
       </div>
+      <!-- JavaScript Icon -->
       <div class="tech-icon">
         <img
           src="../../../assets/icons/frontend/javaScript.svg"
-          alt="JavaScript"
+          alt="{{ 'SKILLS.ICON_JAVASCRIPT_ALT' | translate }}"
         />
-        <span>JavaScript</span>
+        <span>{{ "SKILLS.ICON_JAVASCRIPT_LABEL" | translate }}</span>
       </div>
+      <!-- Angular Icon -->
       <div class="tech-icon">
-        <img src="../../../assets/icons/frontend/angular.svg" alt="Angular" />
-        <span>Angular</span>
+        <img
+          src="../../../assets/icons/frontend/angular.svg"
+          alt="{{ 'SKILLS.ICON_ANGULAR_ALT' | translate }}"
+        />
+        <span>{{ "SKILLS.ICON_ANGULAR_LABEL" | translate }}</span>
       </div>
+      <!-- TypeScript Icon -->
       <div class="tech-icon">
         <img
           src="../../../assets/icons/frontend/typeScript.svg"
-          alt="TypeScript"
+          alt="{{ 'SKILLS.ICON_TYPESCRIPT_ALT' | translate }}"
         />
-        <span>TypeScript</span>
+        <span>{{ "SKILLS.ICON_TYPESCRIPT_LABEL" | translate }}</span>
       </div>
+      <!-- Firebase Icon -->
       <div class="tech-icon">
-        <img src="../../../assets/icons/frontend/firebase.svg" alt="Firebase" />
-        <span>Firebase</span>
+        <img
+          src="../../../assets/icons/frontend/firebase.svg"
+          alt="{{ 'SKILLS.ICON_FIREBASE_ALT' | translate }}"
+        />
+        <span>{{ "SKILLS.ICON_FIREBASE_LABEL" | translate }}</span>
       </div>
+      <!-- GIT Icon -->
       <div class="tech-icon">
-        <img src="../../../assets/icons/frontend/git.svg" alt="GIT" />
-        <span>GIT</span>
+        <img
+          src="../../../assets/icons/frontend/git.svg"
+          alt="{{ 'SKILLS.ICON_GIT_ALT' | translate }}"
+        />
+        <span>{{ "SKILLS.ICON_GIT_LABEL" | translate }}</span>
       </div>
+      <!-- Scrum Icon -->
       <div class="tech-icon">
-        <img src="../../../assets/icons/frontend/scrum.svg" alt="Scrum" />
-        <span>Scrum</span>
+        <img
+          src="../../../assets/icons/frontend/scrum.svg"
+          alt="{{ 'SKILLS.ICON_SCRUM_ALT' | translate }}"
+        />
+        <span>{{ "SKILLS.ICON_SCRUM_LABEL" | translate }}</span>
       </div>
+      <!-- Rest-API Icon -->
       <div class="tech-icon">
-        <img src="../../../assets/icons/frontend/restApi.svg" alt="Rest-API" />
-        <span>Rest-API</span>
+        <img
+          src="../../../assets/icons/frontend/restApi.svg"
+          alt="{{ 'SKILLS.ICON_RESTAPI_ALT' | translate }}"
+        />
+        <span>{{ "SKILLS.ICON_RESTAPI_LABEL" | translate }}</span>
       </div>
     </div>
   </div>
