@@ -1,11 +1,9 @@
-
-
 .div-Nav{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 98px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 98px;
 }
 
 section{
@@ -27,117 +25,112 @@ section{
   align-items: center;
   flex-direction: column;
   padding-bottom: 50px;
-  // overflow-x: hidden;
 }
-
 
 @keyframes arrowMove {
     0%   { transform: translateY(0); }
     50%  { transform: translateY(10px); }
     100% { transform: translateY(0); }
-  }
-
-.button-Div{
-    margin-top: 40px;;
-    display: flex;
-    gap: 48px;
-    font-family: 'Karla';
-    font-size: 18px;
-    font-weight: 400;
 }
 
-
+.button-Div{
+  margin-top: 40px;;
+  display: flex;
+  gap: 48px;
+  font-family: 'Karla';
+  font-size: 18px;
+  font-weight: 400;
+}
 
 .scroll-container {
-    position: absolute;
-    bottom: 0px;    /* Abstand von unten */
-    left: 0px;      /* Abstand von links */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .scroll-btn {
-    width: 30px;
-    height: 48px;
-    border: 1px solid rgba(61, 207, 182, 1);
-    border-radius: 32px;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.scroll-btn {
+  width: 30px;
+  height: 48px;
+  border: 1px solid rgba(61, 207, 182, 1);
+  border-radius: 32px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.scroll-arrow {
+  width: 10px;
+  height: 16px;
+  color: white;
+  animation: arrowMove 1.5s ease-in-out infinite;
+}
+
+.scroll-line {
+  margin-top: 24px;
+  width: 1px;
+  height: 240px;
+  background-color: rgba(61, 207, 182, 1);
+}
+
+.info-container{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;   
+  width: 26px;
+  overflow: visible;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;   
+  color: white; 
+  >a{
+    display: inline-block;          
+    white-space: nowrap;             
+    transform: rotate(-90deg);       
+    transform-origin: center center;
+    font-size: 18px;
+    font-family: 'Karla';
+    font-weight: 400;
+    color: inherit;
+    transition: color 0.3s;
     cursor: pointer;
-    padding: 0;
+
+    &:hover {
+      color: rgba(61, 207, 182, 1);
+    }
   }
 
-  .scroll-arrow {
-    width: 10px;
-    height: 16px;
-    color: white;
-    animation: arrowMove 1.5s ease-in-out infinite;
-  }
-
-  .scroll-line {
-    margin-top: 24px;
-    width: 1px;
-    height: 240px;
-    background-color: rgba(61, 207, 182, 1);
-  }
-
-
-  .info-container{
-    position: absolute;
-    bottom: 0px;
-    right: 0px;   
-    width: 26px;
-    overflow: visible;  
+  .emailDesktop{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;   
-    color: white; 
-    >a{
-        display: inline-block;          
-        white-space: nowrap;             
-        transform: rotate(-90deg);       
-        transform-origin: center center;
-        font-size: 18px;
-        font-family: 'Karla';
-        font-weight: 400;
-        color: inherit;
-        transition: color 0.3s;
-        cursor: pointer;
-    
-        &:hover {
-          color: rgba(61, 207, 182, 1);
-        }
-    }
+  }
 
-    .emailDesktop{
-      display: flex;
-    }
+  .emailMobile{
+    display: none;
+  }
 
-    .emailMobile{
-      display: none;
+  .icon-wrapper {
+    margin-top: 96px;
+    width: 26px;
+    height: 26px;
+    overflow: visible;
+    img {
+      cursor: pointer;
+      transition: transform 0.3s;
     }
-
-    .icon-wrapper {
-        margin-top: 96px;
-        width: 26px;
-        height: 26px;
-        overflow: visible;
-        img {
-          cursor: pointer;
-          transition: transform 0.3s;
-        }
-      }
-    
-      .info-line {
-        width: 1px;
-        height: 190px;
-        background-color: white;
-        margin-left: 6px;
-      }
+  }
+  
+  .info-line {
+    width: 1px;
+    height: 190px;
+    background-color: white;
+    margin-left: 6px;
+  }
 }
 
 .mobileGitImg{
@@ -145,316 +138,316 @@ section{
 }
 
 .ticker-bar {
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    bottom: 100px;
-    left: -110px;  
-    width: 120vw;
-    height: 62px;
-    background-color: rgba(255, 255, 255, 0.12);
-    overflow: hidden;
-      /* Hier die Rotation um 3° hinzufügen */
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 100px;
+  left: -110px;  
+  width: 120vw;
+  height: 62px;
+  background-color: rgba(255, 255, 255, 0.12);
+  overflow: hidden;
   transform: rotate(-3deg);
-  /* Drehpunkt: Mitte oben - passt den Ursprung an dein Layout an */
   transform-origin: top center;
-  }
+}
   
-  .ticker-content {
-    display: flex;
+.ticker-content {
+  display: flex;
+  white-space: nowrap;
+  width: max-content;
+}
+
+.ticker-group {
+  display: flex;
+  align-items: center;
+  margin-left: 56px;
+  gap: 56px;
+  flex: none;
+}
+
+.ticker-item {
+  flex: none;
+  font-size: 32px;
+  color: rgba(61, 207, 182, 1);
+}
+
+.dot {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(61, 207, 182, 1);
+}
+
+// // ipadMini portrait und landscape, ipad air 820 x1180 ist gut, ipad pro 1024x1366
+//  surfacepro ist wieder gt 912x1368
+@media (min-width: 1020px) and (min-height: 760px){}
+
+@media (min-width: 1400px){
+  .ticker-bar {
+    width: 100vw;
   }
-  
-  .ticker-group {
-    display: flex;
-    align-items: center;
-    margin-left: 56px;
-    /* nur hier Gap anwenden, zwischen den Items */
-    gap: 56px;
-    /* Verhindert, dass Flex versucht, Items zu strecken */
-    flex: none;
+}
+
+@media (max-width: 1200px) and (pointer: coarse) and (hover: none){
+  h1{
+    font-size: 48px; 
   }
-  
-  .ticker-item {
-    flex: none;
-    font-size: 32px;
-    color: rgba(61, 207, 182, 1);
+
+  h2{
+    font-size: 20px;
   }
-  
-  .dot {
-    flex: none;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: rgba(61, 207, 182, 1);
+
+  .content{
+    padding-top: 50px;
   }
-  // and (orientation: landscape)
-  @media (max-width: 1200px) and (pointer: coarse) and (hover: none){
-    h1{
-      font-size: 48px; 
+
+  .button-Div{
+    margin-top: 20px;
+    gap: 32px;
+    font-size: 12px;
+  }
+
+  button{
+    font-size: 12px;
+    width: 120px;
+    height: 36px;
+    padding-top: 6px;
+    padding-right: 12px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+  }
+
+  button:hover{
+    border-color: white;
+    color: white;
+  }
+
+  .button-sliding-text:hover .slide-container{
+    animation: none !important;
+  }
+
+  .scroll-btn{
+    width: 30px;
+    height: 48px;
+    font-size: 12px !important;
+  }
+
+  .scroll-line{
+    margin-top: 12px;
+    height: 164px;
+  }
+
+  .scroll-arrow{
+    width: 11px;
+    height: 13px;
+    animation: arrowMove2 1.5s ease-in-out infinite;
+  }
+
+  @keyframes arrowMove2 {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(5px); }
+    100% { transform: translateY(0); }
+  }
+
+  .info-container{
+    // width: 18px;
+    gap: 4px;
+
+    .icon-wrapper{
+      margin-top: 0;
+      >a img{
+        width: 26px;
+        height: 26px;
+      }
     }
 
-    h2{
-      font-size: 20px;
+    .emailIcon{
+      transform: rotate(90deg);
+      height: 26px;
+      width: 26px;
     }
 
-    .content{
-      padding-top: 50px;
+    .emailDesktop{
+      display: none;
     }
 
-    .button-Div{
-      margin-top: 20px;
-      gap: 32px;
-      font-size: 12px;
+    .emailMobile{
+      display: flex;
     }
 
-    button{
-      font-size: 12px;
-      width: 120px;
-      height: 36px;
-      padding-top: 6px;
-      padding-right: 12px;
-      padding-bottom: 6px;
-      padding-left: 12px;
-    }
-
-    button:hover{
-      border-color: white;
+    a:hover{
       color: white;
     }
 
-    .button-sliding-text:hover .slide-container{
-      animation: none !important;
+    .info-line{
+      height: 100px;
+      margin-left: 0;
     }
 
-    .scroll-btn{
-      width: 30px;
-      height: 48px;
-      font-size: 12px !important;
+    .desktopGitImg{
+      display: none;
     }
 
-    .scroll-line{
-      margin-top: 12px;
-      height: 164px;
-    }
-
-    .scroll-arrow{
-      width: 11px;
-      height: 13px;
-      animation: arrowMove2 1.5s ease-in-out infinite;
-    }
-
-    @keyframes arrowMove2 {
-      0%   { transform: translateY(0); }
-      50%  { transform: translateY(5px); }
-      100% { transform: translateY(0); }
-    }
-
-    .info-container{
-      width: 18px;
-      gap: 4px;
-      // >a{
-      //   display: none;
-      //   // font-size: 12px;
-      // }
-      .icon-wrapper{
-        margin-top: 0;
-        // width: 13px;
-        // height: 13px;
-        >a img{
-          width: 26px;
-          height: 26px;
-          // padding-top: 8px;
-          // padding-right: 4px;
-        }
-      }
-
-      .emailIcon{
-        transform: rotate(90deg);
-        height: 26px;
-        width: 26px;
-      }
-
-      .emailDesktop{
-        display: none;
-      }
-
-      .emailMobile{
-        display: flex;
-      }
-
-      a:hover{
-        color: white;
-      }
-
-      .info-line{
-        height: 100px;
-        margin-left: 0;
-      }
-
-      .desktopGitImg{
-        display: none;
-      }
-      .mobileGitImg{
-        display: flex;
-      }
-    }
-
-    .ticker-bar{
-      bottom: 25px;
-      left: -60px;
-      height: 31px;
-    }
-    .ticker-group{
-      margin-left: 28px;
-      gap: 28px;
-    }
-    .dot{
-      height: 5px;
-      width: 5px;
-    }
-    .ticker-item{
-      font-size: 16px;
+    .mobileGitImg{
+      display: flex;
     }
   }
 
-  @media (min-height: 1050px) and (orientation: portrait) and (pointer: coarse) and (hover: none){
-    h1{
-      font-size: 96px; 
-    }
+  .ticker-bar{
+    bottom: 25px;
+    left: -60px;
+    height: 31px;
+  }
 
-    h2{
-      font-size: 40px;
-    }
+  .ticker-group{
+    margin-left: 28px;
+    gap: 28px;
+  }
 
-    .content{
-      padding-top: 100px;
-    }
+  .dot{
+    height: 5px;
+    width: 5px;
+  }
 
-    .button-Div{
-      margin-top: 40px;
-      gap: 64px;
-      font-size: 24px;
-    }
+  .ticker-item{
+    font-size: 16px;
+  }
+}
 
-    button{
-      font-size: 24px;
-      width: 240px;
-      height: 72px;
-      padding-top: 12px;
-      padding-right: 24px;
-      padding-bottom: 12px;
-      padding-left: 24px;
-    }
+@media (min-height: 1050px) and (orientation: portrait) and (pointer: coarse) and (hover: none){
+  h1{
+    font-size: 96px; 
+  }
 
-    .button-sliding-text:hover .slide-container{
-      animation: none !important;
-    }
+  h2{
+    font-size: 40px;
+  }
 
-    .scroll-btn{
-      width: 60px;
-      height: 96px;
-      font-size: 24px !important;
-    }
+  .content{
+    padding-top: 100px;
+  }
 
-    .scroll-line{
-      margin-top: 24px;
-      height: 328px;
-    }
+  .button-Div{
+    margin-top: 40px;
+    gap: 64px;
+    font-size: 24px;
+  }
 
-    .scroll-arrow{
-      width: 22px;
-      height: 26px;
-      animation: arrowMove2 1.5s ease-in-out infinite;
-    }
+  button{
+    font-size: 24px;
+    width: 240px;
+    height: 72px;
+    padding-top: 12px;
+    padding-right: 24px;
+    padding-bottom: 12px;
+    padding-left: 24px;
+  }
 
-    @keyframes arrowMove2 {
-      0%   { transform: translateY(0); }
-      50%  { transform: translateY(10px); }
-      100% { transform: translateY(0); }
-    }
+  .button-sliding-text:hover .slide-container{
+    animation: none !important;
+  }
 
-    .info-container{
-      width: 36px;
-      gap:80px;
-      // >a{
-      //   display: none;
-      //   // font-size: 12px;
-      // }
-      .icon-wrapper{
-        margin-top: 0;
-        // width: 13px;
-        // height: 13px;
-        // padding-top: 16px;
-        // padding-right: 8px;
-        >a img{
-          width: 52px;
-          height: 52px;
-          transform: translate(-14px, 36px);
-        }
-      }
+  .scroll-btn{
+    width: 60px;
+    height: 96px;
+    font-size: 24px !important;
+  }
 
-      .emailIcon{
-        transform: rotate(90deg);
-        height: 52px;
+  .scroll-line{
+    margin-top: 24px;
+    height: 328px;
+  }
+
+  .scroll-arrow{
+    width: 22px;
+    height: 26px;
+    animation: arrowMove2 1.5s ease-in-out infinite;
+  }
+
+  @keyframes arrowMove2 {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(10px); }
+    100% { transform: translateY(0); }
+  }
+
+  .info-container{
+    width: 36px;
+    gap:80px;
+    .icon-wrapper{
+      margin-top: 0;
+      >a img{
         width: 52px;
-      }
-
-      .emailDesktop{
-        display: flex;
-        padding-right: 6px;
-      }
-
-      .emailMobile{
-        display: none;
-      }
-
-      a:hover{
-        color: white;
-      }
-
-      .info-line{
-        height: 200px;
-        margin-left: 0;
-      }
-
-      .desktopGitImg{
-        display: none;
-      }
-      .mobileGitImg{
-        display: flex;
+        height: 52px;
+        transform: translate(-14px, 36px);
       }
     }
 
-    .ticker-bar{
-      bottom: 50px;
-      left: -120px;
-      height: 62px;
-    }
-    .ticker-group{
-      margin-left: 56px;
-      gap: 58px;
-    }
-    .dot{
-      height: 10px;
-      width: 10px;
-    }
-    .ticker-item{
-      font-size: 32px;
+    .emailIcon{
+      transform: rotate(90deg);
+      height: 52px;
+      width: 52px;
     }
 
-    .div-Nav{
-      top: -24px;
-      height: 280px;
+    .emailDesktop{
+      display: flex;
+      padding-right: 6px;
     }
 
-  }
+    .emailMobile{
+      display: none;
+    }
 
-  @media (max-width: 400px) and (orientation: portrait) and (pointer: coarse) and (hover: none){
-    h1{
-      font-size: 40px;
+    a:hover{
+      color: white;
+    }
+
+    .info-line{
+      height: 200px;
+      margin-left: 0;
+    }
+
+    .desktopGitImg{
+      display: none;
+    }
+
+    .mobileGitImg{
+      display: flex;
     }
   }
+
+  .ticker-bar{
+    bottom: 50px;
+    left: -120px;
+    height: 62px;
+  }
+
+  .ticker-group{
+    margin-left: 56px;
+    gap: 58px;
+  }
+
+  .dot{
+    height: 10px;
+    width: 10px;
+  }
+
+  .ticker-item{
+    font-size: 32px;
+  }
+
+  .div-Nav{
+    top: -24px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 400px) and (orientation: portrait) and (pointer: coarse) and (hover: none){
+  h1{
+    font-size: 40px;
+  }
+}
   
 
 

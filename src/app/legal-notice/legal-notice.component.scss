@@ -79,6 +79,7 @@ h3{
         width: 80px !important;
         }
 }
+
 @media (max-width: 800px) and (orientation: landscape) and (pointer: coarse) and (hover: none){
     .wrapper{
         padding: 10px !important;
@@ -111,7 +112,7 @@ h3{
         font-size: 24px;
         height: 28px;
         width: 100px;
-        }
+    }
 }
 
 @media (max-height: 1000px) and (orientation: portrait) and (pointer: coarse) and (hover: none){
@@ -140,7 +141,7 @@ h3{
         font-size: 24px;
         height: 20px;
         width: 80px;
-        }
+    }
 }
 
 @media (max-height: 400px) and (orientation: landscape) and (pointer: coarse) and (hover: none){

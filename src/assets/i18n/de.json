@@ -137,9 +137,9 @@
         "PRIVACY_CONSENT_PART2": "gelesen und stimme der dort beschriebenen Verarbeitung meiner Daten zu.",
         "PRIVACY_CONSENT_ERROR": "Sie müssen der Datenschutzerklärung zustimmen.",
         "SUBMIT_BUTTON_TEXT": "Sag Hallo :)",
-        "SUCCESS_MESSAGE": "Vielen Dank! Ihre Nachricht wurde erfolgreich versendet."
-      },
-      "ERROR_MESSAGE": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es später erneut."
+        "SUCCESS_MESSAGE": "Vielen Dank! Ihre Nachricht wurde erfolgreich versendet.",
+        "ERROR_MESSAGE": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es später erneut."
+      }
     },
     "LANDING_PAGE": {
       "TICKER_ITEM1": "Verfügbar für Remote-Arbeit",

@@ -1,6 +1,6 @@
 export interface TechItem {
-  icon: string;  // Pfad zur SVG/URL
-  name: string;  // z.B. 'Angular'
+  icon: string;
+  name: string;
 }
 export interface Project {
     index: number;

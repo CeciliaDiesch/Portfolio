@@ -2,10 +2,8 @@
 @import 'swiper/css/navigation';
 @import 'swiper/css/pagination';
 
-/* You can add global styles to this file, and also import other style files */
 *{
     margin: 0;
-
 }
 
 *, *::before, *::after {
@@ -42,14 +40,15 @@ h1 {
   font-size: 128px ;
   font-weight: 700;
   color: rgba(217, 217, 217, 1);
-
 }
+
 h2 {
     font-family: "Fira Code", sans-serif;
   font-size: 40px;
   font-weight: 400;
   color: rgba(217, 217, 217, 1);
 }
+
 h3 {
     font-family: "Fira Code", sans-serif;
   font-size: 56px;
@@ -69,103 +68,128 @@ font-family: "Fira Code", sans-serif;
     font-family: "Karla", sans-serif;
 }
 
-/* fira-code-regular - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Fira Code';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../src/assets/fonts/fira-code-v26-latin/fira-code-v26-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
+  font-display: swap;
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../src/assets/fonts/fira-code-v26-latin/fira-code-v26-latin-regular.woff2') format('woff2');
+}
   
-  /* fira-code-700 - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Fira Code';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../src/assets/fonts/fira-code-v26-latin/fira-code-v26-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-
-  /* karla-regular - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Karla';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../src/assets/fonts/karla-v31-latin/karla-v31-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
+  font-display: swap; 
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../src/assets/fonts/fira-code-v26-latin/fira-code-v26-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../src/assets/fonts/karla-v31-latin/karla-v31-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../src/assets/fonts/karla-v31-latin/karla-v31-latin-700.woff2') format('woff2');
+}
   
-  /* karla-700 - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Karla';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../src/assets/fonts/karla-v31-latin/karla-v31-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  
-  section {
-    width: 100%;
-    padding: 145px 100px 0 100px;
-    overflow-x: hidden;
-  }
+section {
+  width: 100%;
+  padding: 145px 100px 0 100px;
+  overflow-x: hidden;
+}
 
 
-  button{
-    white-space: nowrap;
-    font-family: 'Karla';
-    font-weight: 400;
-    font-size: 18px;
-    width: 172px;
-    height: 48px;
-    border-radius: 100px;
-    border: 1px solid;
-    gap: 10px;
-    padding-top: 13px;
-    padding-right: 24px;
-    padding-bottom: 13px;
-    padding-left: 24px;
-    background-color: transparent;
-    cursor: pointer;
-    transition: border-color 0.3s;
-    color: white;
+button{
+  white-space: nowrap;
+  font-family: 'Karla';
+  font-weight: 400;
+  font-size: 18px;
+  width: 172px;
+  height: 48px;
+  border-radius: 100px;
+  border: 1px solid;
+  gap: 10px;
+  padding-top: 13px;
+  padding-right: 24px;
+  padding-bottom: 13px;
+  padding-left: 24px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  color: white;
+  &:hover {
+    border-color: rgba(61, 207, 182, 1);
+    color: rgba(61, 207, 182, 1);
+  }
+  &.disabled {
+    opacity: 0.7;
     &:hover {
-        border-color: rgba(61, 207, 182, 1);
-        color: rgba(61, 207, 182, 1);
-      }
-      &.disabled {
-        opacity: 0.7;
-        &:hover {
-          border-color: white;
-          color:white;
-        }
-      }
+      border-color: white;
+      color:white;
+    }
+  }
+}
+
+
+.button-sliding-text{
+  overflow: hidden;
+  .slide-container {
+    display: inline-block;
+    white-space: nowrap;
+    transform: translateX(0);
+  }
+  &:hover .slide-container {
+    animation: slideLeftOnly 4s linear infinite;
+  }
+}
+    
+@keyframes slideLeftOnly {
+    0%   { transform: translateX(200%); }
+    100% { transform: translateX(-200%); }
   }
 
-
-  .button-sliding-text{
-    overflow: hidden;             /* Wörter, die aus der Box laufen, werden ausgeblendet */
-      .slide-container {
-        display: inline-block;
-        white-space: nowrap;
-        transform: translateX(0);
-      }
-      &:hover .slide-container {
-        animation: slideLeftOnly 4s linear infinite;
-      }
-    }
-    
-    @keyframes slideLeftOnly {
-        0%   { transform: translateX(200%); }   /* startet rechts außerhalb */
-        100% { transform: translateX(-200%); }  /* endet links außerhalb */
-      }
-
-/* Verhindere Scrollen der Seite, wenn Modal offen ist */
 html.modal-open, body.modal-open {
   overflow: hidden !important;
   height: 95vh !important;
   width: 95vw !important;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: #2c2c2c;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3DCFB6;
+  border-radius: 10px;
+  border: 2px solid #2c2c2c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: lighten(#3DCFB6, 10%);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgba(61, 207, 182, 0.3);
+  transition: background 0.3s ease;
+}
+
+body:hover::-webkit-scrollbar-thumb {
+  background: rgba(61, 207, 182, 0.8);
 }
 
 @media (pointer: coarse) and (hover: none){
@@ -179,29 +203,28 @@ html.modal-open, body.modal-open {
   }
 }
 
-
 @media (min-width: 1200px) and (max-width: 1400px) {
   section{
-    padding: 75px 60px 0 60px !important;
+    padding: 75px 60px 12px 60px !important;
   }
 }
 
 @media (min-width: 770px) and (max-width: 1200px) {
   section{
-    transform: translateX(-1vw);    //vllt wieder raus
-    padding: 70px 50px 0 50px !important;
+    transform: translateX(-1vw);
+    padding: 70px 50px 12px 50px !important;
     max-width: 95vw;
   }
 }
     
 @media (min-width: 520px) and (max-width: 770px) {
   section{
-    padding: 60px 20px 0 20px !important;
+    padding: 60px 20px 12px 20px !important;
   }
 }
 
 @media (max-width: 520px) {
   section{
-    padding: 60px 20px 0 20px !important;
+    padding: 60px 20px 12px 20px !important;
   }
 }

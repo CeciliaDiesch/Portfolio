@@ -15,6 +15,7 @@
         font-size: 24px;
         margin-bottom: 20px;
       }
+
       h1 {
         color: rgba(61, 207, 182, 1);
         font-family: 'Fira Code';
@@ -22,6 +23,7 @@
         margin-bottom: 40px;
         line-height: 100%;
       }
+
       .lead {
         font-size: 24px;
         margin-bottom: 16px;
@@ -29,6 +31,7 @@
         font-family: 'Fira Code';
         line-height: 120%;
       }
+
       .body {
         color: rgba(255, 255, 255, 1);
         font-size: 16px;
@@ -36,10 +39,11 @@
         font-weight: 400;
         margin-bottom: 16px;
       }
+
       .highlight {
         font-weight: 700;
         color: rgba(61, 207, 182, 1);
-        text-decoration: none; /* Sicherstellen, dass keine Unterstreichung kommt */
+        text-decoration: none;
       }
     }
   
@@ -90,7 +94,7 @@
       .error {
         margin-top: 0.25rem;
         font-size: 0.8rem;
-        color: #e63946;  // kräftiges Rot
+        color: #e63946;
         text-align: left;
       }
         
@@ -105,8 +109,7 @@
           cursor: pointer;
           user-select: none;
         }
-      
-        /* der tatsächliche Checkbox-Input steht typischerweise vor dem Label-Text: */
+
         input[type='checkbox'] + label {
           font-family: 'Karla';
           font-size: 15px;
@@ -135,22 +138,22 @@
         @media (pointer: coarse) and (hover: none){
           input[type='checkbox']:hover {
             background-color: transparent;
-        }
+          }
         }
 
         input[type='checkbox']:checked {
-            background-color: transparent;
+          background-color: transparent;
         }
 
         input[type='checkbox']:checked::after {
-            content: '';
-            position: absolute;
-            left: 4px;
-            width: 5px;
-            height: 10px;
-            border: solid rgb(61, 207, 182);
-            border-width: 0 2px 2px 0;
-            transform: rotate(45deg);
+          content: '';
+          position: absolute;
+          left: 4px;
+          width: 5px;
+          height: 10px;
+          border: solid rgb(61, 207, 182);
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
         }
 
         a {
@@ -160,8 +163,9 @@
           text-decoration: none;
           position: relative;
           transition: color 0.2s ease-in-out;
-          padding-bottom: 5px; /* Platz für Unterstrich */
+          padding-bottom: 5px;
         }
+
         a::after {
           content: '';
           position: absolute;
@@ -227,19 +231,23 @@
   .contact-section{
     gap: 64px;
     padding-bottom: 80px !important;
+    
     .left{
       .overline{
         margin-bottom: 16px;
         font-size: 18px;
       }
+
       h1{
         font-size: 50px;
         margin-bottom: 32px;
       }
+
       .lead{
         font-size: 20px;
         margin-bottom: 12px;
       }
+
       .body{
         margin-bottom: 12px;
       }
@@ -259,6 +267,10 @@
       }
 
       .success-message{
+        max-width:50% ;
+      }
+
+      .error-message{
         max-width:50% ;
       }
     } 

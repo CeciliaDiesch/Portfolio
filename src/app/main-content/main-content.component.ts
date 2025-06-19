@@ -13,6 +13,6 @@ import { SkillsComponent } from './skills/skills.component';
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'
 })
-export class MainContentComponent {
 
+export class MainContentComponent {
 }

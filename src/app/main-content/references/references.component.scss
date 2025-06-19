@@ -4,28 +4,24 @@
   text-align: center;
 }
 
-  .review-title {
-    font-family: 'Fira Code';
-    font-weight: 700;
-    font-size: 32px;
-    color: rgba(61, 207, 182, 1);
-    margin-bottom: 40px;
-  }
+.review-title {
+  font-family: 'Fira Code';
+  font-weight: 700;
+  font-size: 32px;
+  color: rgba(61, 207, 182, 1);
+  margin-bottom: 40px;
+}
 
-/* das statische Icon, nur einmal im DOM */
 .quote-icon-static {
   position: absolute;
   top: -70px;
-  // linke Kante der active-Card liegt bei 50% - 15% (=35%) der Viewport-Breite
   left: calc(50% - 28.5%);
   font-family: 'Karla';
   font-size: 220px;
   color: #fff;
-  pointer-events: none; // Klicks passieren durch
-  z-index: 100;           // über den Cards
+  pointer-events: none;
+  z-index: 100;
 }
-
-
 
 .carousel-container {
   position: relative;
@@ -45,14 +41,14 @@
   &::after {
     content: '';
     position: absolute;
-    inset: 0;   // top/right/bottom/left = 0
-    pointer-events: none;   // Klicks kommen zum Carousel durch
+    inset: 0;
+    pointer-events: none;
     background-image: radial-gradient(
      circle at center,
       rgba(28, 28, 28, 0) 70%,
       rgb(28, 28, 28)     100%
     );
-    z-index: 2;  // hoch genug, um über den .review-item zu liegen
+    z-index: 2;
   }
 }
 
@@ -76,7 +72,7 @@
   flex-direction: column;
   font-family: 'Karla';
 }
-/* Positionen */
+
 .card.off-prev { transform: translateX(-250%) scale(0.8); }
 .card.prev     { transform: translateX(-150%) scale(0.9); opacity: 1; z-index: 1; }
 .card.active   { transform: translateX(-50%)  scale(1);   opacity: 1; z-index: 2; background: rgba(61, 207, 182, 0.3); }
@@ -98,7 +94,6 @@
   flex: 1;
   border: none;
   border-top: 1px solid rgba(255,255,255,1);
-  // margin: 0 0 12px;
   margin-right: 16px;
 }
 
@@ -136,8 +131,6 @@
   transition: transform 0.4s ease, color 1s;
 }
 
-
-/* Prev-Button: Standard-Icon (white), Hover-Icon (colored) */
 .prev-btn {
   background-image: url('../../../assets/icons/references/arrow_back_white.svg');
 
@@ -147,7 +140,6 @@
   }
 }
 
-/* Next-Button: Standard-Icon (white), Hover-Icon (colored) */
 .next-btn {
   background-image: url('../../../assets/icons/references/arrow_forward_white.svg');
 
@@ -197,9 +189,6 @@
   background: #39c4b4;
 }
 @media (min-height: 300px) and (max-height:380px){
-  // .review-section{
-  //   margin-top: 16px;
-  // }
 
  .card{
   height: 200px;
@@ -261,7 +250,7 @@
     transform: translateX(-50%);
       background-image: radial-gradient(
         circle at center,
-        rgba(28, 28, 28, 0) 60%, // Anpassung: Verlauf beginnt früher
+        rgba(28, 28, 28, 0) 60%,
         rgb(28, 28, 28) 100%
       );
     }

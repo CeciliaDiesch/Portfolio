@@ -1,5 +1,5 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import { CommonModule } from '@angular/common'; // Für ngIf/ngFor
+import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { NavBarComponent } from '../nav-bar/nav-bar.component';
 import { TranslateModule } from '@ngx-translate/core';
@@ -16,20 +16,26 @@ export class LandingPageComponent implements AfterViewInit {
   @ViewChild('tickerBar', { static: false }) tickerBar!: ElementRef<HTMLDivElement>;
 
   
+  /**
+   * Lifecycle hook that runs after the view has been fully initialized.
+   * Starts the smooth scrolling ticker animation.
+   */
   ngAfterViewInit() {
     this.startSmoothTicker();
   }
+  
+  /**
+   * Creates a continuously scrolling ticker effect by updating the scroll position of the ticker bar.
+   * Resets the scroll position when half the content has been scrolled to create a seamless loop.
+   */
   private startSmoothTicker() {
     const bar = this.tickerBar.nativeElement;
-    // scrollWidth enthält die Breite beider Gruppen zusammen
     const resetPoint = bar.scrollWidth / 2;
     let pos = 0;
-    const speed = 0.5; // Pixel pro Frame (je nach gewünschter Geschwindigkeit)
-
+    const speed = 0.5;
     const step = () => {
       pos += speed;
       if (pos >= resetPoint) {
-        // sofort zurück auf 0, ohne sichtbaren Sprung
         pos = 0;
       }
       bar.scrollLeft = pos;

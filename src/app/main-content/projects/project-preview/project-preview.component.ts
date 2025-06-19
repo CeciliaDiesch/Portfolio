@@ -11,17 +11,19 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './project-preview.component.scss'
 })
 export class ProjectPreviewComponent {
-  @Input() project!: Project;          // Die Daten für genau dieses Projekt
-  @Input() isOpen = false;             // Steuerung, ob Modal sichtbar ist
+  @Input() project!: Project;
+  @Input() isOpen = false;
+  @Input() close!: () => void;
+  @Input() next!: () => void;
 
-    /** Events werden per Output() oder Callback-Funktionen an den Parent zurückgemeldet */
-    @Input() close!: () => void;
-    @Input() next!: () => void;
-
-    ngOnChanges(changes: SimpleChanges) {
-      if (changes['isOpen']) {
-        document.body.style.overflow = this.isOpen ? 'hidden' : '';
-      }
+  /**
+   * Detects changes to the isOpen input and toggles page scroll accordingly.
+   * Disables body scrolling when the project preview is open.
+   * @param {SimpleChanges} changes - Object containing the changed input properties.
+  */
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['isOpen']) {
+      document.body.style.overflow = this.isOpen ? 'hidden' : '';
     }
-
+  }
 }

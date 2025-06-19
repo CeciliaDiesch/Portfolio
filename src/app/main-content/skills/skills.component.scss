@@ -18,7 +18,6 @@
     gap: 40px;
   }
   
-  /* ─── Linke Seite ────────────────────────────────────────── */
   .tech-text-box {
     flex: none;
     width: 100%;
@@ -93,7 +92,6 @@
     }
   }
   
-  /* ─── Rechte Seite: Icons ─────────────────────────────── */
   .tech-icons {
     margin-top: 48px;
     display: grid;
@@ -221,7 +219,6 @@
 
   @media (max-width: 1000px) and (orientation: landscape) and (pointer: coarse) and (hover: none){
     .tech-text-box{
-      max-height: 95vh;
       .skill-box{
         h2.skill-title{
           font-size: 46px;

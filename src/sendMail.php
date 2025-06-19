@@ -5,13 +5,10 @@ header("Access-Control-Allow-Methods: POST, OPTIONS");
 header("Access-Control-Allow-Headers: content-type");
 
 switch ($_SERVER['REQUEST_METHOD']) {
-    case ("OPTIONS"): //Allow preflighting to take place.
+    case ("OPTIONS"):
         exit;
-        case("POST"): //Send the email;
-            // Payload is not send to $_POST Variable,
-            // is send to php:input as a text
+        case("POST"):
             $json = file_get_contents('php://input');
-            //parse the Payload from text format to Object
             $params = json_decode($json);
     
             $email = $params->email;
@@ -26,14 +23,13 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $headers[] = 'MIME-Version: 1.0';
             $headers[] = 'Content-type: text/html; charset=utf-8';
 
-            // Additional headers
             $headers[] = "From: noreply@diesch-dev.com";
 
             $success = mail($recipient, $subject, $message, implode("\r\n", $headers));
             echo json_encode(["success" => true]);
 
             break;
-        default: //Reject any non POST or OPTIONS requests.
+        default:
             header("Allow: POST", true, 405);
             exit;
     } 

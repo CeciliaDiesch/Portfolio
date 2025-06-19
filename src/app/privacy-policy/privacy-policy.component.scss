@@ -27,7 +27,7 @@ p{
 .content * {
     max-width: 100%;
     overflow-wrap: break-word;
-  }
+}
   
 .content{
     max-width: 100vw;
@@ -79,13 +79,13 @@ h3{
         display: flex;
         flex-direction: column;
         min-height: 100vh;
-      }
+    }
       
 @media (max-width: 900px) {
-.content {
-    padding: 40px;
-    max-width: calc(100vw - 50px);
-}
+    .content {
+        padding: 40px;
+        max-width: calc(100vw - 50px);
+    }
 }
       
 @media (min-height: 400px) and (min-width: 300px) and (max-width: 1000px)and (pointer: coarse) and (hover: none){
@@ -122,7 +122,7 @@ h3{
         font-size: 18px !important;
         height: 20px !important;
         width: 80px !important;
-        }
+    }
 }
 
 @media (max-width: 800px) and (pointer: coarse) and (hover: none){
@@ -163,7 +163,7 @@ h3{
         font-size: 24px;
         height: 28px;
         width: 100px;
-        }
+    }
 }
 
 @media (max-height: 400px) and (pointer: coarse) and (hover: none){
@@ -195,5 +195,5 @@ h3{
         font-size: 10px;
         height: 8px;
         width: 40px;
-        }
+    }
 }

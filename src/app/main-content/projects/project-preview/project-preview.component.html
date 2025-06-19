@@ -1,7 +1,6 @@
 <div class="project-modal" *ngIf="isOpen">
   <div class="modal-backdrop" (click)="close()"></div>
   <div class="modal-content">
-    <!-- linke Spalte -->
     <button class="modal-close-mobile" (click)="close()">
       <span class="cross-icon"></span>
     </button>
@@ -15,23 +14,19 @@
     <div class="modal-text">
       <p class="modal-index">{{ project.index | number : "2.0" }}</p>
       <h1 class="modal-name">{{ project.name }}</h1>
-
       <h3 class="modal-subtitle">
         {{ "PROJECTS.MODAL_SUBTITLE" | translate }}
       </h3>
       <p class="modal-description">{{ project.description }}</p>
-
       <div class="modal-tech">
         <div class="tech-item" *ngFor="let t of project.tech">
           <img [src]="t.icon" [alt]="t.name" width="24" height="24" />
           <span>{{ t.name }}</span>
         </div>
       </div>
-
       <div class="modal-actions">
-        <!-- Button "Github" -->
         <button>
-          <a [href]="project.github" target="_blank">{{
+          <a [href]="'https://github.com/ceciliadiesch'" target="_blank">{{
             "PROJECTS.MODAL_BUTTON_GITHUB" | translate
           }}</a>
           <img
@@ -39,7 +34,6 @@
             alt="{{ 'PROJECTS.ARROW_FORWARD_ALT' | translate }}"
           />
         </button>
-        <!-- Button "Live Test" -->
         <button>
           <a [href]="project.live" target="_blank">{{
             "PROJECTS.MODAL_BUTTON_LIVE_TEST" | translate
@@ -52,7 +46,6 @@
       </div>
     </div>
 
-    <!-- rechte Spalte -->
     <div class="modal-preview">
       <button class="modal-close" (click)="close()">
         <span class="cross-icon"></span>

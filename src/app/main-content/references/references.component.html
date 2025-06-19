@@ -1,6 +1,5 @@
 <section id="reviews" class="review-section">
   <h2 class="review-title">{{ "REFERENCES.TITLE" | translate }}</h2>
-
   <div class="carousel-container">
     <div class="quote-icon-static">“</div>
     <div class="viewport">
@@ -16,7 +15,6 @@
           }"
         >
           <p class="text">{{ references[getIndex(off)].text }}</p>
-
           <div class="author">
             <hr class="review-divider" />
             <span class="name">{{ references[getIndex(off)].author }}</span>
@@ -26,18 +24,13 @@
       </ng-container>
     </div>
 
-    <!-- Controls & Dots -->
     <div class="controls">
-      <!-- Korrektur für den prev-Button -->
       <button
         class="btn prev-btn"
         (click)="showPrev()"
         [attr.aria-label]="'REFERENCES.PREV_BUTTON_ARIA_LABEL' | translate"
-      >
-        <!-- <img src="../../../assets/icons/references/arrow_back_white.svg" /> -->
-      </button>
+      ></button>
       <ul class="dots">
-        <!-- Korrektur für das li-Element -->
         <li
           *ngFor="let r of references; let i = index"
           [class.active]="i === activeIndex"
@@ -47,14 +40,11 @@
           "
         ></li>
       </ul>
-      <!-- Korrektur für den next-Button -->
       <button
         class="btn next-btn"
         (click)="showNext()"
         [attr.aria-label]="'REFERENCES.NEXT_BUTTON_ARIA_LABEL' | translate"
-      >
-        <!-- <img src="../../../assets/icons/references/arrow_forward_white.svg" /> -->
-      </button>
+      ></button>
     </div>
   </div>
 </section>

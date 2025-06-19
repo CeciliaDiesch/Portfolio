@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common'; // Wenn du CommonModule für ngIf/ngFor etc. brauchst
+import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -10,5 +10,4 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './legal-notice.component.scss'
 })
 export class LegalNoticeComponent {
-
 }

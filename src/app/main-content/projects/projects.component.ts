@@ -1,121 +1,131 @@
-// src/app/main-content/projects/projects.component.ts
 import { CommonModule, NgIf } from '@angular/common';
-import { Component, ViewChild, ElementRef, AfterViewInit, inject } from '@angular/core'; // inject hinzugefügt
+import { Component, ViewChild, ElementRef, AfterViewInit, inject } from '@angular/core';
 import { Project, TechItem } from './project.model';
 import { ProjectPreviewComponent } from './project-preview/project-preview.component';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
-import { TranslateService, TranslateModule } from '@ngx-translate/core'; // <--- HINZUFÜGEN
-
-// Tech-Items bleiben unverändert, da die Namen hier als englische Konstanten definiert sind.
-// Wenn die Tech-Namen selbst übersetzt werden müssten (z.B. "Angular" in "Angular"), müsste
-// das TechItem-Interface angepasst werden und diese Konstanten würden die Translate-Pipe nutzen.
-// Für den Moment gehen wir davon aus, dass Tech-Namen international gleich sind.
 const ANG: TechItem = { icon: 'assets/icons/frontend/angular.svg', name: 'Angular' };
 const TS: TechItem = { icon: 'assets/icons/frontend/typeScript.svg', name: 'TypeScript' };
 const HTML: TechItem = { icon: 'assets/icons/frontend/HTML.svg', name: 'HTML' };
 const CSS: TechItem = { icon: 'assets/icons/frontend/CSS.svg', name: 'CSS' };
 const FB: TechItem = { icon: 'assets/icons/frontend/firebase.svg', name: 'Firebase' };
 
-
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, NgIf, ProjectPreviewComponent, TranslateModule], // <--- TranslateModule hier importieren
+  imports: [CommonModule, NgIf, ProjectPreviewComponent, TranslateModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
+
 export class ProjectsComponent implements AfterViewInit {
+  projects: Project[] = [];
+  activeIndex: number | null = null;
+  /**
+   * Reference to the projects container and project preview element used for DOM access or interaction.
+   */
   @ViewChild('projectsContainer', { static: true })
   projectsContainer!: ElementRef<HTMLDivElement>;
-
   @ViewChild('projectPreview', { static: true })
   projectPreview!: ElementRef<HTMLDivElement>;
 
+  /**
+   * Holds the image source path for the project preview, or null if none is selected and defines the vertical position.
+   */
   previewSrc: string | null = null;
   previewTop = 0;
 
-  private translate = inject(TranslateService); // <--- Inject TranslateService
-
-  // WICHTIG: Die Projekte-Daten MÜSSEN mehrsprachig werden, da die Beschreibung übersetzt werden soll
-  // Die "description" Eigenschaft wird jetzt ein Objekt mit Sprachen
-  projects: Project[] = []; // Initialisiere es leer
+  /**
+   * Injects the translation service for handling dynamic language switching and translations.
+   */
+  private translate = inject(TranslateService);
 
   constructor() {
-    // Rufe die Methode zum Laden/Aktualisieren der Projekte auf
     this.updateProjectsDescriptions();
-
-    // Reagiere auf Sprachwechsel, um die Projektbeschreibungen zu aktualisieren
     this.translate.onLangChange.subscribe(() => {
       this.updateProjectsDescriptions();
     });
   }
 
+  /**
+   * Lifecycle hook after the view has been fully initialized.
+   * Currently unused, but reserved for future logic (e.g. preview positioning).
+   */
   ngAfterViewInit() {
-    // initial keine Vorschau, Position egal
   }
 
-  // Neue Methode, um die Projektbeschreibungen basierend auf der aktuellen Sprache zu setzen
+  /**
+   * Updates the project list by adding language-specific descriptions 
+   * based on the current active language.
+   */
   private updateProjectsDescriptions() {
     const currentLang = this.translate.currentLang;
-
-    // Erstelle ein "Base"-Array der Projekte ohne Beschreibungen
     const baseProjects = [
-      { index: 1, name: 'Join', tech: [ANG, TS, HTML, CSS, FB], github: 'www.det.de', live: 'www.elpolloloce.da', image: 'assets/img/projects (4).png' },
-      { index: 2, name: 'El Pollo Loco', tech: [ANG, TS, HTML, CSS, FB], github: 'www.det.de', live: 'www.elpolloloce.da', image: 'assets/img/projects (3).png' },
-      { index: 3, name: 'Bestell App', tech: [TS, HTML, CSS], github: 'www.det.de', live: 'www.elpolloloce.da', image: 'assets/img/projects (1).png' }
-      // { index: 4, name: 'DaBubble', tech: [TS, HTML, CSS], github: 'www.det.de', live: 'www.elpolloloce.da', image: 'assets/img/projects (2).png' }
+      { index: 1, name: 'Join', tech: [ANG, TS, HTML, CSS, FB], github: 'www.det.de', live: 'https://join.diesch-dev.com/', image: 'assets/img/projects (4).png' },
+      { index: 2, name: 'El Pollo Loco', tech: [ANG, TS, HTML, CSS, FB], github: 'www.det.de', live: 'https://el-pollo-loco.diesch-dev.com/', image: 'assets/img/projects (3).png' },
+      { index: 3, name: 'Bestell App', tech: [TS, HTML, CSS], github: 'www.det.de', live: 'https://bestellapp.diesch-dev.com/', image: 'assets/img/projects (1).png' }
     ];
-
-    // Mappe die Basisprojekte und füge die übersetzten Beschreibungen hinzu
     this.projects = baseProjects.map(p => ({
       ...p,
       description: this.translate.instant(`PROJECTS.PROJECT_${p.index}.DESCRIPTION`)
     }));
-    // WICHTIG: .instant() verwenden, da wir hier nicht auf Observable warten können
-    // Alternativ: Wenn die Beschreibungen sehr lang sind, könnten Sie TranslateService.get() verwenden
-    // und dieses Array von Projekten in einem Observable speichern, aber .instant() ist hier meist OK.
   }
 
+  /**
+   * Sets the preview image source and calculates its vertical position relative to the hovered project row.
+   * @param {HTMLElement} rowEl - The hovered project row element.
+   * @param {string} src - The image source to display in the preview.
+   */
   onHoverPreview(rowEl: ElementRef<HTMLDivElement>['nativeElement'], src: string) {
     this.previewSrc = src;
-
     setTimeout(() => {
       const containerRect = this.projectsContainer.nativeElement.getBoundingClientRect();
       const rowRect = (rowEl as HTMLElement).getBoundingClientRect();
       const previewEl = this.projectPreview.nativeElement;
       const previewH = previewEl.offsetHeight;
-
       let top = (rowRect.top - containerRect.top) + rowRect.height / 2 - previewH / 2;
-
       const min = -10;
       const max = containerRect.height - previewH + 10;
       top = Math.max(min, Math.min(max, top));
-
       this.previewTop = top;
     });
   }
 
+  /**
+   * Clears the preview image when the mouse leaves the project row.
+   */
   onLeavePreview() {
     this.previewSrc = null;
   }
 
-  activeIndex: number | null = null;
-
+  /**
+   * Opens the project preview modal for the given index and disables body scroll.
+   * @param {number} idx - The index of the selected project to preview.
+   */
   openPreview(idx: number) {
     this.activeIndex = idx;
     document.body.classList.add('modal-open');
   }
 
+  /**
+   * Closes the project preview modal and re-enables body scroll.
+   */
   closePreview() {
     this.activeIndex = null;
     document.body.classList.remove('modal-open');
   }
 
+  /**
+   * Advances to the next project in the preview carousel, wrapping around if at the end.
+   */
   nextPreview() {
     if (this.activeIndex === null) return;
     this.activeIndex = (this.activeIndex + 1) % this.projects.length;
   }
 
+  /**
+   * Returns the currently active project based on the active index, or undefined if none is selected.
+   */
   get activeProject(): Project | undefined {
     return this.activeIndex !== null
       ? this.projects[this.activeIndex]

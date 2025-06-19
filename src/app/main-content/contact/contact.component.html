@@ -17,7 +17,6 @@
 
   <div class="right">
     <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" novalidate>
-      <!-- Name-Feld -->
       <div class="input-group">
         <label>
           {{ "CONTACT.FORM.NAME_LABEL" | translate }}
@@ -30,7 +29,6 @@
             required
           />
         </label>
-        <!-- Fehlermeldung, sobald touched oder formSubmitted -->
         <p
           class="error"
           *ngIf="nameCtrl.invalid && (nameCtrl.touched || formSubmitted)"
@@ -39,7 +37,6 @@
         </p>
       </div>
 
-      <!-- E-Mail-Feld -->
       <div class="input-group">
         <label>
           {{ "CONTACT.FORM.EMAIL_LABEL" | translate }}
@@ -54,14 +51,12 @@
             email
           />
         </label>
-        <!-- Wenn required verletzt -->
         <p
           class="error"
           *ngIf="emailCtrl.errors?.['required'] && (emailCtrl.touched || formSubmitted)"
         >
           {{ "CONTACT.FORM.EMAIL_REQUIRED_ERROR" | translate }}
         </p>
-        <!-- Wenn ungültiges E-Mail-Format -->
         <p
           class="error"
           *ngIf="emailCtrl.errors?.['pattern'] && (emailCtrl.touched || formSubmitted)"
@@ -70,7 +65,6 @@
         </p>
       </div>
 
-      <!-- Nachrichten-Feld -->
       <div class="input-group">
         <label>
           {{ "CONTACT.FORM.MESSAGE_LABEL" | translate }}
@@ -133,6 +127,9 @@
         </button>
         <div *ngIf="!isLoading && mailSent" class="success-message">
           <p>{{ "CONTACT.FORM.SUCCESS_MESSAGE" | translate }}</p>
+        </div>
+        <div *ngIf="!isLoading && mailError" class="error-message">
+          <p>{{ "CONTACT.FORM.ERROR_MESSAGE" | translate }}</p>
         </div>
       </div>
     </form>

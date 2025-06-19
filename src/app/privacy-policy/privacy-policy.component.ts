@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common'; // Wenn du CommonModule für ngIf/ngFor etc. brauchst
-import { TranslateModule } from '@ngx-translate/core'; // <--- HINZUFÜGEN
+import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -10,9 +10,8 @@ import { TranslateModule } from '@ngx-translate/core'; // <--- HINZUFÜGEN
   styleUrl: './privacy-policy.component.scss'
 })
 export class PrivacyPolicyComponent implements OnInit {
-  constructor() { } // constructor(private router: Router) { } if needed
+  constructor() { }
 
   ngOnInit(): void {
-    // Falls hier Logik zum Initialisieren nötig ist
   }
 }

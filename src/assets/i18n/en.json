@@ -137,9 +137,9 @@
         "PRIVACY_CONSENT_PART2": "and agree to the processing of my data as outlined.",
         "PRIVACY_CONSENT_ERROR": "You must agree to the privacy policy.",
         "SUBMIT_BUTTON_TEXT": "Say Hello :)",
-        "SUCCESS_MESSAGE": "Thank you! Your message has been sent successfully."
-      },
-      "ERROR_MESSAGE": "Error sending message. Please try again later."
+        "SUCCESS_MESSAGE": "Thank you! Your message has been sent successfully.",
+        "ERROR_MESSAGE": "Error sending message. Please try again later."
+      }
     },
     "LANDING_PAGE": {
       "TICKER_ITEM1": "Available for remote work",

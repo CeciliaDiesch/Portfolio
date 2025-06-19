@@ -1,9 +1,7 @@
-// src/app/main-content/skills/skills.component.ts
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common'; // Falls benötigt
-import { RouterModule } from '@angular/router'; // Für <a> mit routerLink
-
-import { TranslateModule } from '@ngx-translate/core'; // <--- HINZUFÜGEN
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-skills',
@@ -14,5 +12,6 @@ import { TranslateModule } from '@ngx-translate/core'; // <--- HINZUFÜGEN
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })
+
 export class SkillsComponent {
 }

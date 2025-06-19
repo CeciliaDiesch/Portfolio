@@ -6,7 +6,6 @@
       {{ "PROJECTS.DESCRIPTION_INTRO" | translate }}
     </p>
     <div #projectsContainer class="projects-container">
-      <!-- Linke Seite: Liste -->
       <div class="project-list">
         <div
           *ngFor="let p of projects; let i = index"
@@ -16,7 +15,6 @@
           (mouseleave)="onLeavePreview()"
           (click)="openPreview(i)"
         >
-          <!-- Projekt-Name bleibt dynamisch -->
           <span class="project-name">
             {{ p.name }}
             <img
@@ -25,8 +23,6 @@
               alt="{{ 'PROJECTS.ARROW_ICON_ALT' | translate }}"
             />
           </span>
-
-          <!-- Tech-Stack als Liste, Tech-Namen bleiben dynamisch -->
           <span class="project-tech">
             <ng-container *ngFor="let techItem of p.tech; let last = last">
               {{ techItem.name }}<span *ngIf="!last" class="sep">|</span>
@@ -35,7 +31,6 @@
         </div>
       </div>
 
-      <!-- Rechte Seite: Vorschaubild (Alt-Text übersetzen) -->
       <div
         #projectPreview
         class="project-preview"
@@ -51,7 +46,7 @@
         />
       </div>
     </div>
-    <!-- project-preview-Komponente: muss auch TranslateModule importieren und Texte übersetzen -->
+
     <app-project-preview
       [project]="activeProject!"
       [isOpen]="activeProject != null"

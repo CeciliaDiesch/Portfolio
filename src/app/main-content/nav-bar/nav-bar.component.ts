@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common'; // Für ngIf/ngClass
+import { CommonModule } from '@angular/common';
 import { TranslateService, TranslateModule } from '@ngx-translate/core'; 
 
 @Component({
@@ -14,40 +14,56 @@ export class NavBarComponent implements OnInit  {
   isHoverLang =false;
   isMenuOpen = false;
   currentLanguage: string = 'de';
-
   canHover = window.matchMedia('(hover: hover)').matches;
   
   constructor(private translate: TranslateService) { }
 
+  /**
+   * Initializes the component by setting the current language and subscribing to language changes.
+   * Updates the language state to reflect changes in the translation service.
+   */
   ngOnInit(): void {
-    // Die aktuelle Sprache beim Start setzen
     this.currentLanguage = this.translate.currentLang || localStorage.getItem('currentLang') || 'de';
-
-    // Auf Sprachwechsel reagieren, um die Anzeige im Button zu aktualisieren
     this.translate.onLangChange.subscribe(() => {
       this.currentLanguage = this.translate.currentLang;
     });
   }
 
+  /**
+   * Switches the app language if it's different from the current one and saves it to localStorage.
+   */
   switchLanguage(lang: string) {
-    if (this.currentLanguage !== lang) { // Nur wechseln, wenn sich die Sprache ändert
+    if (this.currentLanguage !== lang) {
       this.translate.use(lang);
-      localStorage.setItem('currentLang', lang); // Sprache im localStorage speichern
-      // currentLanguage wird durch onLangChange.subscribe aktualisiert
+      localStorage.setItem('currentLang', lang);
     }
   }
 
+  /**
+   * Toggles the visibility of the mobile menu.
+   */
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
+  /**
+   * Activates the language hover state if hovering is supported.
+   */
   onEnter() {
     if (this.canHover) this.isHoverLang = true;
   }
+
+  /**
+   * Deactivates the language hover state if hovering is supported.
+   */
   onLeave() {
     if (this.canHover) this.isHoverLang = false;
   }
 
+  /**
+   * Returns the image path for the current language button, using a hover variant if active.
+   * @returns {string} The path to the appropriate language icon.
+   */
   getLanguageImageSrc(): string {
     const base = this.currentLanguage === 'en' ? 'eng' : 'ger';
     const suffix = this.isHoverLang ? 'Hover' : '';
