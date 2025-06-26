@@ -37,7 +37,7 @@
 
 /* TABLET - LANDSCAPE*/
 /* Ex: iPad Pro ( 1366x1024), Surface Pro (1368x912), Asus Zenbook Fold (1280x853) */
-@media (min-width: 768px) and (max-width: 1300px) and (orientation: landscape) and (pointer: coarse) and (hover: none) {
+@media (min-width: 768px) and (max-width: 1300px) and (orientation: landscape){
   .project-modal .modal-content {
     flex-direction: row;
     justify-content: center;
@@ -79,7 +79,7 @@
 }
 
 /* ipad Air (1180 x 820px)- PORTRAIT */
-@media (min-width: 1050px) and (max-width: 1200px) and (orientation: portrait) and (pointer: coarse) and (hover: none) {
+@media (min-width: 1050px) and (max-width: 1200px) and (orientation: portrait){
 
   .project-modal .modal-content {
     gap: 20px;
@@ -104,7 +104,7 @@
 
 /* TABLET - PORTRAIT */
 /* Ex: iPad Mini (768x1024), iPad Air (820x1180), iPad Pro (1024x1366) */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (pointer: coarse) and (hover: none) {
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait){
   .project-modal .modal-content {
     flex-direction: column;
     justify-content: space-between;
@@ -161,7 +161,7 @@
 }
 
 /* Surface Pro (912 x 1368px) - Portrait */
-@media (min-width: 900px) and (max-width: 1024px) and (min-height: 1300px) and (orientation: portrait) and (pointer: coarse) and (hover: none) {
+@media (min-width: 900px) and (max-width: 1024px) and (min-height: 1300px) and (orientation: portrait){
   .project-modal .modal-content {
     gap: 40px;
     padding: 40px;
@@ -233,7 +233,7 @@
 
 /* PHONE - LANDSCAPE */
 /* Ex: iPhone 14 Pro Max 932x430, iPhone SE 667x375) */
-@media (max-width: 932px) and (orientation: landscape) and (max-height: 500px) and (pointer: coarse) and (hover: none) {
+@media (max-width: 932px) and (orientation: landscape) and (max-height: 500px){
   .project-modal .modal-content {
     gap: 8px;
     padding: 20px;
@@ -273,7 +273,7 @@
 
 /* PHONE - PORTRAIT */
 /* Ex: iPhone SE (375x667), iPhone XR (414x896), Galaxy S8+ (360x740) */
-@media (max-width: 767px) and (orientation: portrait) and (pointer: coarse) and (hover: none) {
+@media (max-width: 790px) and (orientation: portrait){
   .project-modal .modal-content {
     flex-direction: column;
     justify-content: space-between;

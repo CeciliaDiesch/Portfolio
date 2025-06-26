@@ -91,7 +91,7 @@
   }
 }
 
-@media (max-width: 1200px) and (orientation: landscape) and (pointer: coarse) and (hover: none){
+@media (max-width: 1200px) and (orientation: landscape){
 
   .footer-section{
     padding-bottom: 8px !important;
@@ -116,7 +116,7 @@
   }
 }
 
-@media (max-width: 800px) and (orientation: landscape) and (pointer: coarse) and (hover: none){
+@media (max-width: 800px) and (orientation: landscape){
   .footer-section{
     padding-bottom: 8px !important;
     padding-top: 4px !important;
@@ -125,7 +125,7 @@
 }
 
 
-@media (max-height: 1000px) and (orientation: portrait) and (pointer: coarse) and (hover: none){
+@media (max-height: 1000px) and (orientation: portrait){
   .footer-section{
     padding-bottom: 8px !important;
     padding-top: 8px !important;

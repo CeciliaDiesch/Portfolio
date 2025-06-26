@@ -149,7 +149,7 @@
   }
 }
 
-@media (pointer: coarse) and (hover: none){
+@media (max-width:1200px){
   .prev-btn {
     &:hover {
       background-image: url('../../../assets/icons/references/arrow_back_white.svg');
@@ -215,7 +215,7 @@
 
 }
 
-@media (max-width: 1000px) and (min-height:380px) and (pointer: coarse) and (hover: none){
+@media (max-width: 1000px) and (min-height:380px){
 
   .review-section {
     padding: 0 20px;
