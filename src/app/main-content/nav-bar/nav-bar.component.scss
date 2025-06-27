@@ -172,7 +172,7 @@ nav {
   } 
 }
 
-@media (min-height: 1050px) and (orientation: portrait){
+@media (min-height: 1020px) and (orientation: portrait){
   nav{
     .burger{
       width: 50px;
@@ -225,7 +225,6 @@ nav {
   .logoDiv {
     transform: scale(2);
     transform-origin: center center;
-    margin-right: 2vw;
     margin-top: 5vh;
   }
 }
