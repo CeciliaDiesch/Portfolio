@@ -11,35 +11,42 @@ p{
 .wrapper{
     padding-top: 40px;
     width: 100vw;
-    max-width: 2000px;
+    max-width: 4000px;
     min-height: 100vh;
     background-image: url('./../../assets/img/landingPageBackground.png');
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
     font-family: 'Karla', Arial, Helvetica, sans-serif;
-    font-size: 24px;
+    font-size: 16px;
 }
 
-.content * {
-    max-width: 100%;
+h1, h2, h3, p, li, a {
     overflow-wrap: break-word;
-}
+    word-wrap: break-word; // Fallback für ältere Browser
+    hyphens: auto; // Optional: Erlaubt automatische Silbentrennung
+  }
+
+  a {
+    word-break: break-word;
+  }
+
+* {
+    box-sizing: border-box;
+  }
   
 .content{
-    max-width: 100vw;
+    width: 100%;
+    max-width: 1440px;
     padding: 100px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     text-align: left;
     justify-content: flex-start;
     align-items: flex-start;
     color: white;
-    font-family: 'Karla', Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
 }
 
 h1{
@@ -88,10 +95,7 @@ h3{
     }
 }
       
-@media (min-height: 400px) and (min-width: 300px) and (max-width: 1000px)and (pointer: coarse) and (hover: none){
-    .content{
-        font-size: 12px !important;
-    }
+@media (min-height: 400px) and (min-width: 300px) and (max-width: 1000px){
 
     h1{
         font-size: 24px !important;
@@ -125,19 +129,15 @@ h3{
     }
 }
 
-@media (max-width: 800px) and (pointer: coarse) and (hover: none){
+@media (max-width: 800px){
     .wrapper{
         padding: 10px !important;
     }
 }
 
-@media (max-height: 950px) and (pointer: coarse) and (hover: none){
+@media (max-height: 950px){
     .wrapper{
         padding-top: 10px;
-    }
-
-    .content{
-        font-size: 24px;
     }
 
     h1{
@@ -166,10 +166,9 @@ h3{
     }
 }
 
-@media (max-height: 400px) and (pointer: coarse) and (hover: none){
+@media (max-height: 400px){
     .content{
         margin-top: 8px;
-        font-size: 12px !important;
     }
 
     h1{
@@ -185,14 +184,14 @@ h3{
     }
     
     h3{
-        font-size:14px;
+        font-size:16px;
         font-weight:400;
         margin: 16px 0 0 0;
     }
 
     .imprintButtonBack {
         margin-top: 12px;
-        font-size: 10px;
+        font-size: 14px;
         height: 8px;
         width: 40px;
     }

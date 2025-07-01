@@ -1,16 +1,17 @@
 .main-Section{
     min-height: 100vh;
     overflow-y: auto;
+    min-width: 100vw;
     width: 100%;  
-    max-width: 1440px;
+    max-width: 4000px !important;
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 0 !important;
-    > * {
-        display: block;
-        width: 100%;
-    }
+    // > * {
+    //     display: block;
+    //     width: 100%;
+    // }
 }
 
 @media (min-width: 1200px) and (max-width: 1400px) {

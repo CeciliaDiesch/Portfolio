@@ -6,10 +6,18 @@
   height: 98px;
 }
 
-section{
+.wrapper{
+  width: 100vw !important;
   background-image: url('./../../../assets/img/landingPageBackground.png');
   background-size:cover;
   background-repeat: no-repeat;
+  background-size: 100vw 100dvh;
+  display: flex;
+  justify-content: center;
+}
+
+section{
+  background: none;
   height: 100dvh;
   min-height: 105dvh;
   padding-top:0 !important ;
@@ -116,12 +124,13 @@ section{
 
   .icon-wrapper {
     margin-top: 96px;
-    width: 26px;
+    // width: 26px;
     height: 26px;
     overflow: visible;
+    display: flex;
     img {
       cursor: pointer;
-      transition: transform 0.3s;
+      // transition: transform 0.3s;
     }
   }
   
@@ -129,12 +138,17 @@ section{
     width: 1px;
     height: 190px;
     background-color: white;
-    margin-left: 6px;
+    // transform: translateX(3px); 
+    // margin-left: 6px;
   }
 }
 
 .mobileGitImg{
   display: none;
+}
+
+.github-hover {
+  opacity: 0;
 }
 
 .ticker-bar {

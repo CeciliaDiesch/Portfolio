@@ -1,7 +1,6 @@
 .wrapper{
     padding-top: 40px;
     width: 100vw;
-    max-width: 2000px;
     background-image: url('./../../assets/img/landingPageBackground.png');
     background-size: cover;
     background-position: center;
@@ -10,10 +9,11 @@
     align-items: flex-start;
     justify-content: center;
     font-family: 'Karla', Arial, Helvetica, sans-serif;
-    font-size: 24px;
+    font-size: 16px;
 }
 
 .content{
+    max-width: 2000px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -55,9 +55,9 @@ h3{
       }
       
 
-@media (min-height: 400px) and (min-width: 300px) and (max-width: 1200px) and (orientation: landscape) and (pointer: coarse) and (hover: none){
+@media (min-height: 400px) and (min-width: 300px) and (max-width: 1200px) and (orientation: landscape){
     .content{
-        font-size: 12px !important;
+        font-size: 16px !important;
     }
 
     h1{
@@ -80,19 +80,19 @@ h3{
         }
 }
 
-@media (max-width: 800px) and (orientation: landscape) and (pointer: coarse) and (hover: none){
+@media (max-width: 800px) and (orientation: landscape){
     .wrapper{
         padding: 10px !important;
     }
 }
 
-@media (max-height: 950px) and (orientation: landscape) and (pointer: coarse) and (hover: none){
+@media (max-height: 950px) and (orientation: landscape){
     .wrapper{
         padding-top: 10px;
     }
 
     .content{
-        font-size: 24px;
+        font-size: 16px;
     }
 
     h1{
@@ -115,7 +115,7 @@ h3{
     }
 }
 
-@media (max-height: 1000px) and (orientation: portrait) and (pointer: coarse) and (hover: none){
+@media (max-width: 600px){
     .content{
         margin-top: 60px;
     }
@@ -144,10 +144,40 @@ h3{
     }
 }
 
-@media (max-height: 400px) and (orientation: landscape) and (pointer: coarse) and (hover: none){
+
+@media (max-height: 1000px) and (orientation: portrait){
+    .content{
+        margin-top: 60px;
+    }
+
+    .wrapper{
+        font-size: 16px;
+    }
+
+    h1{
+        font-size: 32px;
+        margin-bottom: 20px;
+        padding-top: 10px;
+    }
+    
+    h3{
+        font-size:18px;
+        font-weight:400;
+        margin: 32px 0 -16px 0;
+    }
+
+    .imprintButtonBack {
+        margin-top: 40px;
+        font-size: 24px;
+        height: 20px;
+        width: 80px;
+    }
+}
+
+@media (max-height: 400px) and (orientation: landscape){
     .content{
         margin-top: 8px;
-        font-size: 12px !important;
+        font-size: 16px !important;
     }
 
     h1{

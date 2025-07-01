@@ -11,8 +11,8 @@
 }
 
 body{
-  width: 100vw;
-  background-color: black;
+  width: 100%;
+  background-color: rgb(28, 28, 28);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -105,6 +105,9 @@ section {
   width: 100%;
   padding: 145px 100px 0 100px;
   overflow-x: hidden;
+  max-width: 1440px;
+  display: flex;
+  justify-content: center;
 }
 
 
@@ -146,15 +149,16 @@ button{
     display: inline-block;
     white-space: nowrap;
     transform: translateX(0);
+    pointer-events: none;
   }
   &:hover .slide-container {
-    animation: slideLeftOnly 4s linear infinite;
+    animation: slideLeftOnly 3s linear infinite;
   }
 }
     
 @keyframes slideLeftOnly {
-    0%   { transform: translateX(200%); }
-    100% { transform: translateX(-200%); }
+    0%   { transform: translateX(130%); }
+    100% { transform: translateX(-130%); }
   }
 
 html.modal-open, body.modal-open {
@@ -167,9 +171,11 @@ html.modal-open, body.modal-open {
   width: 8px;
   height: 8px;
   background-color: transparent;
+  display: none;
 }
 
 ::-webkit-scrollbar-track {
+  display: none;
   background: #2c2c2c;
   border-radius: 10px;
 }
@@ -212,9 +218,9 @@ body:hover::-webkit-scrollbar-thumb {
 
 @media (min-width: 770px) and (max-width: 1200px) {
   section{
-    transform: translateX(-1vw);
+    // transform: translateX(-1vw);
     padding: 70px 50px 12px 50px !important;
-    max-width: 95vw;
+    // max-width: 95vw;
   }
 }
     

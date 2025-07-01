@@ -1,111 +1,114 @@
-<section id="home">
-  <div class="content">
-    <div class="div-Nav"><app-nav-bar></app-nav-bar></div>
-    <h2>Frontend Developer</h2>
-    <h1>Cecilia Diesch</h1>
-    <div class="button-Div">
-      <a href="#projects">
-        <button class="button-sliding-text">
-          <span class="slide-container">
-            <span class="button-Text">Check my work</span>
-          </span>
-        </button></a
-      >
-      <a href="#contact">
-        <button class="button-sliding-text">
-          <span class="slide-container">
-            <span class="button-Text">Contact me</span>
-          </span>
-        </button></a
-      >
-    </div>
+<div class="wrapper">
+  <section id="home">
+    <div class="content">
+      <div class="div-Nav"><app-nav-bar></app-nav-bar></div>
+      <h2>Frontend Developer</h2>
+      <h1>Cecilia Diesch</h1>
+      <div class="button-Div">
+        <a href="#projects">
+          <button class="button-sliding-text">
+            <span class="slide-container">
+              <span class="button-Text">Check my work</span>
+            </span>
+          </button></a
+        >
+        <a href="#contact">
+          <button class="button-sliding-text">
+            <span class="slide-container">
+              <span class="button-Text">&nbsp; Contact me &nbsp;</span>
+            </span>
+          </button></a
+        >
+      </div>
 
-    <div class="scroll-container">
-      <a href="#about">
-        <button class="scroll-btn" aria-label="Scroll down">
-          <svg viewBox="0 0 24 24" class="scroll-arrow">
-            <path
-              d="M12 -12v35m0 0l-8-8m8 8l8-8"
-              stroke="currentColor"
-              stroke-width="2.3"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
-      </a>
-      <div class="scroll-line"></div>
-    </div>
-    <div class="info-container">
-      <a class="emailDesktop" href="#contact">Ceciliadiesch &#64; yahoo.com</a>
-      <a class="emailMobile" href="#contact"
-        ><img class="emailIcon" [src]="'assets/icons/email.svg'" />
-      </a>
-
-      <div class="icon-wrapper">
-        <a href="https://github.com/ceciliadiesch" target="_blank">
-          <img
-            class="desktopGitImg"
-            [src]="
-              isGitHover
-                ? 'assets/img/gitHubHover.svg'
-                : 'assets/img/gitHub.svg'
-            "
-            (mouseenter)="isGitHover = true"
-            (mouseleave)="isGitHover = false"
-            alt="GitHub"
-          />
-          <img
-            class="mobileGitImg"
-            [src]="'assets/img/gitHub.svg'"
-            alt="GitHub"
-          />
+      <div class="scroll-container">
+        <a href="#about">
+          <button class="scroll-btn" aria-label="Scroll down">
+            <svg viewBox="0 0 24 24" class="scroll-arrow">
+              <path
+                d="M12 -12v35m0 0l-8-8m8 8l8-8"
+                stroke="currentColor"
+                stroke-width="2.3"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
         </a>
+        <div class="scroll-line"></div>
       </div>
-      <div class="info-line"></div>
-    </div>
+      <div class="info-container">
+        <a class="emailDesktop" href="#contact"
+          >Ceciliadiesch &#64; yahoo.com</a
+        >
+        <a class="emailMobile" href="#contact"
+          ><img class="emailIcon" [src]="'assets/icons/email.svg'" />
+        </a>
 
-    <div class="ticker-bar" #tickerBar>
-      <div class="ticker-content">
-        <div class="ticker-group">
-          <span class="dot"></span>
-          <span class="ticker-item">{{
-            "LANDING_PAGE.TICKER_ITEM1" | translate
-          }}</span>
-          <span class="dot"></span>
-          <span class="ticker-item">{{
-            "LANDING_PAGE.TICKER_ITEM2" | translate
-          }}</span>
-          <span class="dot"></span>
-          <span class="ticker-item">{{
-            "LANDING_PAGE.TICKER_ITEM3" | translate
-          }}</span>
-          <span class="dot"></span>
-          <span class="ticker-item">{{
-            "LANDING_PAGE.TICKER_ITEM4" | translate
-          }}</span>
-          <span class="dot"></span>
+        <div class="icon-wrapper">
+          <a href="https://github.com/ceciliadiesch" target="_blank">
+            <img
+              class="desktopGitImg github-default"
+              src="assets/img/gitHub.svg"
+              alt="GitHub"
+            />
+            <img
+              class="desktopGitImg github-hover"
+              src="assets/img/gitHubHoverWhite.svg"
+              alt="GitHub Hover"
+            />
+            <img
+              class="mobileGitImg"
+              src="assets/img/gitHub.svg"
+              alt="GitHub"
+            />
+          </a>
         </div>
+        <div class="info-line"></div>
+      </div>
 
-        <div class="ticker-group">
-          <span class="ticker-item">{{
-            "LANDING_PAGE.TICKER_ITEM1" | translate
-          }}</span>
-          <span class="dot"></span>
-          <span class="ticker-item">{{
-            "LANDING_PAGE.TICKER_ITEM2" | translate
-          }}</span>
-          <span class="dot"></span>
-          <span class="ticker-item">{{
-            "LANDING_PAGE.TICKER_ITEM3" | translate
-          }}</span>
-          <span class="dot"></span>
-          <span class="ticker-item">{{
-            "LANDING_PAGE.TICKER_ITEM4" | translate
-          }}</span>
+      <div class="ticker-bar" #tickerBar>
+        <div class="ticker-content">
+          <div class="ticker-group">
+            <span class="dot"></span>
+            <span class="ticker-item">{{
+              "LANDING_PAGE.TICKER_ITEM1" | translate
+            }}</span>
+            <span class="dot"></span>
+            <span class="ticker-item">{{
+              "LANDING_PAGE.TICKER_ITEM2" | translate
+            }}</span>
+            <span class="dot"></span>
+            <span class="ticker-item">{{
+              "LANDING_PAGE.TICKER_ITEM3" | translate
+            }}</span>
+            <span class="dot"></span>
+            <span class="ticker-item">{{
+              "LANDING_PAGE.TICKER_ITEM4" | translate
+            }}</span>
+            <span class="dot"></span>
+          </div>
+
+          <div class="ticker-group">
+            <span class="ticker-item">{{
+              "LANDING_PAGE.TICKER_ITEM1" | translate
+            }}</span>
+            <span class="dot"></span>
+            <span class="ticker-item">{{
+              "LANDING_PAGE.TICKER_ITEM2" | translate
+            }}</span>
+            <span class="dot"></span>
+            <span class="ticker-item">{{
+              "LANDING_PAGE.TICKER_ITEM3" | translate
+            }}</span>
+            <span class="dot"></span>
+            <span class="ticker-item">{{
+              "LANDING_PAGE.TICKER_ITEM4" | translate
+            }}</span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>

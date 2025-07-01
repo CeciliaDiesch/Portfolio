@@ -11,6 +11,8 @@
   line-height: 120%;
   background: rgb(28, 28, 28);
   font-size:16px;
+  width: 100vw;
+  max-width: 1440px;
 }
 
 .left{
@@ -130,6 +132,28 @@
     padding-bottom: 8px !important;
     padding-top: 8px !important;
     font-size:12px;
+    gap: 16px;
+  }
+
+  .left{
+    gap: 12px;
+    .logoDiv{
+      display: flex;
+      flex-direction: row;
+      gap: 3px !important;
+      >img{
+          height: 28px;
+      }
+    }
+  }
+}
+
+@media (min-height: 1001px) and (max-width:600px){
+  .footer-section{
+    padding-bottom: 8px !important;
+    padding-top: 8px !important;
+    font-size:12px;
+    gap: 14px;
   }
 
   .left{

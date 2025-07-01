@@ -2,6 +2,9 @@
 .review-section {
   background-color: rgb(28, 28, 28);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
 }
 
 .review-title {
