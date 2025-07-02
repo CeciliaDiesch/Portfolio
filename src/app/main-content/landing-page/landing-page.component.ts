@@ -12,5 +12,4 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './landing-page.component.scss'
 })
 export class LandingPageComponent{
-  // isGitHover = false;
 }

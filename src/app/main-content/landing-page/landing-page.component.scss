@@ -124,13 +124,11 @@ section{
 
   .icon-wrapper {
     margin-top: 96px;
-    // width: 26px;
     height: 26px;
     overflow: visible;
     display: flex;
     img {
       cursor: pointer;
-      // transition: transform 0.3s;
     }
   }
   
@@ -138,8 +136,6 @@ section{
     width: 1px;
     height: 190px;
     background-color: white;
-    // transform: translateX(3px); 
-    // margin-left: 6px;
   }
 }
 

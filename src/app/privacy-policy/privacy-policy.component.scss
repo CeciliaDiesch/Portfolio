@@ -22,10 +22,18 @@ p{
     font-size: 16px;
 }
 
+.div-Nav{
+    width: 100%;
+    max-width: 1700px;
+    height: 98px;
+    margin-bottom: 64px;
+    margin-left: 0;
+  }
+
 h1, h2, h3, p, li, a {
     overflow-wrap: break-word;
-    word-wrap: break-word; // Fallback für ältere Browser
-    hyphens: auto; // Optional: Erlaubt automatische Silbentrennung
+    word-wrap: break-word;
+    hyphens: auto;
   }
 
   a {
@@ -88,11 +96,46 @@ h3{
         min-height: 100vh;
     }
       
+
+@media (min-height: 1300px){
+.div-Nav{
+    top: -18px;
+    height: 180px;
+    }
+}
+
+
+@media (min-height: 1300px) and (max-width: 1200px){
+    .div-Nav{
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 760px) and (max-width: 914px) and (min-height: 1020px) and (orientation: portrait){
+.div-Nav{
+    top: 4px;
+    height: 180px;
+    margin-bottom: 48px;
+    margin-left: 0;
+  }
+}
+    
 @media (max-width: 900px) {
     .content {
         padding: 40px;
         max-width: calc(100vw - 50px);
     }
+}
+
+@media (max-width: 790px) and (min-height: 1200px) {
+    .div-Nav{
+        top: 4px;
+        height: 120px;
+        margin-bottom: 32px;
+        margin-left: 0;
+        scale: 0.8;
+        gap: 12px;
+     }
 }
       
 @media (min-height: 400px) and (min-width: 300px) and (max-width: 1000px){
@@ -132,6 +175,11 @@ h3{
 @media (max-width: 800px){
     .wrapper{
         padding: 10px !important;
+    }
+
+    .content {
+        padding: 8px;
+        max-width: calc(100vw - 16px);
     }
 }
 

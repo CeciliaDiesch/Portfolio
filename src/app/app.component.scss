@@ -18,6 +18,15 @@
     flex-shrink: 0;
   }
 }
+@media (min-width: 1190px) and (max-width: 1370px) and (max-height:1299px) and (orientation: landscape) {
+  .static-layout{
+    app-footer{
+      scale: 0.9;
+      margin-top: -24px;
+      margin-bottom: -16px;
+    }
+  }
+}
   
 .scroll-layout {
   min-height: 100vh;
