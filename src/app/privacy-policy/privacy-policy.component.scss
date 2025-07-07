@@ -1,105 +1,121 @@
 .wrapper {
     width: 100vw !important;
     background-image: url('./../../assets/img/landingPageBackground.png');
-    background-size: cover;
+    background-size: fit;
     background-repeat: no-repeat;
     background-size: 100vw 100dvh;
     display: flex;
-    font-family: 'Karla';
-    }
-    
-      
-    .content {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-    padding-bottom: 50px;
-    color: white;
-    font-family: 'Karla', sans-serif;
-    font-size: 18px;
-    }
-    
-    section{
-    background: none;
-    padding-top:0 !important;
-    }
-    
-    .div-Nav{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 98px;
-    }
-    
-    h1, h2, h3, p, li, a {
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    hyphens: auto;
-    }
-    
-    a {
-    word-break: break-word;
-    }
-    
-    
-    h1 {
-    font-size: 64px;
-    margin-bottom: 40px;
-    text-align: left;
-    font-family: 'Fira Code';
-    margin-top: 200px;
-    color: #3DCFB6;
-    }
-
-    h2 {
-    color: #3DCFB6;
-    font-size: 24px;
-    margin-bottom: 16px;
-    margin-top: 32px;
-    font-weight: 700;
-    font-family: 'Fira Code';
-    }
-    
-    h3 {
-    font-size: 18px;
-    font-weight: 400;
-    margin-top: 0px;
-    margin-bottom: 10px;
-    color: white;
-    }
-
-    
-    .imprintButtonBack {
-    margin-top: 30px;
-    cursor: pointer;
-    font-size: 32px;
-    font-weight: 400;
-    display: flex;
     justify-content: center;
-    align-items: center;
+    font-family: 'Karla';  
+}
+
+@media (min-width: 1700px){
+    .wrapper{
+        mask-image: radial-gradient(
+            ellipse at center,
+            white 80%,
+            transparent 100%
+            );
+        -webkit-mask-image: radial-gradient(
+        ellipse at center,
+        white 80%,
+        transparent 100%
+        );
+    }
+}
+    
+      
+.content {
+display: flex;
+flex-direction: column;
+position: relative;
+width: 100%;
+padding-bottom: 50px;
+color: white;
+font-family: 'Karla', sans-serif;
+font-size: 18px;
+}
+
+section{
+background: none;
+padding-top:0 !important;
+}
+
+.div-Nav{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 98px;
+}
+
+h1, h2, h3, p, li, a {
+overflow-wrap: break-word;
+word-wrap: break-word;
+hyphens: auto;
+}
+
+a {
+word-break: break-word;
+}
+
+
+h1 {
+font-size: 64px;
+margin-bottom: 40px;
+text-align: left;
+font-family: 'Fira Code';
+margin-top: 200px;
+color: #3DCFB6;
+}
+
+h2 {
+color: #3DCFB6;
+font-size: 24px;
+margin-bottom: 16px;
+margin-top: 32px;
+font-weight: 700;
+font-family: 'Fira Code';
+}
+
+h3 {
+font-size: 18px;
+font-weight: 400;
+margin-top: 0px;
+margin-bottom: 10px;
+color: white;
+}
+
+
+.imprintButtonBack {
+margin-top: 30px;
+cursor: pointer;
+font-size: 32px;
+font-weight: 400;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+@media (max-width: 1000px) and (pointer: coarse) and (hover: none){
+        
+    .content{
+        font-size: 16px;
     }
 
-    @media (max-width: 1000px) and (pointer: coarse) and (hover: none){
-          
-        .content{
-            font-size: 16px;
-        }
+    .h3{
+        margin-bottom: 16px;
+        font-size: 18px;
+    }
 
-        .h3{
-            margin-bottom: 16px;
-            font-size: 18px;
-        }
+    h1{
+        font-size: 50px;
+        margin-bottom: 32px;
+    }
+
+    .h2{
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
     
-        h1{
-            font-size: 50px;
-            margin-bottom: 32px;
-        }
-    
-        .h2{
-            font-size: 20px;
-            margin-bottom: 12px;
-        }
-      
-        }
+    }

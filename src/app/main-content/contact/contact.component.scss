@@ -248,6 +248,10 @@
     display: flex;
     flex-direction: column;
   }
+
+  h1{
+    font-size: 48px !important;
+  }
 }
 
 @media (max-width: 1000px) and (pointer: coarse) and (hover: none){
