@@ -28,10 +28,28 @@
   </div>
 
   <div class="right">
-    <a href="https://github.com/ceciliadiesch" target="_blank">Github</a>
-    <a href="#contact">Email</a>
-    <a routerLink="/legal-notice">{{
-      "FOOTER.LEGAL_NOTICE_LINK" | translate
-    }}</a>
+    <a href="https://github.com/ceciliadiesch" target="_blank"
+      ><span class="link-text">Github</span>
+      <img
+        class="icon github-icon"
+        src="assets/img/gitHub.svg"
+        alt="GitHub Icon"
+    /></a>
+    <a href="#contact"
+      ><span class="link-text">Email</span>
+      <img
+        class="icon email-icon"
+        [src]="'assets/icons/email.svg'"
+        alt="Email Icon"
+    /></a>
+    <a routerLink="/legal-notice"
+      ><span class="link-text">{{
+        "FOOTER.LEGAL_NOTICE_LINK" | translate
+      }}</span>
+      <img
+        class="icon legal-notice-icon"
+        [src]="'assets/icons/legal-notice.svg'"
+        alt="Legal Notice Icon"
+    /></a>
   </div>
 </section>

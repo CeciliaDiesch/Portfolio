@@ -1,7 +1,7 @@
 <section class="contact-section">
   <div class="left">
-    <p class="overline">Contact me</p>
-    <h1>Let’s work<br />together</h1>
+    <p class="overline">{{ "CONTACT.CONTACT_ME_OVERLINE" | translate }}</p>
+    <h1>{{ "CONTACT.LETS_WORK_TOGETHER_TITLE" | translate }}</h1>
     <p class="lead">{{ "CONTACT.LEAD_TEXT" | translate }}</p>
     <p class="body">
       {{ "CONTACT.BODY_TEXT_PART1" | translate }}<br />
@@ -84,23 +84,25 @@
         </p>
       </div>
 
-      <div class="checkbox-group">
-        <div>
-          <input
-            type="checkbox"
-            id="privacy"
-            name="privacy"
-            [(ngModel)]="contactData.privacyChecked"
-            #privacyCtrl="ngModel"
-            required
-          />
-          <label for="privacy">
-            {{ "CONTACT.FORM.PRIVACY_CONSENT_PART1" | translate }}
-            <a class="privacy-policy" routerLink="/privacy-policy">
-              {{ "CONTACT.FORM.PRIVACY_CONSENT_LINK_TEXT" | translate }}
-            </a>
-            {{ "CONTACT.FORM.PRIVACY_CONSENT_PART2" | translate }}
-          </label>
+      <div class="checkbox-wrapper">
+        <div class="checkbox-group">
+          <div>
+            <input
+              type="checkbox"
+              id="privacy"
+              name="privacy"
+              [(ngModel)]="contactData.privacyChecked"
+              #privacyCtrl="ngModel"
+              required
+            />
+            <label for="privacy">
+              {{ "CONTACT.FORM.PRIVACY_CONSENT_PART1" | translate }}
+              <a class="privacy-policy" routerLink="/privacy-policy">
+                {{ "CONTACT.FORM.PRIVACY_CONSENT_LINK_TEXT" | translate }}
+              </a>
+              {{ "CONTACT.FORM.PRIVACY_CONSENT_PART2" | translate }}
+            </label>
+          </div>
         </div>
         <p
           class="error"

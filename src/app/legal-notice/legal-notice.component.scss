@@ -1,688 +1,239 @@
-// .wrapper{
-//     padding-top: 40px;
-//     width: 100vw;
-//     background-image: url('./../../assets/img/landingPageBackground.png');
-//     background-size: cover;
-//     background-position: center;
-//     display: flex;
-//     flex: 1;
-//     align-items: flex-start;
-//     justify-content: center;
-//     font-family: 'Karla', Arial, Helvetica, sans-serif;
-//     font-size: 16px;
-// }
-
-// .content{
-//     max-width: 1440px;
-//     display: flex;
-//     flex-direction: column;
-//     text-align: center;
-//     justify-content: center;
-//     align-items: center;
-//     color: white;
-//     font-family: 'Karla', Arial, Helvetica, sans-serif;
-// }
-
-// .div-Nav{
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 98px;
-//     scale: 0.8;
-//   }
-
-// h1{
-//     color: rgb(61, 207, 182);
-//     font-family: "Fira Code";
-//     font-size: 64px;
-//     margin-bottom: 40px;
-//     margin-top: 48px;
-// }
-
-// h3{
-//     font-family: "Fira Code";
-//     font-size: 24px;
-//     font-weight: 700;
-//     color: #3DCFB6;
-//     margin: 40px 0 0 0;
-// }
-
-// .imprintButtonBack {
-//     margin-top: 80px;
-//     font-size: 40px;
-//     font-weight: 400;
-//     cursor: pointer;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     }
-
-//     :host {
-//         display: flex;
-//         flex-direction: column;
-//         min-height: 100vh;
-//       }
-      
-
-// @media (min-height: 1300px){
-// .div-Nav{
-//     top: -18px;
-//     height: 180px;
-//     }
-// }
-
-
-// @media (min-height: 1300px) and (max-width: 1200px){
-//     .div-Nav{
-//         margin-left: 0;
-//     }
-// }
-
-// @media (max-height: 1299px) and (max-width: 1200px) and (orientation:portrait){
-//     .div-Nav{
-//         scale: 1 !important;
-//     }
-
-//     .content{
-//         scale: 0.9 !important;
-//         margin-top: 0 !important;
-//     }
-
-//     .wrapper{
-//         margin-top: 0 !important;
-//         padding-top: 0 !important ;
-//     }
-// }
-
-// @media (max-height: 1299px) and (max-width: 1200px) and (orientation:landscape){
-//     .div-Nav{
-//         scale: 1.2 !important;
-//         width: 90vw;
-//         transform: translate(-15vw, -12vw);
-
-//     }
-
-//     h1{
-//         margin-top: -32px;
-//     }
-
-//     .content{
-//         scale: 0.7 !important;
-//         margin-top: 0 !important;
-//         transform: translateY(5vw);
-//     }
-
-//     .wrapper{
-//         margin-top: 0 !important;
-//         padding-top: 0 !important ;
-//     }
-// }
-
-// @media (min-width: 760px) and (max-width: 914px) and (min-height: 1020px) and (orientation: portrait){
-//     .div-Nav{
-//         top: 4px;
-//         height: 160px;
-//         margin-bottom: 48px;
-//         margin-left: 0;
-//     }
-// }
-
-// @media (max-width: 900px) {
-//     .content {
-//         padding: 40px;
-//         max-width: calc(100vw - 50px);
-//     }
-// }
-
-// @media (min-width: 590px) and (min-height: 1200px) {
-//     h1{
-//         margin-top: 160px;
-//     }
-// }
-
-// @media (max-width: 790px) and (min-height: 1200px) {
-//     .div-Nav{
-//         top: 4px;
-//         height: 120px;
-//         margin-bottom: 64px;
-//         margin-left: 0;
-//         gap: 12px;
-//      }
-// }
-
-// @media (min-height: 400px) and (min-width: 300px) and (max-width: 1200px) and (orientation: landscape){
-//     .content{
-//         font-size: 16px !important;
-//     }
-
-//     h1{
-//         font-size: 24px !important;
-//         margin-bottom: 0px !important;
-//         padding-top: 10px !important;
-//     }
-    
-//     h3{
-//         font-size: 14px !important;
-//         font-weight:400 !important;
-//         margin: 14px 0 -16px 0 !important;
-//     }
-
-//     .imprintButtonBack {
-//         margin-top: 24px !important;
-//         font-size: 18px !important;
-//         height: 20px !important;
-//         width: 80px !important;
-//         }
-// }
-
-// @media (max-width: 800px) and (orientation: landscape){
-//     .wrapper{
-//         padding: 10px !important;
-//     }
-// }
-
-// @media (max-height: 950px) and (orientation: landscape){
-//     .wrapper{
-//         padding-top: 10px;
-//     }
-
-//     .content{
-//         font-size: 16px;
-//     }
-
-//     h1{
-//         font-size: 40px;
-//         margin-bottom: 0px;
-//         padding-top: 10px;
-//     }
-    
-//     h3{
-//         font-size: 32px;
-//         font-weight:400;
-//         margin: 14px 0 -16px 0;
-//     }
-
-//     .imprintButtonBack {
-//         margin-top: 24px;
-//         font-size: 24px;
-//         height: 28px;
-//         width: 100px;
-//     }
-// }
-
-// @media (max-width: 600px){
-//     .content{
-//         margin-top: 60px;
-//     }
-
-//     .wrapper{
-//         font-size: 16px;
-//     }
-
-//     h1{
-//         font-size: 32px;
-//         margin-bottom: 20px;
-//         padding-top: 10px;
-//     }
-    
-//     h3{
-//         font-size:18px;
-//         font-weight:400;
-//         margin: 32px 0 -16px 0;
-//     }
-
-//     .imprintButtonBack {
-//         margin-top: 40px;
-//         font-size: 24px;
-//         height: 20px;
-//         width: 80px;
-//     }
-// }
-
-
-// @media (max-height: 1000px) and (orientation: portrait){
-//     .content{
-//         margin-top: 60px;
-//     }
-
-//     .wrapper{
-//         font-size: 16px;
-//     }
-
-//     h1{
-//         font-size: 32px;
-//         margin-bottom: 20px;
-//         padding-top: 10px;
-//     }
-    
-//     h3{
-//         font-size:18px;
-//         font-weight:400;
-//         margin: 32px 0 -16px 0;
-//     }
-
-//     .imprintButtonBack {
-//         margin-top: 40px;
-//         font-size: 24px;
-//         height: 20px;
-//         width: 80px;
-//     }
-// }
-
-// @media (max-height: 400px) and (orientation: landscape){
-//     .content{
-//         margin-top: 8px;
-//         font-size: 16px !important;
-//     }
-
-//     h1{
-//         font-size: 16px;
-//         margin-bottom: -8px;
-//         padding-top: 0px;
-//     }
-    
-//     h3{
-//         font-size:14px;
-//         font-weight:400;
-//         margin: 16px 0 -16px 0;
-//     }
-
-//     .imprintButtonBack {
-//         margin-top: 12px;
-//         font-size: 10px;
-//         height: 8px;
-//         width: 40px;
-//         }
-// }
-
-:host {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
 .wrapper {
-    width: 100vw;
-    max-width: 4000px;
-    background-image: url('./../../assets/img/landingPageBackground.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Karla', Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    min-width: 0;
-    flex-grow: 1;
+width: 100vw !important;
+background-image: url('./../../assets/img/landingPageBackground.png');
+background-size: cover;
+background-repeat: no-repeat;
+background-size: 100vw 100dvh;
+display: flex;
+justify-content: center;
+font-family: 'Karla';
 }
 
-.div-Nav {
-    width: 100%;
-    max-width: 1440px;
-    height: 98px;
-    padding: 100px 0;
-    margin: 0 auto 64px auto;
-    &.nav-open-space {
-        margin-bottom: 250px;
-    }
-}
-
+  
 .content {
-    width: 100%;
-    max-width: 1440px;
-    padding: 100px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    justify-content: flex-start;
-    align-items: flex-start;
-    color: white;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    min-width: 0;
-    flex-grow: 1;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+position: relative;
+width: 100%;
+height: 100dvh;
+min-height: 100dvh;
+padding-bottom: 50px;
+color: white;
+font-family: 'Karla', sans-serif;
+font-size: 18px;
+}
+
+section{
+background: none;
+height: 100dvh;
+min-height: 105dvh;
+padding-top:0 !important;
+}
+
+.div-Nav{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 98px;
 }
 
 h1, h2, h3, p, li, a {
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    hyphens: auto;
+overflow-wrap: break-word;
+word-wrap: break-word;
+hyphens: auto;
 }
 
 a {
-    word-break: break-word;
+word-break: break-word;
 }
+
 
 h1 {
-    color: rgb(61, 207, 182);
-    font-family: "Fira Code";
-    font-size: 64px;
-    margin-bottom: 40px;
-    text-align: left;
-}
-
-h2 {
-    font-family: "Fira Code";
-    font-size: 32px;
-    font-weight: 700;
-    color: #3DCFB6;
-    margin: 40px 0 0 0;
+font-size: 64px;
+margin-bottom: 20px;
+text-align: left;
+font-family: 'Fira Code';
 }
 
 h3 {
-    font-family: "Fira Code";
-    font-size: 24px;
-    font-weight: 700;
-    color: #3DCFB6;
-    margin: 40px 0 0 0;
+font-size: 24px;
+margin-top: 20px;
+margin-bottom: 10px;
+color: #39c4b4;
 }
 
-p {
-    color: white;
+.span1,
+.span2,
+.span3 {
+display: block;
+margin-bottom: 15px;
+}
+
+a {
+color: #39c4b4;
+text-decoration: none;
+
+&:hover {
+    text-decoration: underline;
+}
 }
 
 .imprintButtonBack {
-    margin-top: 80px;
-    font-size: 40px;
-    font-weight: 400;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+margin-top: 30px;
+cursor: pointer;
+font-size: 32px;
+font-weight: 400;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
-@media (max-width: 1370px) and (max-height:1299px) and (orientation: landscape) {
-    .div-Nav{
-        max-width: 90vw;
-        padding: 0;
-        margin: 0;
-        scale: 0.9;
+
+@media (max-width: 1300px) and (max-height: 800px) {
+    .content {
+        font-size: 16px;
     }
 
-    .content{
-        max-width: 90vw;
-        padding: 0;
-        scale: 0.9;
+    h1 {
+        font-size: 48px;
     }
 
-    .wrapper{
+    h3 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 1024px) and (max-height: 600px) {
+
+    h1 {
+        font-size: 32px;
+        margin-bottom: 8px;
+        margin-top: 0;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 0px;
+        margin-top: 0;
+    }
+
+    .imprintButtonBack{
+        margin-top: 16px;
+        font-size: 24px;
+    }
+
+    button{
+        width: 80px;
+        height: 20px;
+    }
+}
+
+@media (max-height: 550px) {
+    .content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .span1,
+    .span2,
+    .span3 {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        min-height: 80vh;
-        z-index: 200;
-    }
-
-    h1{
-        font-size: 56px;
-        margin-bottom: 0;
-    }
-}
-
-@media (max-width: 900px) {
-    .content {
-        padding: 40px;
-        max-width: calc(100vw - 80px);
-    }   
-}
-
-
-@media (max-width: 800px) {
-    .wrapper {
-        padding: 10px !important;
-    }
-
-    .content {
-        padding: 8px;
-        max-width: calc(100vw - 16px);
-    }
-}
-
-@media (max-height: 950px) {
-    .wrapper {
-        padding-top: 10px;
+        flex: 1;
+        min-width: 200px;
+        margin: 5px;
+        h3 {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        }
     }
 
     h1 {
-        font-size: 40px;
-        margin-bottom: 8px;
-        padding-top: 10px;
-    }
-
-    h2 {
-        font-size: 36px;
-        font-weight: 400;
-        margin: 14px 0 0 0;
-    }
-
-    h3 {
-        font-size: 32px;
-        font-weight: 400;
-        margin: 14px 0 0 0;
+        width: 100%;
+        text-align: center;
+        margin-bottom: -56px;
+        margin-top: 80px;
     }
 
     .imprintButtonBack {
-        margin-top: 24px;
-        font-size: 24px;
-        height: 28px;
-        width: 100px;
+        margin-top: 15px;
     }
 }
 
-@media (max-width: 1025px) and (max-height:1299px) and (orientation: landscape) {
-    .div-Nav{
-        max-width: 100vw;
-        height: 48px;
+@media (max-height: 420px) and (max-width: 1000px) and (orientation:landscape){
+
+    button{
+        width: 32px;
+        height: 20px;
     }
 
-    .content{
-        max-width: 100vw;
-    }
-
-    h1 {
-        font-size: 30px;
-        margin-bottom: 6px;
-        padding-top: 8px;
-    }
-
-    h2 {
-        font-size: 27px;
-        font-weight: 400;
-        margin: 11px 0 0 0;
-    }
-
-    h3 {
-        font-size: 24px;
-        font-weight: 400;
-        margin: 11px 0 0 0;
-    }
-}
-
-@media (max-width: 915px) and (max-height: 550px){
-    .div-Nav{
-        padding-top: 20px;
-    }
-}
-
-@media (max-width: 915px) and (max-height: 415px) and (orientation:landscape) {
-    h1{
-        font-size: 30px !important;
-    }
-
-    h2{
-        font-size: 14px !important;
-    }
-
-    h3{
-        font-size: 14px !important;
-    }
-    .div-Nav{
-        padding-top: 20px;
-    }
-
-    .content{
-        justify-content: center;
-        padding: 0;
-    }
-
-    .span2{
-        position: absolute;
-        top: 40%;
-        right: 10%;
-    }
-
-    .span3{
-        position: absolute;
-        top: 40%;
-        right: 40%;
-    }
-}
-
-@media (max-width: 932px) and (max-height: 430px) and (min-height: 420px){
-    .div-Nav{
-        padding-top: 16px !important;
-    }
-
-    .content{
-        margin-top: 32px !important;
-    }
-}
-
-@media (max-width: 740px) and (max-height: 380px){
-    .span2{
-        position: absolute;
-        top: 30%;
-        right: 0%;
-    }
-
-    .span3{
-        position: absolute;
-        top: 30%;
-        right: 25%;
-    }
-}
-
-@media (max-height: 500px) {
-    .content {
-        margin-top: 8px;
-    }
-
-    h1 {
+    .imprintButtonBack{
+        margin-top: 100px;
+        padding-top: 0;
+        padding-bottom: 0;
         font-size: 16px;
-        margin-bottom: 8px;
-        padding-top: 0px;
+    }
+  }
+
+@media (max-height: 375px) and (max-width: 740px) and (orientation:landscape) {
+    .content {
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 10px;
     }
 
-    h2 {
-        font-size: 14px;
+    .span1,
+    .span2,
+    .span3 {
+        flex: auto;
+        max-width: 25%;
+        margin: 0px;
+        h3 {
+        font-size: 16px;
         font-weight: 400;
-        margin: 0;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        }
     }
 
-    h3 {
-        font-size: 12px;
-        font-weight: 400;
-        margin: 0;
+    h1 {
+        margin-bottom:  -24px;
     }
 
     .imprintButtonBack {
-        margin-top: 12px;
-        font-size: 14px;
-        height: 8px;
-        width: 40px;
+        margin-top: -42px;
     }
 }
 
-@media (min-height: 1300px) {
-    .div-Nav {
-        top: -18px;
-        height: 180px;
-        scale: 0.9;
-    }
-}
-
-@media (max-width: 1200px) and (min-height: 1300px) {
-    .div-Nav {
-        top: -18px;
-        height: 180px;
-        scale: 0.9;
-    }
-}
-
-@media (max-width: 790px) and (min-height: 1200px) {
-    .div-Nav {
-        top: 4px;
-        height: 120px;
-        margin-bottom: 32px;
-        margin-left: 0;
-        scale: 0.8;
-        transform: translateX(-16px);
+@media (max-height:932px) and (max-width:540px) and (orientation:portrait){
+    h1 {
+        font-size: 32px;
+        margin-bottom: 8px;
+        margin-top: 48px;
     }
 
-    .content{
-        scale: 0.9;
-    }
-}
+    h3 {
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        }
 
-@media (max-width: 914px) and (max-height:1300px) and (orientation:landscape) {
-    .div-Nav{
-        padding: 16px 0 0 0;
-        margin: 0;
-    }
-
-    .content{
-        scale: 0.9;
-    }
-}
-
-@media (max-width: 853px) and (max-height:1280px) and (orientation:portrait) {
-    .div-Nav{
-        padding: 16px 0 0 0;
-        scale: 0.9;
+    .imprintButtonBack{
+        margin-top: 16px;
+        font-size: 24px;
     }
 
-    .content{
-        scale: 1;
-    }
-}
-
-@media (max-width: 770px) and (max-height:1026px) and (orientation:portrait) {
-    .content{
-        scale: 0.9;
-    }
-}
-
-@media (max-width: 540px) and (max-height:914px) and (orientation:portrait) {
-    .div-Nav{
-        padding: 24px;
-        scale: 1.1;
-    }
-
-    .content{
-        scale: 0.8;
-    }
-}
-
-@media (max-width: 430px) and (max-height:932px) and (orientation:portrait) {
-    .div-Nav{
-        padding: 20px;
-    }
-}
-
-@media (max-width: 344px) and (max-height:882px) and (orientation:portrait) {
-    .content{
-        padding: 0;
-        scale: 0.7;
-    }
-}
-
-@media (max-width: 375px) and (max-height:740px) and (orientation:portrait) {
-    .div-Nav{
-       padding: 40px;
-       padding-bottom: 12px;
-       margin: 0;
+    button{
+        width: 80px;
+        height: 20px;
     }
 }

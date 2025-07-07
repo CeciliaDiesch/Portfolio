@@ -14,6 +14,7 @@
   background-size: 100vw 100dvh;
   display: flex;
   justify-content: center;
+  font-family: 'Karla';
 }
 
 section{
@@ -35,6 +36,10 @@ section{
   padding-bottom: 50px;
 }
 
+h2{
+  font-family: 'Fira Code';
+}
+
 @keyframes arrowMove {
     0%   { transform: translateY(0); }
     50%  { transform: translateY(10px); }
@@ -45,7 +50,6 @@ section{
   margin-top: 40px;;
   display: flex;
   gap: 48px;
-  font-family: 'Karla';
   font-size: 18px;
   font-weight: 400;
 }
@@ -103,7 +107,6 @@ section{
     transform: rotate(-90deg);       
     transform-origin: center center;
     font-size: 18px;
-    font-family: 'Karla';
     font-weight: 400;
     color: inherit;
     transition: color 0.3s;

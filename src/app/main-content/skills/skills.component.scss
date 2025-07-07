@@ -1,37 +1,37 @@
 .wrapper{
   width: 100vw;
-  background-image:  radial-gradient(
-    ellipse at center,
-    rgba(28, 28, 28, 0) 70%,
-    rgb(28, 28, 28)     100%
-  ),
-  url('./../../../assets/img/skillSetBackground.png');
-  background-repeat: no-repeat;
-  background-position: center, center;
-  background-size: 100vw 100dvh;
   display: flex;
   justify-content: center;
-  mask-image: radial-gradient(
-    ellipse at center,
-    white 70%,
-    transparent 100%
-  );
-  -webkit-mask-image: radial-gradient(
-    ellipse at center,
-    white 70%,
-    transparent 100%
-  );
+
 }
 
 .skill-section {
-  position: relative;
-  background: none;
+  mask-image:
+  linear-gradient(to bottom, transparent 0%, white 1%, white 99%, transparent 100%),
+  linear-gradient(to right, transparent 0%, white 6%, white 100%);
+-webkit-mask-image:
+  linear-gradient(to bottom, transparent 0%, white 1%, white 100%, transparent 100%),
+  linear-gradient(to right, transparent 0%, white 6%, white 100%);
+
+mask-mode: alpha, alpha;
+mask-composite: source-in;
+-webkit-mask-mode: alpha, alpha;
+-webkit-mask-composite: source-in;
+
+background-image:
+  url('./../../../assets/img/skillSetBackground.png'); 
+background-repeat: no-repeat;
+background-position: center, center;
+background-size: 100vw 100dvh;
+position: relative;
+width: 100vw;
 
   .technologies-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 40px;
+    flex: 1;
   }
   
   .tech-text-box {
@@ -58,7 +58,7 @@
       justify-content: flex-start;
       gap: 40px;
 
-      h2.skill-title {
+      .skill-title {
         font-family: 'Fira Code', monospace;
         font-size: 64px;
         font-weight: 700;
@@ -194,13 +194,24 @@
     } 
 
     .tech-icons {
-      gap: 16px;
+      gap: 40px;
       grid-template-columns: repeat(3, 1fr);
       align-self: center;
     }
   }
 
+  @media (max-width:1000px){
+    .tech-icons {
+      gap: 16px;
+    }
+  }
+
   @media (max-width: 768px) {
+
+    .tech-text-box .skill-box .skill-title{
+        font-size: 48px;
+    } 
+
     .technologies-content {
       flex-direction: column;
       align-items: center;

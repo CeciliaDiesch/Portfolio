@@ -103,19 +103,25 @@
       "LEGAL_NOTICE_LINK": "Legal Notice"
     },
     "BUTTONS": {
-      "BACK": "Back"
+      "BACK": "Back",
+      "CHECK_WORK": "Check my work",
+      "CONTACT_ME": "Contact me"
     },
     "LANGUAGE_SWITCH": {
       "EN": "English",
       "DE": "German"
     },
     "ABOUT_ME": {
+    "WHO_I_AM": "Who I Am",
+    "ABOUT_ME_TITLE": "About me",
     "MAIN_TEXT": "I love IT because it lets me solve real-world problems with code. Building apps from scratch makes me happy.",
     "LOCATION_TEXT": "I am based in Berlin and Dresden and am very open to remote work.",
     "EDUCATION_TEXT": "I’m passionate about exploring new technologies and learning new skills.",
     "PROBLEM_SOLVING_TEXT": "I tackle challenges step by step: during my Physics studies I learned to solve complex problems with perseverance."
     },
     "CONTACT": {
+      "CONTACT_ME_OVERLINE": "Contact me",
+      "LETS_WORK_TOGETHER_TITLE": "Let’s work together",
       "LEAD_TEXT": "Got a problem to solve?",
       "BODY_TEXT_PART1": "Feel free to reach out if you’re looking for someone who’s eager to learn, works meticulously, and thrives in a team.",
       "BODY_TEXT_PART2": "I’m passionate about crafting clean, user-friendly interfaces and adding real value to your projects.",
@@ -148,6 +154,7 @@
       "TICKER_ITEM4": "Open to work"
     },
     "PROJECTS": {
+      "FEATURED_PROJECTS_TITLE": "Featured Projects",
       "DESCRIPTION_INTRO": "Here is a selection of my work – please explore them in action.",
       "ARROW_ICON_ALT": "Arrow icon",
       "PREVIEW_IMAGE_ALT": "Project preview",

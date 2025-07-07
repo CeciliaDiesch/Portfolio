@@ -10,7 +10,6 @@
   font-weight: 400;
   line-height: 120%;
   background: rgb(28, 28, 28);
-  font-size:16px;
   width: 100vw;
   max-width: 1440px;
 }
@@ -58,6 +57,15 @@
     text-decoration: none;
     color: white;
     cursor: pointer;
+    .icon {
+      display: none;
+      height: 24px;
+      width: 24px;
+    }
+
+    .link-text {
+      display: block;
+    }
   
     &:hover {
       color: #39c4b4;
@@ -93,12 +101,12 @@
   }
 }
 
-@media (max-width: 1200px) and (orientation: landscape){
+@media (max-width: 1370px) and (orientation: landscape){
 
   .footer-section{
-    padding-bottom: 8px !important;
+    padding-bottom: 16px !important;
     padding-top: 8px !important;
-    font-size:12px;
+    font-size:16px;
   }
 
   .left{
@@ -108,7 +116,7 @@
       flex-direction: row;
       gap: 3px !important;
       >img{
-          height: 28px;
+          height: 32px;
       }
     }
   }
@@ -122,16 +130,15 @@
   .footer-section{
     padding-bottom: 8px !important;
     padding-top: 4px !important;
-    font-size:10px;
+    font-size:16px;
   }
 }
-
 
 @media (max-height: 1000px) and (orientation: portrait){
   .footer-section{
     padding-bottom: 8px !important;
     padding-top: 8px !important;
-    font-size:12px;
+    font-size:16px;
     gap: 16px;
   }
 
@@ -150,9 +157,9 @@
 
 @media (min-height: 1001px) and (max-width:600px){
   .footer-section{
-    padding-bottom: 8px !important;
-    padding-top: 8px !important;
-    font-size:12px;
+    padding-bottom: 16px !important;
+    padding-top: 16px !important;
+    font-size:16px;
     gap: 14px;
   }
 
@@ -164,6 +171,56 @@
       gap: 3px !important;
       >img{
           height: 28px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px), (max-height: 540px) and (max-width: 915px) {
+
+  .footer-section{
+    padding-bottom: 16px !important;
+    padding-top: 16px !important;
+  }
+
+  .left {
+    gap: 12px;
+    .logoDiv {
+      display: flex;
+      flex-direction: row;
+      gap: 3px !important;
+      > img {
+        height: 32px;
+      }
+    }
+  }
+
+  .column {
+    display: none;
+  }
+
+  .middle {
+    display: none;
+  }
+
+  .right {
+    flex-direction: row;
+    gap: 16px;
+    
+    a {
+      .link-text {
+        display: none;
+      }
+
+      .icon {
+        display: block;
+      }
+
+      &:hover {
+        color: white;
+        &::before {
+          content: '';
+        }
       }
     }
   }

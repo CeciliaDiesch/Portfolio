@@ -1,0 +1,13 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="title">
+  <title id="title">Info-Symbol</title>
+
+  <!-- Kreis -->
+  <circle cx="12" cy="12" r="10" fill="rgb(61, 207, 182)"></circle>
+
+  <!-- Punkt des „i“ -->
+  <circle cx="12" cy="7" r="1.2" fill="rgb(28, 28, 28)"></circle>
+
+  <!-- Strich des „i“ -->
+  <rect x="11" y="10" width="2" height="7" rx="1" fill="rgb(28, 28, 28)"></rect>
+</svg>

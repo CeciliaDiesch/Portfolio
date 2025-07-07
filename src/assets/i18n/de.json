@@ -1,6 +1,6 @@
 {
     "NAV": {
-      "ABOUT_ME": "About Me",
+      "ABOUT_ME": "Über Mich",
       "SKILLS": "Skills",
       "PROJECTS": "Projekte"
     },
@@ -95,19 +95,25 @@
       "LEGAL_NOTICE_LINK": "Impressum"
     },
     "BUTTONS": {
-      "BACK": "Zurück"
+      "BACK": "Zurück",
+      "CHECK_WORK": "Projekten testen",
+      "CONTACT_ME": "Schreib mir"
     },
     "LANGUAGE_SWITCH": {
       "EN": "English",
       "DE": "Deutsch"
     },
     "ABOUT_ME": {
-      "MAIN_TEXT": "Ich liebe IT, weil sie es mir ermöglicht, reale Probleme mit Code zu lösen. Apps von Grund auf neu zu entwickeln, macht mir Freude.",
+      "WHO_I_AM": "Wer ich bin",
+      "ABOUT_ME_TITLE": "Über mich",
+      "MAIN_TEXT": "Ich liebe IT, weil sie es mir ermöglicht, interessante Probleme mit Code zu lösen. Apps von Grund auf neu zu entwickeln, macht mir Freude.",
       "LOCATION_TEXT": "Ich bin in Berlin und Dresden ansässig und sehr offen für Remote-Arbeit.",
       "EDUCATION_TEXT": "Ich bin begeistert daran interessiert, immer neue Technologien zu erkunden und neue Fähigkeiten zu erwerben.",
       "PROBLEM_SOLVING_TEXT": "Ich gehe Herausforderungen Schritt für Schritt an: Während meines Physikstudiums lernte ich komplexe Probleme mit Beharrlichkeit zu lösen."
     },
     "CONTACT": {
+      "CONTACT_ME_OVERLINE": "Kontaktieren Sie mich",
+      "LETS_WORK_TOGETHER_TITLE": "Lassen Sie uns zusammen arbeiten",
       "LEAD_TEXT": "Haben Sie ein Problem?",
       "BODY_TEXT_PART1": "Melden Sie sich gerne, wenn Sie jemanden suchen, der lernbegierig ist, akribisch arbeitet und im Team aufblüht.",
       "BODY_TEXT_PART2": "Ich bin leidenschaftlich daran interessiert, saubere, benutzerfreundliche Oberflächen zu erstellen und Ihren Projekten echten Mehrwert zu verleihen.",
@@ -136,10 +142,11 @@
     "LANDING_PAGE": {
       "TICKER_ITEM1": "Verfügbar für Remote-Arbeit",
       "TICKER_ITEM2": "Frontend Entwicklerin",
-      "TICKER_ITEM3": "Based in Berlin/Dresden",
+      "TICKER_ITEM3": "Standort in Berlin/Dresden",
       "TICKER_ITEM4": "Offen für neue Projekte"
     },
     "PROJECTS": {
+      "FEATURED_PROJECTS_TITLE": "Projekte",
       "DESCRIPTION_INTRO": "Hier ist eine Auswahl meiner Projekte – erkunden Sie es gerne in Aktion.",
       "ARROW_ICON_ALT": "Pfeil Symbol",
       "PREVIEW_IMAGE_ALT": "Projektvorschau",
