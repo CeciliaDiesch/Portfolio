@@ -729,4 +729,9 @@
     height: 120px;
   }
 }
-  
+
+@media (max-width:400px){
+  .button-Div {
+    gap: 12px;
+  }
+}

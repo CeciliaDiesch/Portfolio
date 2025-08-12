@@ -1,5 +1,5 @@
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withComponentInputBinding, withInMemoryScrolling } from '@angular/router';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { routes } from './app.routes';
@@ -18,7 +18,10 @@ export const appConfig: ApplicationConfig = {
    * Application-wide providers for routing, animations, HTTP client, and translation setup.
    */
   providers: [
-    provideRouter(routes),
+    provideRouter(routes, withComponentInputBinding(), withInMemoryScrolling({
+      scrollPositionRestoration: 'enabled',
+      anchorScrolling: 'enabled', // Hier ist die entscheidende Änderung
+    })),
     provideAnimations(),
     provideHttpClient(withFetch()),
     importProvidersFrom(
