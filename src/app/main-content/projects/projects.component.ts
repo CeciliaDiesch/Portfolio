@@ -63,7 +63,8 @@ export class ProjectsComponent implements AfterViewInit {
     const baseProjects = [
       { index: 1, name: 'Join', tech: [ANG, TS, HTML, CSS, FB], github: 'www.det.de', live: 'https://join.diesch-dev.com/', image: 'assets/img/projects (4).png' },
       { index: 2, name: 'El Pollo Loco', tech: [ANG, TS, HTML, CSS, FB], github: 'www.det.de', live: 'https://el-pollo-loco.diesch-dev.com/', image: 'assets/img/projects (3).png' },
-      { index: 3, name: 'Bestell App', tech: [TS, HTML, CSS], github: 'www.det.de', live: 'https://bestellapp.diesch-dev.com/', image: 'assets/img/projects (1).png' }
+      // { index: 3, name: 'Bestell App', tech: [TS, HTML, CSS], github: 'www.det.de', live: 'https://bestellapp.diesch-dev.com/', image: 'assets/img/projects (1).png' }
+      { index: 3, name: 'Chat App', tech: [ANG, TS, HTML, CSS, FB], github: 'www.det.de', live: 'https://chatapp.diesch-dev.com/', image: 'assets/img/projects (5).png' }
     ];
     this.projects = baseProjects.map(p => ({
       ...p,
